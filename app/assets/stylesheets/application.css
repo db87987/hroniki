@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap
+ *= require PTSans
+ *= require PTSerif
+ *= require sticky_footer
+ *= require_self
+ */
+
+.header_top_menu {
+	z-index: 2;
+	margin-left: 0px;
+	
+}
+
+.header_title {
+	background: url('header-logo.png');
+	background-repeat:no-repeat;
+	height: 170px;
+	width: 710px;
+	float: left;
+}
+
+.header_title .heading {
+
+}
+
+.header_title .date {
+	color: #fff0aa;
+	margin-top: 30px;
+	margin-left: 460px;
+	font-size: 60px;
+	font-family: 'PT Serif'
+}
+
+.header_menu {
+	font-family: 'PT Sans Caption';
+	font-size: 14px;
+	background-color: black;
+	height: 170px;
+	opacity: 0.8;
+	width: 230px;
+	float: left;
+	color: white;
+}
+
+.header_menu ul {
+	list-style: none;
+	padding-left: 20px;
+	padding-top: 5px;
+}
+
+.header_menu ul li {
+	margin-top: 10px;
+}
+
+.header_menu a {
+	color: white;
+}
+
+.header-image {
+	position: absolute;
+	top: 0px;
+	z-index: -1;
+}
