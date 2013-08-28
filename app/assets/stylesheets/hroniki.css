@@ -1,0 +1,53 @@
+.hroniki_title_link {
+	font-family: 'PT Serif';
+	color: #000000;
+	font-size: 20px;
+}
+
+.tag_link {
+	font-family: 'PT Sans Caption';
+	color: #777777;
+	font-size: 14px;
+}
+
+.hroniki_image_container {
+	margin-top: 20px;	
+}
+
+.hroniki_hover_container {
+	height: 300px;
+	width: 276px;
+	background-image: url('hroniki_hover.png');
+	padding-left: 24px;
+}
+
+.hroniki_hover_container .title {
+	padding-top: 30px;
+}
+
+.hroniki_hover_container p {
+	color: white;
+	padding-top: 10px;
+	font-size: 14px;
+	width: 240px;
+}
+
+.hroniki_hover_container .panel {
+	font-family: 'PT Sans Caption';
+	font-size: 14px;
+	margin-top: 30px;
+	color: #fff0aa;
+}
+
+.hroniki_hover_container .panel img {
+	margin-right: 10px;
+}
+
+.hroniki_hover_container .panel a {
+	margin-left: 30px;
+	color: #fff0aa;
+}
+
+.hroniki_hover_container .panel a:hover {
+	color: black;
+}

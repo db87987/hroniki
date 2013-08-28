@@ -1,0 +1,50 @@
+h1 {
+	font-family: 'PT Serif';
+	color: #000000;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: 'PT Serif Caption';
+	color: #ff634d;
+	font-size: 20px;
+}
+
+h4 {
+	font-family: 'PT Serif';
+	color: black;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+p {
+	font-family: 'PT Sans';
+	color: #666666;
+	font-size: 16px;
+}
+
+.title_link {
+	font-family: 'PT Serif';
+	color: #000000;
+	font-size: 32px;
+}
+
+.small_link {
+	font-family: 'PT Sans Caption';
+	color: #777777;
+	font-size: 14px;
+}
+
+.yellow_link {
+	font-family: 'PT Sans Caption';
+	display: block;
+	width: 222px;
+	height: 38px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #fff0aa;
+	padding-top: 18px;
+	margin-top: 30px;
+	color: #4d4d4d;
+	font-size: 15px;
+}

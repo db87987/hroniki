@@ -1,0 +1,28 @@
+.footer {
+	height: 90px;
+}
+
+.copyright {
+	font-family: 'PT Sans';
+	font-size: 14px;
+}
+
+.zero a {
+	font-family: Tahoma;
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+}
+
+.zero a:hover {
+	text-decoration: underline;
+}
+
+
+.zero img {
+	margin-left: 25px;
+}
+
+.zero_text {
+	text-align: center;
+}
