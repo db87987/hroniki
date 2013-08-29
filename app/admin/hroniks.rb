@@ -20,7 +20,7 @@ ActiveAdmin.register Hronik do
      f.inputs t('properties') do
        f.input :title
        f.input :date
-       f.input :cover, :as => :file
+       f.input :cover, :as => :file, :hint => ( f.object.new_record? || !f.object.cover ) ? nil : image_tag(f.object.cover.url(:ico))
        f.input :text, :as => :ckeditor, :label => false
      end
      f.actions
