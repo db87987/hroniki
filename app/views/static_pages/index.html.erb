@@ -1,149 +1,29 @@
 <div class="container">
 	
 	<div class="row header-image">
-    <div class="span12">
-	    <%= image_tag('index-header.png') %>
+    
+	<div class="span12">
+	    <%= image_tag @hronik.cover.url(:main) %>
 	 </div>
 
       <div class="span4">
-	    <%= link_to "Смотреть все хроники", "#", :class=> 'yellow_link' %>
+	    <%= link_to "Смотреть все хроники", hroniks_path, :class=> 'yellow_link' %>
 	  </div>
 	
 	  <div class="span8" style="margin-top: 20px;">
-		<%= link_to "11 июня. День доктора Хауса", "/", :class=> 'title_link' %>
+		<%= link_to (Russian::strftime(@hronik.date, "%d %B") + " " + @hronik.title), hronik_path(@hronik), :class=> 'title_link' %>
 		<p>В 1959 году родился Хью Лори, актёр, писатель и музыкант</p>
-		<%= link_to "Смотреть", "#", :class=> 'small_link' %>
+		<%= link_to "Смотреть", hronik_path(@hronik), :class=> 'small_link' %>
 	  </div>
 	
 	  <div class="span12" style="margin-top: 20px;">
 		<h3>Что у нас есть нового?</h3>
 	  </div>
 	
-	  <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
-		<p>24 июля</p>
-		<%= link_to "День «лечебного горошка»", "#", :class=> 'hroniki_title_link' %>
-		<%= link_to "хроники", "#", :class=> 'tag_link' %>
-		<%= link_to "июль", "#", :class=> 'tag_link' %>
-		<div class="hroniki_image_container">
-		<div class="hroniki_hover_container">
-			<h4 class="title">День «лечебного горошка»</h4>
-			<p>Лист Мёбиуса отображает экспериментальный интеграл Дирихле, в итоге приходим к логическому противоречию. График функции раскручивает убывающий расходящийся ряд, как и предполагалось. Наряду с этим, нормальное распределение поразительно....</p>
-			<div class="panel">
-				<%= image_tag "hroniki_comment.png" %>
-				<span style="margin-right: 10px;">15</span>
-				<%= image_tag "hroniki_watch.png" %>
-				122
-				<%= link_to "читать далее", "#" %>
-			</div>
-		</div>
-		</div>
-	  </div>
+		<%= render @hroniks %>
 	
-	  <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
-		<p>24 июля</p>
-		<%= link_to "День «лечебного горошка»", "#", :class=> 'hroniki_title_link' %>
-		<%= link_to "хроники", "#", :class=> 'tag_link' %>
-		<%= link_to "июль", "#", :class=> 'tag_link' %>
-		<div class="hroniki_image_container">
-		<div class="hroniki_hover_container">
-			<h4 class="title">День «лечебного горошка»</h4>
-			<p>Лист Мёбиуса отображает экспериментальный интеграл Дирихле, в итоге приходим к логическому противоречию. График функции раскручивает убывающий расходящийся ряд, как и предполагалось. Наряду с этим, нормальное распределение поразительно....</p>
-			<div class="panel">
-				<%= image_tag "hroniki_comment.png" %>
-				<span style="margin-right: 10px;">15</span>
-				<%= image_tag "hroniki_watch.png" %>
-				122
-				<%= link_to "читать далее", "#" %>
-			</div>
-		</div>
-		</div>
-	  </div>
-	
-	  <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
-		<p>24 июля</p>
-		<%= link_to "День «лечебного горошка»", "#", :class=> 'hroniki_title_link' %>
-		<%= link_to "хроники", "#", :class=> 'tag_link' %>
-		<%= link_to "июль", "#", :class=> 'tag_link' %>
-		<div class="hroniki_image_container">
-		<div class="hroniki_hover_container">
-			<h4 class="title">День «лечебного горошка»</h4>
-			<p>Лист Мёбиуса отображает экспериментальный интеграл Дирихле, в итоге приходим к логическому противоречию. График функции раскручивает убывающий расходящийся ряд, как и предполагалось. Наряду с этим, нормальное распределение поразительно....</p>
-			<div class="panel">
-				<%= image_tag "hroniki_comment.png" %>
-				<span style="margin-right: 10px;">15</span>
-				<%= image_tag "hroniki_watch.png" %>
-				122
-				<%= link_to "читать далее", "#" %>
-			</div>
-		</div>
-		</div>
-	  </div>
-	
-	  <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
-		<p>24 июля</p>
-		<%= link_to "День «лечебного горошка»", "#", :class=> 'hroniki_title_link' %>
-		<%= link_to "хроники", "#", :class=> 'tag_link' %>
-		<%= link_to "июль", "#", :class=> 'tag_link' %>
-		<div class="hroniki_image_container">
-		<div class="hroniki_hover_container">
-			<h4 class="title">День «лечебного горошка»</h4>
-			<p>Лист Мёбиуса отображает экспериментальный интеграл Дирихле, в итоге приходим к логическому противоречию. График функции раскручивает убывающий расходящийся ряд, как и предполагалось. Наряду с этим, нормальное распределение поразительно....</p>
-			<div class="panel">
-				<%= image_tag "hroniki_comment.png" %>
-				<span style="margin-right: 10px;">15</span>
-				<%= image_tag "hroniki_watch.png" %>
-				122
-				<%= link_to "читать далее", "#" %>
-			</div>
-		</div>
-		</div>
-	  </div>
-	
-	  <div class="span4" style="margin-top: 20px;  margin-bottom: 40px;">
-		<p>24 июля</p>
-		<%= link_to "День «лечебного горошка»", "#", :class=> 'hroniki_title_link' %>
-		<%= link_to "хроники", "#", :class=> 'tag_link' %>
-		<%= link_to "июль", "#", :class=> 'tag_link' %>
-		<div class="hroniki_image_container">
-		<div class="hroniki_hover_container">
-			<h4 class="title">День «лечебного горошка»</h4>
-			<p>Лист Мёбиуса отображает экспериментальный интеграл Дирихле, в итоге приходим к логическому противоречию. График функции раскручивает убывающий расходящийся ряд, как и предполагалось. Наряду с этим, нормальное распределение поразительно....</p>
-			<div class="panel">
-				<%= image_tag "hroniki_comment.png" %>
-				<span style="margin-right: 10px;">15</span>
-				<%= image_tag "hroniki_watch.png" %>
-				122
-				<%= link_to "читать далее", "#" %>
-			</div>
-		</div>
-		</div>
-	  </div>
-	
-	  <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
-		<p>24 июля</p>
-		<%= link_to "День «лечебного горошка»", "#", :class=> 'hroniki_title_link' %>
-		<%= link_to "хроники", "#", :class=> 'tag_link' %>
-		<%= link_to "июль", "#", :class=> 'tag_link' %>
-		<div class="hroniki_image_container">
-		<div class="hroniki_hover_container">
-			<h4 class="title">День «лечебного горошка»</h4>
-			<p>Лист Мёбиуса отображает экспериментальный интеграл Дирихле, в итоге приходим к логическому противоречию. График функции раскручивает убывающий расходящийся ряд, как и предполагалось. Наряду с этим, нормальное распределение поразительно....</p>
-			<div class="panel">
-				<%= image_tag "hroniki_comment.png" %>
-				<span style="margin-right: 10px;">15</span>
-				<%= image_tag "hroniki_watch.png" %>
-				122
-				<%= link_to "читать далее", "#" %>
-			</div>
-		</div>
-		</div>
-	  </div>
-	
-	
+	 	
 	</div>
 	
-	
-	
-	
-	
+		
 </div>

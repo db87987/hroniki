@@ -1,0 +1,20 @@
+<div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
+	<p><%= Russian::strftime(hronik.date, "%d %B") %></p>
+	<%= link_to hronik.title, "#", :class=> 'hroniki_title_link' %><br>
+	<% hronik.tags.each do |tag| %>
+	  <%= link_to tag.title, "#", :class=> 'tag_link' %>
+	<% end %>
+	<div class="hroniki_image_container">
+	<div class="hroniki_hover_container">
+		<h4 class="title"><%= hronik.title %></h4>
+		<p style="height: 180px; overflow: hidden;"><%= truncate(hronik.text, length: 280, omission: '...').html_safe %></p>
+		<div class="panel">
+			<%= image_tag "hroniki_comment.png" %>
+			<span style="margin-right: 10px;">15</span>
+			<%= image_tag "hroniki_watch.png" %>
+			<%= hronik.session_hroniks.count %>
+			<%= link_to "читать далее", hronik %>
+		</div>
+	</div>
+	</div>
+</div>

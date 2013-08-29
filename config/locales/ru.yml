@@ -1,0 +1,13 @@
+ru:
+  properties: "Свойства"
+  activerecord:
+    models: 
+      hronik:
+        one: "Хроника"
+        other: "Хроники"
+    attributes:
+      hronik:
+        title: "Название"
+        date: "Дата"
+        cover: "Изображение"
+        text: "Текст"

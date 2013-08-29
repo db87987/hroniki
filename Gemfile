@@ -14,6 +14,9 @@ gem "russian", "~> 0.6.0"
 gem "ckeditor"
 gem 'activeadmin'
 
+gem 'populator'
+gem 'faker'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

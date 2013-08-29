@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @hronik.title %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @hronik.date %>
+</p>
+
+<p>
+  <b>Cover:</b>
+  <%= @hronik.cover %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @hronik.text %>
+</p>
+
+
+<%= link_to 'Edit', edit_hronik_path(@hronik) %> |
+<%= link_to 'Back', hroniks_path %>

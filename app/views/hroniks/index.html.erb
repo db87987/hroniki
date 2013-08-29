@@ -1,0 +1,29 @@
+<h1>Listing hroniks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Date</th>
+    <th>Cover</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hroniks.each do |hronik| %>
+  <tr>
+    <td><%= hronik.title %></td>
+    <td><%= hronik.date %></td>
+    <td><%= hronik.cover %></td>
+    <td><%= hronik.text %></td>
+    <td><%= link_to 'Show', hronik %></td>
+    <td><%= link_to 'Edit', edit_hronik_path(hronik) %></td>
+    <td><%= link_to 'Destroy', hronik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hronik', new_hronik_path %>
