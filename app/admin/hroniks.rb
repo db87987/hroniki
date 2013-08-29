@@ -23,6 +23,10 @@ ActiveAdmin.register Hronik do
        f.input :cover, :as => :file, :hint => ( f.object.new_record? || !f.object.cover ) ? nil : image_tag(f.object.cover.url(:ico))
        f.input :text, :as => :ckeditor, :label => false
      end
+     
+     f.inputs t('tags') do
+       f.input :tags, :as => :check_boxes
+     end
      f.actions
    end
 
@@ -37,5 +41,14 @@ ActiveAdmin.register Hronik do
         hronik.text.html_safe
       end
     end  
+    
+    panel t('tags') do 
+       table_for hronik.tags do 
+         column :title do |column|
+          column.title
+         end
+       end
+     end
+    
    end
 end

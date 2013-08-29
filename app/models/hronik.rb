@@ -1,5 +1,5 @@
 class Hronik < ActiveRecord::Base
-  attr_accessible :cover, :date, :text, :title
+  attr_accessible :cover, :date, :text, :title, :tag_ids
   
   has_many :hronik_tags
   has_many :tags, through: :hronik_tags
