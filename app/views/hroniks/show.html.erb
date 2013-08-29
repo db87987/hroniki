@@ -6,6 +6,19 @@
   VK.init({apiId: 3850211, onlyWidgets: true});
 </script>
 
+<script type="text/javascript">
+  function addCommentCallback(num, last_comment, date, sign){
+    $.post("/hroniks/comment",{
+         type: 'vkontakte',
+         num: num,
+         last_comment: last_comment,
+         date: date,
+         sign: sign,
+         id: "<%= @hronik.id %>"
+    });
+}
+</script>
+
 
 <div class="container" style="margin-top: 200px; margin-bottom: 100px;">
 <div class="row">
