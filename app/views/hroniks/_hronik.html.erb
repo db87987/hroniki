@@ -12,7 +12,7 @@
 		<%= truncate(text, length: 280, omission: '...').html_safe %></p>
 		<div class="panel">
 			<%= image_tag "hroniki_comment.png" %>
-			<span style="margin-right: 10px;">15</span>
+			<span style="margin-right: 10px;"><%= hronik.comments_qty %></span>
 			<%= image_tag "hroniki_watch.png" %>
 			<%= hronik.session_hroniks.count %>
 			<%= link_to "читать далее", hronik %>
