@@ -51,3 +51,15 @@
 .hroniki_hover_container .panel a:hover {
 	color: black;
 }
+
+.link_to_back {
+	color: #999999;
+	font-family: 'PT Sans Caption';
+	font-size: 14px;
+}
+
+.hronik_tag {
+	font-family: 'PT Sans Caption';
+	color: #777777;
+	font-size: 14px;
+}

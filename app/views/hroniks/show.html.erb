@@ -1,8 +1,39 @@
-<div class="container" style="margin-top: 300px;">
-	
-	<div class="row">
-	  <div class="span12"><%= link_to hroniks_path do %>&larr; назад, к "хроникам"<% end %>
+
+
+
+<div class="container" style="margin-top: 200px; margin-bottom: 100px;">
+<div class="row">
+  <div class="span12">
+    <%= link_to hroniks_path, :class => 'link_to_back' do %>&larr; Назад, к "хроникам"<% end %>
+	<div style="margin-top: 20px; margin-bottom: 20px;">
+	<h1 style="color: #4c4c4c;"><%= @hronik.title %></h1>
+	<div style="margin-top: 10px;">
+	<% @hronik.tags.each do |tag| %>
+	  <%= link_to tag.title, "#", :class=> 'tag_link' %>
+	<% end %>
 	</div>
-	
-		
+	</div>
+  </div>
+
+  <div class="span9">
+    <p><%= @hronik.text.html_safe %></p>
+  </div>
+
+  <div class="span3">
+    Календарь записей
+  </div>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
 </div>

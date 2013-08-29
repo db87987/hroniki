@@ -11,10 +11,11 @@
  *= require bootstrap
  *= require PTSans
  *= require PTSerif
- *= require sticky_footer
+ 
  *= require header
  *= require footer
  *= require shared
  *= require hroniki
  *= require_self
+ *= require sticky_footer
  */
