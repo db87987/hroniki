@@ -13,6 +13,7 @@
 	height: 170px;
 	width: 710px;
 	float: left;
+	cursor: pointer;
 }
 
 .header_title .heading {
