@@ -16,4 +16,8 @@ class HroniksController < InheritedResources::Base
     @hronik.save
   end
   
+  def index
+    @hroniks = Hronik.all
+  end
+  
 end
