@@ -1,25 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @hronik.title %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= @hronik.date %>
-</p>
-
-<p>
-  <b>Cover:</b>
-  <%= @hronik.cover %>
-</p>
-
-<p>
-  <b>Text:</b>
-  <%= @hronik.text %>
-</p>
-
-
-<%= link_to 'Edit', edit_hronik_path(@hronik) %> |
-<%= link_to 'Back', hroniks_path %>
+<div class="container" style="margin-top: 300px;">
+	
+	<div class="row">
+	  <div class="span12"><%= link_to hroniks_path do %>&larr; назад, к "хроникам"<% end %>
+	</div>
+	
+		
+</div>
