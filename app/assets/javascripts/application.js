@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function addCommentCallback(num, last_comment, date, sign){
+    $.post("%ССЫЛКА_НА_СТРАНИЦУ_ОБРАБОТКИ_КОММЕНТАРИЯ%",{
+         type: 'vkontakte',
+         num: num,
+         last_comment: last_comment,
+         date: date,
+         sign: sign,
+         id: "<?php echo $this->post['id']?>"
+    });
+}
