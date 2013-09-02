@@ -6,5 +6,5 @@ class Hronik < ActiveRecord::Base
   
   has_many :session_hroniks
   
-  has_attached_file :cover, :styles => { :main => "940x510#",:gallery => "300x300#", :ico => "100x100#" } 
+  has_attached_file :cover, :styles => { :main => "940x510#", :gallery => "300x300#", :side => "220x220#", :ico => "100x100#" } 
 end

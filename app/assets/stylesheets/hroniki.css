@@ -61,5 +61,46 @@
 .hronik_tag {
 	font-family: 'PT Sans Caption';
 	color: #777777;
-	font-size: 14px;
+	font-size: 14px;	
 }
+
+/*small container*/
+
+.hroniki_hover_small_container {
+	height: 200px;
+	width: 185px;
+	background-image: url('hroniki_hover_small.png');
+	padding-left: 15px;
+}
+
+
+.hroniki_hover_small_container p {
+	color: white;
+	padding-top: 10px;
+	font-size: 14px;
+	width: 160px;
+	height: 120px; 
+	overflow: hidden;
+}
+
+.hroniki_hover_small_container .panel {
+	font-family: 'PT Sans Caption';
+	font-size: 14px;
+	margin-top: 10px;
+	color: #fff0aa;
+}
+
+.hroniki_hover_small_container .panel img {
+	margin-right: 5px;
+}
+
+.hroniki_hover_small_container .panel a {
+	margin-left: 10px;
+	color: #fff0aa;
+}
+
+.hroniki_hover_small_container .panel a:hover {
+	color: black;
+}
+
+

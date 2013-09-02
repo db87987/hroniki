@@ -1,6 +1,7 @@
 class HroniksController < InheritedResources::Base
   
   def show 
+    @hroniks = Hronik.limit(3)
     @hronik = Hronik.find(params[:id])
     session_id = request.session_options[:id]
     begin
