@@ -24,6 +24,7 @@
 .hroniki_image_container {
 	position: relative;
 	margin-top: 20px;	
+	cursor: pointer;
 }
 
 .hroniki_image {
