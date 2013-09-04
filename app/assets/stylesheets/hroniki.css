@@ -13,6 +13,14 @@
 	font-size: 14px;
 }
 
+.hronik_cover {
+	margin-bottom: 25px;
+}
+
+.hronik_cover img {
+	border: 1px solid #ff6c57;
+}
+
 .hroniki_image_container {
 	margin-top: 20px;	
 }
