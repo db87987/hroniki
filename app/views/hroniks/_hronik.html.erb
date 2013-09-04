@@ -2,7 +2,7 @@
 	<p><%= Russian::strftime(hronik.date, "%d %B") %></p>
 	<%= link_to hronik.title, hronik, :class=> 'hroniki_title_link' %><br>
 	<% hronik.tags.limit(3).each do |tag| %>
-	  <%= link_to tag.title, hronik, :class=> 'tag_link' %>
+	  <%= link_to tag.title, "#", :class=> 'tag_link' %>
 	<% end %>
 	<div class="hroniki_image_container">
 	<div class="hroniki_hover_container">
