@@ -11,7 +11,7 @@
 		<h4 class="title"><%= hronik.title %></h4>
 		<p style="height: 180px; overflow: hidden;">
 		<% text = strip_tags(hronik.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>
-		<%= truncate(text, length: 290, omission: '...').html_safe %></p>
+		<%= truncate(text, length: 260, omission: '...').html_safe %></p>
 		<div class="panel">
 			<%= image_tag "hroniki_comment.png" %>
 			<span style="margin-right: 10px;"><%= hronik.comments_qty %></span>
