@@ -76,17 +76,20 @@
 
 .hroniki_hover_small_container p {
 	color: white;
-	padding-top: 10px;
+	padding-top: 35px;
 	font-size: 14px;
+	line-height: 1;
 	width: 160px;
-	height: 120px; 
+	height: 100px; 
 	overflow: hidden;
+	font-weight: normal;
+
 }
 
 .hroniki_hover_small_container .panel {
+	margin-top: 0px;
 	font-family: 'PT Sans Caption';
 	font-size: 14px;
-	margin-top: 10px;
 	color: #fff0aa;
 }
 
@@ -95,7 +98,6 @@
 }
 
 .hroniki_hover_small_container .panel a {
-	margin-left: 10px;
 	color: #fff0aa;
 }
 
@@ -103,4 +105,10 @@
 	color: black;
 }
 
+.hronik_text {
+	font-family: 'PT Sans';
+	color: #666666;
+	font-size: 16px;
+	margin-bottom: 30px;
+}
 

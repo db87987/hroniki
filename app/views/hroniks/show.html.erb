@@ -35,7 +35,7 @@
   </div>
 
   <div class="span9">
-    <p><%= @hronik.text.html_safe %></p>
+    <div class="hronik_text"><%= @hronik.text.html_safe %></div>
 
 	<div id="vk_comments"></div>
 	<script type="text/javascript">
@@ -60,11 +60,13 @@
 				<% text = strip_tags(hronik.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>
 				<%= truncate(text, length: 135, omission: '...').html_safe %></p>
 				<div class="panel">
+					<%= link_to "читать далее", hronik %><br>
+					<div style="margin-top: 10px;">
 					<%= image_tag "hroniki_comment.png" %>
-					<span style=""><%= hronik.comments_qty %></span>
+					<span style="margin-right: 20px;"><%= hronik.comments_qty %></span>
 					<%= image_tag "hroniki_watch.png" %>
 					<%= hronik.session_hroniks.count %>
-					<%= link_to "читать далее", hronik %>
+					</div>
 				</div>
 			</div>
 			</div>
