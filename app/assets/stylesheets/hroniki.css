@@ -3,7 +3,7 @@
 	color: #000000;
 	font-size: 20px;
 	display: block;
-	height: 52px;
+	height: 34px;
 
 }
 
@@ -25,6 +25,10 @@
 	margin-top: 20px;	
 }
 
+.hroniki_tags {
+	height: 20px;
+}
+
 .hroniki_hover_container {
 	height: 300px;
 	width: 276px;
@@ -33,12 +37,13 @@
 }
 
 .hroniki_hover_container .title {
-	padding-top: 30px;
+	padding-top: 20px;
+	height: 56px;
 }
 
 .hroniki_hover_container p {
 	color: white;
-	padding-top: 10px;
+	padding-top: 0px;
 	font-size: 14px;
 	width: 240px;
 }
