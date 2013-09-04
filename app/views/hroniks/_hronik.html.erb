@@ -7,6 +7,7 @@
 	<% end %>
 	</div>
 	<div class="hroniki_image_container">
+	
 	<div class="hroniki_hover_container">
 		<h4 class="title"><%= hronik.title %></h4>
 		<p style="height: 180px; overflow: hidden;">
@@ -20,5 +21,6 @@
 			<%= link_to "читать далее", hronik %>
 		</div>
 	</div>
+	<%= image_tag(hronik.cover.url(:gallery), :class => "hroniki_image") %>
 	</div>
 </div>

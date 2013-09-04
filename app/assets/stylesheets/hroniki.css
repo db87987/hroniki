@@ -22,7 +22,12 @@
 }
 
 .hroniki_image_container {
+	position: relative;
 	margin-top: 20px;	
+}
+
+.hroniki_image {
+
 }
 
 .hroniki_tags {
@@ -34,6 +39,10 @@
 	width: 276px;
 	background-image: url('hroniki_hover.png');
 	padding-left: 24px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
 }
 
 .hroniki_hover_container .title {
