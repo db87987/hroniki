@@ -14,7 +14,8 @@ class HroniksController < InheritedResources::Base
   def comment
         
     api_secret = "GfqyAEOfSrOYwssRtbOk"
-    hash = Digest::MD5.hexdigest(api_secret+params[:date]+params[:num]+params[:last_comment])
+    last_comment = params[:last_comment].encode Encoding::WINDOWS_1251
+    hash = Digest::MD5.hexdigest(api_secret+params[:date]+params[:num]+last_comment)
     sign = params[:sign]
     if hash == sign
       @hronik = Hronik.find(params[:id])
