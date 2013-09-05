@@ -12,9 +12,18 @@ class HroniksController < InheritedResources::Base
   end
   
   def comment
-    @hronik = Hronik.find(params[:id])
-    @hronik.comments_qty = params[:num]
-    @hronik.save
+        
+    api_secret = "GfqyAEOfSrOYwssRtbOk"
+    hash = Digest::MD5.hexdigest(api_secret+params[:date]+params[:num]+params[:last_comment])
+    if hash == params[:sign]
+      @hronik = Hronik.find(params[:id])
+      @hronik.comments_qty = params[:num]
+      @hronik.save
+    else
+      raise "error"
+    end
+    
+
   end
   
   def index
