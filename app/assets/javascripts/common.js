@@ -12,4 +12,13 @@ $(document).ready(function() {
 		$('.hroniki_hover_container').hide();
 	});
 	
+	$(".hroniki_image_container").on("mouseover",function () {
+		$(this).find('.hroniki_hover_small_container').show();
+	});
+	
+
+	$(".hroniki_image_container").mouseleave(function () {
+		$('.hroniki_hover_small_container').hide();
+	});
+	
 });

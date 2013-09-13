@@ -146,10 +146,14 @@
 /*small container*/
 
 .hroniki_hover_small_container {
-	height: 200px;
-	width: 185px;
+	height: 220px;
+	width: 205px;
 	background-image: url('hroniki_hover_small.png');
 	padding-left: 15px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
 }
 
 
@@ -158,8 +162,8 @@
 	padding-top: 35px;
 	font-size: 14px;
 	line-height: 1;
-	width: 160px;
-	height: 100px; 
+	width: 180px;
+	height: 120px; 
 	overflow: hidden;
 	font-weight: normal;
 
