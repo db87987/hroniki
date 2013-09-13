@@ -3,7 +3,7 @@
      <% @hroniks.each do |hronik| %>
        <div class="span3" style="margin-top: 20px; margin-bottom: 40px;">
 			<p><%= Russian::strftime(hronik.date, "%d %B") %></p>
-			<%= link_to hronik.title, "#", :class=> 'hroniki_title_link' %><br>
+			<%= link_to hronik.title, hronik, :class=> 'hroniki_title_link' %><br>
 			<% hronik.tags.each do |tag| %>
 			  <%= link_to tag.title, "#", :class=> 'tag_link' %>
 			<% end %>
