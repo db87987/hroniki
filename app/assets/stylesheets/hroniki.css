@@ -90,6 +90,26 @@
 	font-size: 14px;	
 }
 
+.hronik_social {
+	width: 585px;
+	height: 146px;
+	padding-left: 35px;
+	padding-top: 30px;
+	background-color: #e6e6e6;
+}
+
+.hronik_social p {
+	display: block;
+	float: left;
+}
+
+.red_button {
+	display: block;
+	float: left;
+}
+
+
+
 /*small container*/
 
 .hroniki_hover_small_container {
