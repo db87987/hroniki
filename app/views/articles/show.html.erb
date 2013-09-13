@@ -73,37 +73,7 @@
 
 
 
-  <div class="span3">
-	 <div class="row">
-       <% @hroniks.each do |hronik| %>
-         <div class="span3" style="margin-top: 20px; margin-bottom: 40px;">
-			<p><%= Russian::strftime(hronik.date, "%d %B") %></p>
-			<%= link_to hronik.title, "#", :class=> 'hroniki_title_link' %><br>
-			<% hronik.tags.each do |tag| %>
-			  <%= link_to tag.title, "#", :class=> 'tag_link' %>
-			<% end %>
-			<div class="hroniki_image_container">
-			<div class="hroniki_hover_small_container">
-				<p>
-				<% text = strip_tags(hronik.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>
-				<%= truncate(text, length: 170, omission: '...').html_safe %></p>
-				<div class="panel">
-					<%= link_to "читать далее", hronik %><br>
-					<div style="margin-top: 10px;">
-					<%= image_tag "hroniki_comment.png" %>
-					<span style="margin-right: 20px;"><%= hronik.comments_qty %></span>
-					<%= image_tag "hroniki_watch.png" %>
-					<%= hronik.session_hroniks.count %>
-					</div>
-				</div>
-			</div>
-			<%= image_tag(hronik.cover.url(:side), :class => "hroniki_image") %>
-			</div>
-		</div>
-
-	   <% end %>
-	</div>
-  </div>
+<%= render 'hroniks/side' %>
 
 </div>
 
