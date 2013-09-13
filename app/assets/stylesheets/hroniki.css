@@ -129,6 +129,16 @@
 .red_button {
 	display: block;
 	float: left;
+	font-family: 'PT Sans Caption';
+	width: 200px;
+	height: 28px;
+	margin-left: 50px;
+	padding-top: 8px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #ffa599;
+	color: #ffffff;
+	font-size: 14px;
 }
 
 
