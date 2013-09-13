@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130904090410) do
+ActiveRecord::Schema.define(:version => 20130913123018) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -45,6 +45,37 @@ ActiveRecord::Schema.define(:version => 20130904090410) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "article_tags", :force => true do |t|
+    t.integer  "article_id"
+    t.integer  "tag_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "article_views", :force => true do |t|
+    t.integer  "article_id"
+    t.integer  "session_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "article_views", ["article_id", "session_id"], :name => "index_article_views_on_article_id_and_session_id", :unique => true
+  add_index "article_views", ["article_id"], :name => "index_article_views_on_article_id"
+
+  create_table "articles", :force => true do |t|
+    t.string   "title"
+    t.date     "date"
+    t.text     "text"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "watched",            :default => 0
+    t.integer  "comments_qty",       :default => 0
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false

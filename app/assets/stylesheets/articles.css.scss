@@ -1,0 +1,21 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article_panel {
+	margin-top: 30px;
+	color: #999999;
+	font-family: 'PT Sans Caption';
+	font-size: 14px;
+}
+
+.article_panel a {
+	display: inline-block;
+	float: right;
+	color: #999999;
+	margin-right: 40px;
+}
+
+.article_panel img {
+	margin-right: 5px;
+}

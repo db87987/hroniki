@@ -33,6 +33,23 @@ namespace :db do
     puts "Tags created!"
     
   end
+  
+  task :import_articles => :environment do
+    
+    Article.destroy_all
+    
+    Article.populate 30 do |article|
+      article.title = Faker::Lorem.words(1)[0].capitalize
+      article.date = Date.today + rand(200)
+      article.text = Populator.sentences(30..50)
+      article.comments_qty = 0
+    end
+    Article.all.each { |article| article.tags << Tag.all.sample; article.save! }
+    Article.all.each { |article| article.image = File.open(Dir.glob(File.join(Rails.root, 'covers', '*')).sample); article.save! }
+    
+    puts "Articles created!"
+    
+  end
 end
 
 

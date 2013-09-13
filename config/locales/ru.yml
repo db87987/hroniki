@@ -1,19 +1,31 @@
 ru:
   properties: "Свойства"
   tags: "Тэги"
+  blog: "Блог"
   activerecord:
     models: 
+      admin_user:
+        one: "Администратор"
+        other: "Администраторы"
       hronik:
         one: "Хроника"
         other: "Хроники"
       tag:
         one: "Тэг"
         other: "Тэги"
+      article:
+        one: "Статья"
+        other: "Статьи"
     attributes:
       hronik:
         title: "Название"
         date: "Дата"
         cover: "Изображение"
+        text: "Текст"
+      article:
+        title: "Название"
+        date: "Дата"
+        image: "Изображение"
         text: "Текст"
       tag:
         title: "Название"

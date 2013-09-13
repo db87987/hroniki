@@ -3,4 +3,7 @@ class Tag < ActiveRecord::Base
   
   has_many :hronik_tags
   has_many :hroniks, through: :hronik_tags
+  
+  has_many :article_tags
+  has_many :articles, through: :article_tags
 end

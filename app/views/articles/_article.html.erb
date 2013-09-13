@@ -1,0 +1,23 @@
+<div class="span12" style="margin-top: 20px; margin-bottom: 40px;">
+	<p><%= Russian::strftime(article.date, "%d %B") %></p>
+	<h1 style="color: #4c4c4c;"><%= article.title %></h1>
+	<div class="hroniki_tags">
+	<% article.tags.limit(3).each do |tag| %>
+	  <%= link_to tag.title, "#", :class=> 'tag_link' %>
+	<% end %>
+	</div>
+	<p>
+	<% text = strip_tags(article.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>
+	<%= truncate(text, length: 780, omission: '...').html_safe %></p>
+	
+	<div class="article_panel">
+	<%= image_tag('article_comment.png') %>
+	комментариев:
+	<span style="margin-right: 20px;"><%= article.comments_qty %></span>
+	<%= image_tag('article_watch.png') %>
+	просмотров: 
+	<span style="margin-right: 10px;"><%= article.article_views.count %></span>
+	<%= link_to "читать далее", article %>
+	</div>
+	
+</div>
