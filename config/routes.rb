@@ -8,7 +8,7 @@ Hroniki::Application.routes.draw do
   resources :hroniks
   match '/hroniks/comment' => 'hroniks#comment', :via => :post
 
-  match '/contacts' => 'static_pages#contacts'
+  match '/feedback' => 'static_pages#feedback'
   
   root :to => 'static_pages#index'
   

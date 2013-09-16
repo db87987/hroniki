@@ -17,6 +17,7 @@
  *= require shared
  *= require hroniki
  *= require articles
+ *= require modal
  *= require_self
  *= require sticky_footer
  */

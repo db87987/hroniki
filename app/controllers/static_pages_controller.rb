@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
     @hroniks = Hronik.limit(9)
     @hronik = Hronik.all.sample
   end
-
-  def contacts
+  
+  def feedback
   end
 end

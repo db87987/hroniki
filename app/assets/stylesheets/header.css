@@ -41,7 +41,7 @@
 
 .header_menu ul {
 	list-style: none;
-	padding-left: 20px;
+	padding-left: 10px;
 	padding-top: 5px;
 }
 
@@ -49,7 +49,26 @@
 	margin-top: 10px;
 }
 
+
 .header_menu a {
+	color: white;
+	padding-left: 10px;
+	padding-right: 15px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.header_menu a:hover {
+	background-color: #fff0aa;
+	color: black;
+}
+
+.header_menu a.active {
+	background-color: #ff634d;
+	text-decoration: none;
+}
+
+.header_menu a.active:hover {
 	color: white;
 }
 

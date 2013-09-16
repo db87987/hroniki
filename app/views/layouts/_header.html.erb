@@ -6,11 +6,11 @@
   </div>
   <div class="header_menu">
     <ul>
-	  <li><%= link_to "Хроники", hroniks_path %></li>
-	  <li><%= link_to "Блог", articles_path %></li>
+	  <li><%= link_to "Хроники", hroniks_path, :class => ('active' if controller_name == "hroniks")  %></li>
+	  <li><%= link_to "Блог", articles_path, :class => ('active' if controller_name == "articles")  %></li>
 	  <li><%= link_to "Медицинские старости", "#" %></li>
 	  <li><%= link_to "Медицинский календарь", "#" %></li>
-	  <li><%= link_to "Обратная связь", "#" %></li>
+	  <li><%= link_to "Обратная связь", feedback_path %></li>
   </div>
 </div>
 </div>
