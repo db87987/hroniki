@@ -8,7 +8,8 @@
   <%= yield :head %>
 </head>
 <body>	
-		<%= render 'shared/modal' %>
+		<%= render :partial => 'shared/hronik_suggest' %>
+		<div class="page_content">
         <div class="wrapper">
             <%= render 'layouts/header' %>
 		    <%= yield %>
@@ -17,7 +18,7 @@
         <div class="container footer">
             <%= render 'layouts/footer' %>
         </div>
-		<script src="modal.js"></script>
+		</div>
     </body>
 </html>
 
