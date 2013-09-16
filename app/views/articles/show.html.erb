@@ -45,6 +45,7 @@
   </div>
 
   <div class="span9">
+	<div class="hronik_cover"><%= image_tag(@article.image.url(:show)) %></div>
     <div class="hronik_text"><%= @article.text.html_safe %></div>
 
 	<div class="hronik_social" style="height: 100px;">
