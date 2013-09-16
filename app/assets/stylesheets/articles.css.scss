@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .article_panel {
-	margin-top: 30px;
+	margin-top: 10px;
 	color: #999999;
 	font-family: 'PT Sans Caption';
 	font-size: 14px;
@@ -18,4 +18,15 @@
 
 .article_panel img {
 	margin-right: 5px;
+}
+
+.article_image {
+	float: left;
+	width: 220px;
+}
+
+.article_content {
+	float: left;
+	margin-left: 20px;
+	width: 700px;
 }
