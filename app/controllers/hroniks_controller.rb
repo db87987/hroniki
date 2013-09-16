@@ -24,8 +24,7 @@ class HroniksController < InheritedResources::Base
     else
       nil
     end
-    
-
+    render nothing: true
   end
   
   def index
