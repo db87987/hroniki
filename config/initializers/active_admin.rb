@@ -206,6 +206,5 @@ ActiveAdmin.setup do |config|
   #
   # config.filters = true
   config.register_javascript 'ckeditor/init.js'
-  config.register_stylesheet 'jquery.Jcrop.css'
 
 end
