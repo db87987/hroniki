@@ -35,13 +35,15 @@ ActiveAdmin.register Hronik do
       row :title
       row :date
       row :cover do |cover|
+        image_tag hronik.cover.url(:main)
+      end
+      row :cover do |cover|
         image_tag hronik.cover.url(:gallery)
       end
       row :text do |text|
         hronik.text.html_safe
       end
     end  
-    
     panel t('tags') do 
        table_for hronik.tags do 
          column :title do |column|
@@ -49,6 +51,43 @@ ActiveAdmin.register Hronik do
          end
        end
      end
+  end
+  
+  member_action :crop do
+    @hronik = Hronik.find(params[:id])
+  end
+  
+  controller do
     
-   end
+    
+    def create
+      @hronik = Hronik.new(params[:hronik])
+      if @hronik.save
+        if params[:hronik][:cover].blank?
+          redirect_to admin_hronik_path(@hronik)
+        else
+          render :action => "crop", :layout => 'active_admin' 
+        end
+      else
+        render :action => 'new'
+      end
+    end
+    
+    def update
+      @hronik = Hronik.find(params[:id])
+      if @hronik.update_attributes(params[:hronik])
+        if params[:hronik][:cover].blank?
+          redirect_to admin_hronik_path(@hronik)
+        else
+          render :action => "crop", :layout => 'active_admin' 
+        end
+      else
+        render :action => 'edit'
+      end
+    end
+    
+  end
+   
+   
+   
 end

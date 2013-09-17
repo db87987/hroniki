@@ -29,6 +29,10 @@ p {
 	font-size: 16px;
 }
 
+a:hover {
+	color: #ff634d;
+}
+
 .buf{
 	float:none;
 	width: 100%;

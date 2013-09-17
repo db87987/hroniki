@@ -1,0 +1,34 @@
+<%= semantic_form_for [:admin, @hronik], :html => {:multipart => true}	 do |f| %>
+
+<div style="float: left; width: 600px;">
+<h4>Оригинал:</h4>
+<%= image_tag @hronik.cover.url(:original), :id => "cropbox" %>
+</div>
+
+<div style="float: left; width: 600px; margin-left: 20px;">	
+<h4>Обработанный вариант:</h4>
+<div style="width:600px; height:326px; overflow:hidden;">
+  <%= image_tag("head.png", :class => "head") %>
+  <%= image_tag @hronik.cover.url(:original), :id => "main" %>
+</div>
+
+<%= form_for @hronik do |f| %>
+<% %w[x y w h].each do |attribute| %>
+<%= f.hidden_field "crop_#{attribute}" %>
+<% end %>
+<fieldset class="actions">
+<ol>
+<li><%= f.submit "Обрезать" %></li>
+</ol>
+</fieldset>
+<% end %>
+
+</div>
+
+
+
+<% end %>
+
+
+
+
