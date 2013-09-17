@@ -66,6 +66,24 @@ a:hover {
 	font-size: 15px;
 }
 
+.red_button {
+	display: block;
+	font-family: 'PT Sans Caption';
+	width: 200px;
+	height: 28px;
+	padding-top: 8px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #ffa599;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.red_button:hover {
+	color: #ffffff;
+	background-color: #ff634d;
+}
+
 .content {
 	width: 690px;
 	float: left;
@@ -75,5 +93,103 @@ a:hover {
 .right_column {
 	width: 230px;
 	float: left;
+}
 
+/*feedback_page*/
+
+#feedback_page .head_line {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 35px;
+}
+
+#feedback_page .head_line a {
+	color: #ff634d;
+}
+
+#feedback_page .wrap {
+	background-color: white;
+	padding: 20px;
+	width: 900px;
+	margin-top: 20px;
+	margin-bottom: 60px;
+	float: left;
+}
+
+#feedback_page label {
+	display: block;
+	font-family: 'PT Sans';
+	color: #8c8c8c;
+	font-size: 14px;
+}
+
+textarea:focus, input:focus, select:focus {
+    outline: 0;
+}
+
+#feedback_page input[type="text"]  {
+	width: 530px;
+	height: 35px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-family: 'PT Serif Caption';
+	color: #bfbfbf;
+	font-size: 16px;
+	border: 1px inset
+}
+
+#feedback_page input[type="text"]:focus  {
+	border: 1px solid #29B0D9;
+}
+
+#feedback_page textarea  {
+	width: 530px;
+	height: 230px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-family: 'PT Serif Caption';
+	color: #bfbfbf;
+	font-size: 16px;
+	border: 1px inset
+}
+
+#feedback_page textarea:focus  {
+	border: 1px solid #29B0D9;
+}
+
+.like_link {
+	display: block;
+	font-family: 'PT Sans Caption';
+	width: 195px;
+	padding-top: 6px;
+	padding-bottom: 5px;
+	text-indent: 50px;
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.like_link.like {
+	background: url('thumb_up2.png') no-repeat 20px 7px;
+}
+
+.like_link.un_like {
+	background: url('thumb_down2.png') no-repeat 20px 7px;
+}
+
+.like_link:hover {
+	background-color: #ffa599;
+}
+
+.like_link.active {
+	background-color: #ff634d;
+}
+
+.like_link:hover, .like_link.active {
+	color: #ffffff;
+	background-position: 20px -17px;
 }

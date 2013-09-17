@@ -20,6 +20,20 @@ $(document).ready(function() {
 	});
 	
 	
+	$("#like").on('click', function () {
+		$(this).addClass('active');
+		$("#unlike").removeClass('active');
+		return false
+	});
+	
+	$("#unlike").on('click', function () {
+		$(this).addClass('active');
+		$("#like").removeClass('active');
+		return false
+	});
+	
+	
+	
 
 	
 });

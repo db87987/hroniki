@@ -2,6 +2,7 @@ Hroniki::Application.routes.draw do
   
   resources :articles
   match '/articles/comment' => 'articles#comment', :via => :post
+  match '/feedbacks' => 'feedbacks#create', :via => :post, :as => :feedbacks
 
   mount Ckeditor::Engine => '/ckeditor'
 

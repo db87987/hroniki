@@ -1,8 +1,36 @@
-<div class="container" style="margin-top: 200px; margin-bottom: 100px;">
+<div class="container" style="margin-top: 200px; margin-bottom: 100px;" id="feedback_page">
 
-	<p>Проект компании Euromed Group </p>
-	<p>Мы будем рады, если вы оставите свой отзыв:</p>
+  <div class="head_line">
+	<p>«Хроники» — это творческий проект компании <%= link_to "Euromed group", "http://euromed-group.ru/", :target => '_blank' %>.</p>
+	<p>Главный редактор проекта — <%= mail_to "demmeda@gmail.com", "Дмитрий Журавлёв" %>.</p>
+	<p>С предложениями обращайтесь к <%= mail_to "makarenko@euromed.ru", "Марии Макаренко" %>, а ещё мы будем рады вашим отзывам!<p>
+  </div>
+
+  <h1 style="color: #4c4c4c;">Оставьте свой отзыв!</h1>
+	
+  <div class="wrap">
 	
 	
+	<%= form_for(Feedback.new) do |f| %>
+	
+	<div style="float: left; width: 530px;">
+	<%= f.label :name, "Представьтесь, пожалуйста" %>
+	<%= f.text_field :name %>
+	<%= f.label :feedback, "Добавьте отзыв или предложение" %>
+	<%= f.text_area :feedback %>
+	<%= link_to "Можно отправлять", "#", :class => 'red_button' %>
+	</div>
+	
+	<div style="float: left; margin-left: 150px; width: 220px;">
+	<%= link_to "Мне нравится!", "#", :class => 'like_link like', :id => 'like' %>
+	<%= link_to "Не понравилось", "#", :class => 'like_link un_like', :id => 'unlike' %>
+	
+	</div>
+	
+	
+	
+	<% end %>
+	
+  </div>
 
 </div>

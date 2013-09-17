@@ -126,7 +126,7 @@
 	float: left;
 }
 
-.red_button {
+.hronik_social .red_button {
 	display: block;
 	float: left;
 	font-family: 'PT Sans Caption';
@@ -139,6 +139,10 @@
 	background-color: #ffa599;
 	color: #ffffff;
 	font-size: 14px;
+}
+
+.hronik_social .red_button:hover {
+	color: #ffffff;
 }
 
 
