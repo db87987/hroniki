@@ -57,22 +57,23 @@ $(document).ready(function() {
 
 
   $('#new_feedback').submit(function() {
-    if ($( "input[name='feedback[name]']" ).val() == '' || $( "input[name='feedback[name]']" ).val() == 'Укажите ваше имя') {
+    if ($("#feedback_name").val() == '' || $("#feedback_name").val() == 'Укажите ваше имя') {
       $("#feedback_name").addClass('input_error');
 	  $("#feedback_name").val('Укажите ваше имя');
 	  return false;
     }
-    else if ($( "input[name='feedback[feedback]']" ).text() == '') {
+    else if ($("#feedback_feedback").val() == '' || $("#feedback_feedback").val() == 'Оставьте отзыв') {
       $("#feedback_feedback").addClass('input_error');
-	  $("#feedback_feedback").val('Оставьте отзыв');
+	  $("#feedback_feedback").text('Оставьте отзыв');
 	  return false;
     }
   });
 
   $("#feedback_name, #feedback_feedback").focus(function() {
-  	$(this).val('');
-	$(this).removeClass('input_error');
-	
+	if ($(this).val() == 'Укажите ваше имя' || $(this).val() == 'Оставьте отзыв') {
+      $(this).val('');
+	  $(this).removeClass('input_error');	
+    }
   });
 	
 	
