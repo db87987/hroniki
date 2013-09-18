@@ -64,7 +64,7 @@ $(document).ready(function() {
     }
     else if ($("#feedback_feedback").val() == '' || $("#feedback_feedback").val() == 'Оставьте отзыв') {
       $("#feedback_feedback").addClass('input_error');
-	  $("#feedback_feedback").text('Оставьте отзыв');
+	  $("#feedback_feedback").val('Оставьте отзыв');
 	  return false;
     }
   });
