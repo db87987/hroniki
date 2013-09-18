@@ -53,6 +53,25 @@ $(document).ready(function() {
       $('#feedback_sent').show().fadeOut(4000);
 	  $('#new_feedback_area').hide();
     }
+    });
+
+
+  $('#new_feedback').submit(function() {
+    if ($( "input[name='feedback[name]']" ).val() == '' || $( "input[name='feedback[name]']" ).val() == 'Укажите ваше имя') {
+      $("#feedback_name").addClass('input_error');
+	  $("#feedback_name").val('Укажите ваше имя');
+	  return false;
+    }
+    else if ($( "input[name='feedback[feedback]']" ).text() == '') {
+      $("#feedback_feedback").addClass('input_error');
+	  $("#feedback_feedback").val('Оставьте отзыв');
+	  return false;
+    }
+  });
+
+  $("#feedback_name").focus(function() {
+  	$(this).val('');
+	$( "#feedback_name" ).removeClass('input_error');
   });
 	
 	

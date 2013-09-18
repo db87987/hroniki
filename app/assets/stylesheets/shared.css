@@ -153,6 +153,11 @@ textarea:focus, input:focus, select:focus {
 	border: 1px inset
 }
 
+#feedback_page input[type="text"].input_error, #feedback_page textarea.input_error {
+	border: 1px solid #ff634d;
+	color: #ff634d;
+}
+
 #feedback_page textarea:focus  {
 	border: 1px solid #29B0D9;
 }
