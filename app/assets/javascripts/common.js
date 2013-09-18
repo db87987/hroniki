@@ -69,9 +69,10 @@ $(document).ready(function() {
     }
   });
 
-  $("#feedback_name").focus(function() {
+  $("#feedback_name, #feedback_feedback").focus(function() {
   	$(this).val('');
-	$( "#feedback_name" ).removeClass('input_error');
+	$(this).removeClass('input_error');
+	
   });
 	
 	
