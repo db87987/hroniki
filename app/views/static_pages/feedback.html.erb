@@ -6,31 +6,50 @@
 	<p>С предложениями обращайтесь к <%= mail_to "makarenko@euromed.ru", "Марии Макаренко" %>, а ещё мы будем рады вашим отзывам!<p>
   </div>
 
+  <div id="new_feedback_area">
   <h1 style="color: #4c4c4c;">Оставьте свой отзыв!</h1>
-	
   <div class="wrap">
-	
-	
-	<%= form_for(Feedback.new) do |f| %>
-	
+	<%= form_for @feedback, remote: true do |f| %>
 	<div style="float: left; width: 530px;">
 	<%= f.label :name, "Представьтесь, пожалуйста" %>
 	<%= f.text_field :name %>
 	<%= f.label :feedback, "Добавьте отзыв или предложение" %>
 	<%= f.text_area :feedback %>
-	<%= link_to "Можно отправлять", "#", :class => 'red_button' %>
+	<%= f.hidden_field :feedback_type %>
+	<%= link_to "Можно отправлять", "#", :class => 'red_button', :id => 'feedback_submit' %>
 	</div>
-	
 	<div style="float: left; margin-left: 150px; width: 220px;">
 	<%= link_to "Мне нравится!", "#", :class => 'like_link like', :id => 'like' %>
 	<%= link_to "Не понравилось", "#", :class => 'like_link un_like', :id => 'unlike' %>
-	
 	</div>
-	
-	
-	
 	<% end %>
-	
+  </div>
   </div>
 
+  <h1 style="color: #4c4c4c;">Что о нас думают люди (<%= @feedbacks.count %> <%= Russian.p(@feedbacks.count, "отзыв", "отзыва", "отзывов") %>)</h1>
+
+   <% @feedbacks.each do |feedback| %>
+	<div class="feedback">
+	<% if feedback.feedback_type == 'like' %>
+	<%= image_tag('thumb_up.png')%>
+	<% else %>
+	<%= image_tag('thumb_down.png')%>
+	<% end %>
+	<div class="feedback_content">
+	  <div class="feedback_heading">
+	    <span class="name"><%= feedback.name %></span> | <%= feedback.created_at.strftime("%d.%m.%y") %>
+	  </div>
+	
+	  <div class="feedback_text">
+		<p><%= feedback.feedback %></p>
+	  </div>
+    </div>
+	</div>
+	
+   <% end %>
+
+
+
 </div>
+
+<div id="feedback_sent">Спасибо за ваш отзыв!</div>

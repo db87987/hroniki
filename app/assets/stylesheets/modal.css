@@ -16,3 +16,17 @@
     z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
 }
 
+#feedback_sent {
+	display: none;
+	font-family: 'PT Serif Caption';
+	font-size: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+    position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
+    left: 25%; /* positions the div half way horizontally */
+    top: 25%; /* positions the div half way vertically */
+    background-color: #ff634d;
+    width: 50%;
+	text-align: center;
+    z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
+}

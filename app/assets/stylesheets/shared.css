@@ -193,3 +193,38 @@ textarea:focus, input:focus, select:focus {
 	color: #ffffff;
 	background-position: 20px -17px;
 }
+
+.feedback {
+	padding-top: 50px;
+	width: 100%;
+	clear: both;
+}
+
+.feedback img {
+	float: left;
+	width: 31px;
+}
+
+.feedback .feedback_content {
+	width: 819px;
+	float: left;
+	margin-left: 50px;
+}
+
+
+.feedback .feedback_heading {
+	width: 100%;
+	clear: both;
+}
+
+.feedback .feedback_heading {
+	font-family: 'PT Sans';
+	font-size: 16px;
+	color: #8c8c8c;
+}
+
+.feedback .feedback_heading .name {
+	font-family: 'PT Sans';
+	font-size: 24px;
+	color: #ff634d;
+}
