@@ -12,6 +12,11 @@ class HroniksController < InheritedResources::Base
     rescue ActiveRecord::RecordNotUnique
       nil
     end
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
   
   def comment
