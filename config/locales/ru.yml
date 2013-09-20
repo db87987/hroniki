@@ -2,6 +2,13 @@ ru:
   properties: "Свойства"
   tags: "Тэги"
   blog: "Блог"
+  Monday: "ПН"
+  Tuesday: "ВТ"
+  Wednesday: "СР"
+  Thursday: "ЧТ"
+  Friday: "ПТ"
+  Saturday: "СБ"
+  Sunday: "ВС"
   activerecord:
     models: 
       admin_user:

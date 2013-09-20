@@ -1,0 +1,100 @@
+#hroniks .calendar {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 50px;
+  
+
+  td, th {
+    font-family: "Lucida Grande", arial, helvetica, sans-serif;
+    font-size: 10px;
+    padding: 4px;
+    
+  }
+
+  th {
+    text-align: center;
+    background-color: #bcf1ed;
+    width: 14.2857142857143%;
+  }
+
+  td {
+    color: black;
+	background-color: #bfbfbf;	
+    vertical-align: top;
+    font-size: 16px;
+	border: 1px solid white;
+  }
+
+  .notmonth, .notmonth a { color: #CCC; }
+  .today { background-color: #ff634d; }
+}
+
+#hroniks #month {
+  margin: 0;
+  
+  text-align: center;
+  font-size: 22px;
+  a {
+    text-decoration: none;
+    color: #999;
+  }
+}
+
+#hroniks ul {
+  font-size: 11px;
+  padding-left: 20px;
+}
+
+#hroniks #month {
+  margin: 0;
+  width: 100%;
+  background-color: #bfbfbf;
+  font-size: 16px;
+  color: black;
+  font-family: 'PT Sans';
+  text-align: center;	
+}
+
+.month-inner {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+}
+
+.current_month {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	width: 160px;
+	height: 25px;
+	padding-top: 4px;
+}
+
+.prev_month {
+	float: left;
+	margin-left: 10px;
+	display: block;
+	width: 15px;
+	text-indent: -99999px;
+	background: url('cal_left.png') no-repeat left 10px;
+}
+
+.prev_month:hover {
+
+}
+
+.next_month {
+	float: right;
+	display: block;
+	margin-right: 10px;
+	width: 15px;
+	text-indent: -99999px;
+	background: url('cal_right.png') no-repeat 7px 10px;
+}
+
+.next_month:hover {
+
+}

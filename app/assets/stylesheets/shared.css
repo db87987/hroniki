@@ -233,3 +233,13 @@ textarea:focus, input:focus, select:focus {
 	font-size: 24px;
 	color: #ff634d;
 }
+
+.yellow_cation {
+	background-color: #fff0aa;
+	text-align: center;
+	font-family: 'PT Serif Caption';
+	font-size: 16px;
+	color: #ff634d;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}

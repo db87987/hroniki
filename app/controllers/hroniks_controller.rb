@@ -2,6 +2,9 @@ class HroniksController < InheritedResources::Base
   
   def show 
     @hroniks = Hronik.limit(3)
+    @hroniks_for_calendar = Hronik.all
+    @hroniks_by_date = @hroniks_for_calendar.group_by(&:created_at)
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
     @hronik = Hronik.find(params[:id])
     session_id = request.session_options[:id]
     begin

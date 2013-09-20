@@ -1,5 +1,11 @@
+
+
 <div class="span3">
+	<div class="yellow_cation" style="margin-bottom: 20px;">Календарь записей</div>
+	<%= render 'shared/calendar' %>
+	<div class="yellow_cation">Что у нас есть нового?</div>
 	 <div class="row">
+		
      <% @hroniks.each do |hronik| %>
        <div class="span3" style="margin-top: 20px; margin-bottom: 40px;">
 			<p><%= Russian::strftime(hronik.date, "%d %B") %></p>

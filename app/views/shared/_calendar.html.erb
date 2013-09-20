@@ -1,0 +1,19 @@
+<div id="hroniks">
+	  <div id="month">
+		<div class="month-inner">
+	    <%= link_to "предыдущий месяц", {date: @date.prev_month}, :class => 'prev_month' %>
+	    <div class="current_month"><%= Russian::strftime(@date, "%B") %></div>
+	    <%= link_to "следующий месяц", {date: @date.next_month}, :class => 'next_month' %>
+		</div>
+	  </div>
+  <%= calendar @date do |date| %>
+    <%= date.day %>
+    <% if @hroniks_by_date[date] %>
+      <ul>
+        <% @hroniks_by_date[date].each do |hronik| %>
+          <li><%= link_to hronik.name, hronik %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+</div>
