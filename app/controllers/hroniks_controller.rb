@@ -36,7 +36,7 @@ class HroniksController < InheritedResources::Base
   end
   
   def index
-    @hroniks = params[:date] ? Hronik.where(:date => params[:date]) : @hroniks = Hronik.all
+    @hroniks = Hronik.all
   end
   
 end

@@ -10,6 +10,7 @@ Hroniki::Application.routes.draw do
   match '/hroniks/comment' => 'hroniks#comment', :via => :post
 
   match '/feedback' => 'static_pages#feedback'
+  match '/calendar' => 'static_pages#calendar'
   
   root :to => 'static_pages#index'
   
