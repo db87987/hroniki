@@ -3,7 +3,7 @@ class HroniksController < InheritedResources::Base
   def show 
     @hroniks = Hronik.limit(3)
     @hroniks_for_calendar = Hronik.all
-    @hroniks_by_date = @hroniks_for_calendar.group_by(&:created_at)
+    @hroniks_by_date = @hroniks_for_calendar.group_by(&:date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     @hronik = Hronik.find(params[:id])
     session_id = request.session_options[:id]
@@ -36,7 +36,7 @@ class HroniksController < InheritedResources::Base
   end
   
   def index
-    @hroniks = Hronik.all
+    @hroniks = params[:date] ? Hronik.where(:date => params[:date]) : @hroniks = Hronik.all
   end
   
 end

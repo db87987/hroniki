@@ -26,6 +26,23 @@
     font-size: 12px;
 	border: 1px solid white;
 	
+	a {
+	 text-decoration: none;
+	 color: #ff634d;
+	}
+	a:hover {
+	 text-decoration: none;
+	 color: #ff634d;
+	}
+	
+  }
+
+  td.with_events {
+	color: #ff634d;
+  }
+
+  td:active {
+	color: white;
   }
 
   .notmonth, .notmonth a { color: #CCC; }

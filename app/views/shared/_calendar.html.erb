@@ -7,13 +7,11 @@
 		</div>
 	  </div>
   <%= calendar @date do |date| %>
-    <%= date.day %>
+   
     <% if @hroniks_by_date[date] %>
-      <ul>
-        <% @hroniks_by_date[date].each do |hronik| %>
-          <li><%= link_to hronik.name, hronik %></li>
-        <% end %>
-      </ul>
+       <%= link_to date.day, hroniks_path(:date => date) %>
+	<% else %>
+	   <%= date.day %>
     <% end %>
   <% end %>
 </div>

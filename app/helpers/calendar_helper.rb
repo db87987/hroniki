@@ -37,7 +37,12 @@ module CalendarHelper
       classes = []
       classes << "today" if day == Date.today
       classes << "notmonth" if day.month != date.month
+      classes << "with_events" if has_events?(day)
       classes.empty? ? nil : classes.join(" ")
+    end
+    
+    def has_events?(day)
+      if Hronik.find_by_date(day) then true end
     end
 
     def weeks
