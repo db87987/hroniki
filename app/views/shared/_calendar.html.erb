@@ -2,7 +2,10 @@
 	  <div id="month">
 		<div class="month-inner">
 	    <%= link_to "предыдущий месяц", {date: @date.prev_month}, :class => 'prev_month', remote: true %>
-	    <div class="current_month"><%= Russian::strftime(@date, "%B %Y") %></div>
+	    <div class="current_month">
+		<%= Russian::strftime(@date, "%B") %>
+		<span style="color: #CCC;"><%= Russian::strftime(@date, "%Y") %></span>
+		</div>
 	    <%= link_to "следующий месяц", {date: @date.next_month}, :class => 'next_month', remote: true %>
 		</div>
 	  </div>
