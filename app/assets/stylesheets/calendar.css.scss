@@ -28,24 +28,24 @@
 	
 	a {
 	 text-decoration: none;
-	 color: #ff634d;
+	 color: black;
 	}
 	a:hover {
 	 text-decoration: none;
-	 color: #ff634d;
+	 color: black;
 	}
 	
   }
 
   td.with_events {
-	color: #ff634d;
+	background-color: #8c8c8c;
   }
 
   td:active {
 	color: white;
   }
 
-  .notmonth, .notmonth a { color: #CCC; }
+  .notmonth, .notmonth a,  .notmonth a:hover{ color: #CCC; }
   .today { background-color: #ff634d; }
 }
 
