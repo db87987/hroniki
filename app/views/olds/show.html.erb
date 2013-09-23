@@ -43,11 +43,14 @@
 	</div>
 	</div>
   </div>
+	
+  <% unless @old.issue_id == nil %>
   <div class="span3">
 	<%= link_to olds_path(:issue_id => @old.issue_id) do %>
 	<div class="issue_title"><%= issue_title(@old.issue_id) %></div>
 	<% end%>
   </div>
+  <% end %>
 	
 
 

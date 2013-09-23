@@ -5,5 +5,11 @@
   <div class="article_content">
 	<p><%= Russian::strftime(issue.date, "%d %B") %></p>
 	<h1 style="color: #4c4c4c;"><%= issue.title %></h1>
+	<ul>
+	<% issue.olds.each do |old| %>
+	<li><%= link_to old.title, old_path(old) %></li>
+	<% end %>
+	</ul>
+	
   </div>
 </div>
