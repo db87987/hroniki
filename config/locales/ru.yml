@@ -9,6 +9,7 @@ ru:
   Friday: "ПТ"
   Saturday: "СБ"
   Sunday: "ВС"
+  olds: "Медицинские Старости"
   activerecord:
     models: 
       admin_user:
@@ -23,6 +24,12 @@ ru:
       article:
         one: "Статья"
         other: "Статьи"
+      old:
+        one: "Медицинская старость"
+        other: "Медицинские старости"
+      issue:
+        one: "Выпуск"
+        other: "Выпуски"
     attributes:
       hronik:
         title: "Название"
@@ -36,3 +43,11 @@ ru:
         text: "Текст"
       tag:
         title: "Название"
+      issue:
+        title: "Название"
+      old:
+        title: "Название"
+        issue_id: "Номер выпуска"
+        date: "Дата"
+        image: "Изображение"
+        text: "Текст"

@@ -1,4 +1,4 @@
-<% @title = @article.title %>
+<% @title = @old.title %>
 <% content_for :head do %>
 <script src="http://vk.com/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
 <% end %>
@@ -24,7 +24,7 @@
          last_comment: last_comment,
          date: date,
          sign: sign,
-         id: "<%= @article.id %>"
+         id: "<%= @old.id %>"
     });
 }
 </script>
@@ -33,11 +33,11 @@
 <div class="container" style="margin-top: 200px; margin-bottom: 100px;">
 <div class="row">
   <div class="span12">
-    <%= link_to articles_path, :class => 'link_to_back' do %>&larr; Назад, к блогу<% end %>
+    <%= link_to issue_path(:issue_id => @old.issue_id), :class => 'link_to_back' do %>&larr; Назад, к статьям выпуска<% end %>
 	<div style="margin-top: 20px; margin-bottom: 20px;">
-	<h1 style="color: #4c4c4c;"><%= @article.title %></h1>
+	<h1 style="color: #4c4c4c;"><%= @old.title %></h1>
 	<div style="margin-top: 10px;">
-	<% @article.tags.each do |tag| %>
+	<% @old.tags.each do |tag| %>
 	  <%= link_to tag.title, "#", :class=> 'tag_link' %>
 	<% end %>
 	</div>
@@ -45,8 +45,8 @@
   </div>
 
   <div class="span9">
-	<div class="hronik_cover"><%= image_tag(@article.image.url(:show)) %></div>
-    <div class="hronik_text"><%= @article.text.html_safe %></div>
+	<div class="hronik_cover"><%= image_tag(@old.image.url(:show)) %></div>
+    <div class="hronik_text"><%= @old.text.html_safe %></div>
 
 	<div class="hronik_social" style="height: 100px;">
 		<p>Понравилась статья? Расскажи друзьям!</p>

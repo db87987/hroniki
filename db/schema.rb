@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130918080742) do
+ActiveRecord::Schema.define(:version => 20130923104420) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -122,6 +122,44 @@ ActiveRecord::Schema.define(:version => 20130918080742) do
     t.datetime "updated_at",                        :null => false
     t.integer  "watched",            :default => 0
     t.integer  "comments_qty",       :default => 0, :null => false
+  end
+
+  create_table "issues", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "old_tags", :force => true do |t|
+    t.integer  "old_id"
+    t.integer  "tag_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "old_views", :force => true do |t|
+    t.integer  "old_id"
+    t.string   "session_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "old_views", ["old_id", "session_id"], :name => "index_old_views_on_old_id_and_session_id", :unique => true
+  add_index "old_views", ["old_id"], :name => "index_old_views_on_old_id"
+
+  create_table "olds", :force => true do |t|
+    t.string   "title"
+    t.date     "date"
+    t.text     "text"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "sn",                 :default => 1
+    t.integer  "issue_id"
+    t.integer  "comments_qty",       :default => 0
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   create_table "session_hroniks", :force => true do |t|

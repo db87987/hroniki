@@ -11,7 +11,7 @@
 	  </div>
   <%= calendar @date do |date| %>
    
-    <% if @hroniks_by_date[date] %>
+    <% if @events_by_date[date] %>
        <%= link_to date.day, calendar_path(:date => date) %>
 	<% else %>
 	   <%= date.day %>

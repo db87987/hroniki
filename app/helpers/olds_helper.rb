@@ -1,0 +1,2 @@
+module OldsHelper
+end

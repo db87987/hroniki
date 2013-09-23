@@ -34,6 +34,18 @@ namespace :db do
     
   end
   
+  task :import_issues => :environment do
+    
+    Issue.destroy_all
+    
+    Issue.populate 10 do |issue|
+      issue.title = Faker::Lorem.words(1)[0].capitalize
+    end
+    
+    puts "Issues created!"
+    
+  end
+  
   task :import_articles => :environment do
     
     Article.destroy_all
@@ -48,6 +60,24 @@ namespace :db do
     Article.all.each { |article| article.image = File.open(Dir.glob(File.join(Rails.root, 'covers', '*')).sample); article.save! }
     
     puts "Articles created!"
+    
+  end
+  
+  task :import_olds => :environment do
+    
+    Old.destroy_all
+    
+    Old.populate 30 do |old|
+      old.title = Faker::Lorem.words(1)[0].capitalize
+      old.date = Date.today + rand(200)
+      old.text = Populator.sentences(30..50)
+      old.issue_id = Issue.all.sample.id
+      old.comments_qty = 0
+    end
+    Old.all.each { |old| old.tags << Tag.all.sample; old.save! }
+    Old.all.each { |old| old.image = File.open(Dir.glob(File.join(Rails.root, 'covers', '*')).sample); old.save! }
+    
+    puts "Olds created!"
     
   end
 end

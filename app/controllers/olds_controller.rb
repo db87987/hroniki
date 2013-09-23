@@ -1,18 +1,23 @@
-class ArticlesController < ApplicationController
+class OldsController < ApplicationController
   def index
-    @articles = Article.all
+    @olds = Old.all
+  end
+  
+  def issue
+    @olds = Old.where(:issue_id => params[:issue_id])
+    render 'index'
   end
 
-  def show 
+  def show
     @hroniks = Hronik.limit(3)
     
     @events_by_date = (Article.all + Hronik.all + Old.all).group_by(&:date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     
-    @article = Article.find(params[:id])
+    @old = Old.find(params[:id])
     session_id = request.session_options[:id]
     begin
-      ArticleView.create(:article_id => @article.id, :session_id => session_id)
+      OldView.create(:old_id => @old.id, :session_id => session_id)
     rescue ActiveRecord::RecordNotUnique
       nil
     end
@@ -24,12 +29,12 @@ class ArticlesController < ApplicationController
     hash = Digest::MD5.hexdigest(api_secret+params[:date]+params[:num]+last_comment)
     sign = params[:sign]
     if hash == sign
-      @article = Article.find(params[:id])
-      @article.comments_qty = params[:num]
-      @article.save
+      @old = Old.find(params[:id])
+      @old.comments_qty = params[:num]
+      @old.save
     else
       nil
     end
-      render nothing: true
+    render nothing: true
   end
 end
