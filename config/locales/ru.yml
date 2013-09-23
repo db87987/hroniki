@@ -45,6 +45,8 @@ ru:
         title: "Название"
       issue:
         title: "Название"
+        date: "Дата"
+        image: "Изображение"
       old:
         title: "Название"
         issue_id: "Номер выпуска"
