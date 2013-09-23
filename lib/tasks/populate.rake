@@ -40,7 +40,10 @@ namespace :db do
     
     Issue.populate 10 do |issue|
       issue.title = Faker::Lorem.words(1)[0].capitalize
+      issue.date = Date.today + rand(200)
     end
+    
+    Issue.all.each { |issue| issue.image = File.open(Dir.glob(File.join(Rails.root, 'covers', '*')).sample); issue.save! }
     
     puts "Issues created!"
     

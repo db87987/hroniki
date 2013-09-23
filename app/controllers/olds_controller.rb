@@ -1,11 +1,10 @@
 class OldsController < ApplicationController
   def index
-    @olds = Old.all
+    @olds = params[:issue_id] ? Old.where(:issue_id => params[:issue_id]) : Old.all
   end
   
-  def issue
-    @olds = Old.where(:issue_id => params[:issue_id])
-    render 'index'
+  def issues
+    @issues = Issue.all
   end
 
   def show

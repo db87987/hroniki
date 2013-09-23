@@ -2,6 +2,18 @@
     
 	<div class="modal-header">
 		Предложить свой сюжет для «хроник»
+		
+		<%= link_to "Закрыть", "#", :class => 'close_modal' %>
+	</div>
+	
+	<div class="modal-content">
+		<div class="date">
+		  <span><%= Russian::strftime(Time.now, "%d") %></span>
+		  <%= Russian::strftime(Time.now, "%d %B")[3..-1] %>
+		</div>
+		<div class="date-text">
+			В этот день в 1929 году датируется первая публикация сказки Чуковского «Айболит» датируется 1929 года
+		</div>
 	</div>
 	
 	

@@ -5,6 +5,14 @@ $(document).ready(function() {
 		$("#modal").show();
 	});
 	
+	$(".close_modal").on('click', function () {
+		$(".wrapper, .footer").removeClass("blur");
+		$("#modal").hide();
+	});
+	
+	
+	
+	
 });
 
 

@@ -33,7 +33,7 @@
 <div class="container" style="margin-top: 200px; margin-bottom: 100px;">
 <div class="row">
   <div class="span6">
-    <%= link_to issue_path(:issue_id => @old.issue_id), :class => 'link_to_back' do %>&larr; Назад, к статьям выпуска<% end %>
+    <%= link_to olds_path(:issue_id => @old.issue_id), :class => 'link_to_back' do %>&larr; Назад, к статьям выпуска<% end %>
 	<div style="margin-top: 20px; margin-bottom: 20px;">
 	<h1 style="color: #4c4c4c;"><%= @old.title %></h1>
 	<div style="margin-top: 10px;">
@@ -44,7 +44,7 @@
 	</div>
   </div>
   <div class="span3">
-	<%= link_to issue_path(:issue_id => @old.issue_id) do %>
+	<%= link_to olds_path(:issue_id => @old.issue_id) do %>
 	<div class="issue_title"><%= issue_title(@old.issue_id) %></div>
 	<% end%>
   </div>

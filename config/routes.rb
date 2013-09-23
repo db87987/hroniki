@@ -6,7 +6,7 @@ Hroniki::Application.routes.draw do
   resources :articles
   match '/articles/comment' => 'articles#comment', :via => :post
   
-  match '/olds/issue' => 'olds#issue', :via => :get, :as => :issue
+  match '/olds/issues' => 'olds#issues', :via => :get, :as => :issues
   resources :olds
   match '/olds/comment' => 'olds#comment', :via => :post
   
