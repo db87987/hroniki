@@ -42,7 +42,7 @@ module CalendarHelper
     end
     
     def has_events?(day)
-      if Hronik.find_by_date(day) || Article.find_by_date(day) || Old.find_by_date(day) then true end
+      if Hronik.find_by_date(day) || Article.find_by_date(day) then true end
     end
 
     def weeks

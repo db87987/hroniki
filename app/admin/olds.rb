@@ -7,7 +7,6 @@ ActiveAdmin.register Old do
    index do
      column :id
      column :title
-     column :date
      column :image do |column|
        image_tag column.image.url(:ico)
      end
@@ -21,7 +20,6 @@ ActiveAdmin.register Old do
      f.inputs t('properties') do
        f.input :title
        f.input :issue_id, :as => :select, :collection => Issue.all, :prompt => :false
-       f.input :date
        f.input :image, :as => :file, :hint => ( f.object.new_record? || !f.object.image ) ? nil : image_tag(f.object.image.url(:ico))
        f.input :text, :as => :ckeditor, :label => false
      end
@@ -39,7 +37,6 @@ ActiveAdmin.register Old do
         issue = Issue.find(article.issue_id)
         link_to issue.title, admin_issue_path(issue)
       end
-      row :date
       row :image do |cover|
         image_tag article.image.url(:side)
       end

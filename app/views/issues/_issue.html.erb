@@ -3,7 +3,7 @@
 	<%= image_tag(issue.image.url(:cover)) %>
   </div>
   <div class="article_content">
-	<p><%= Russian::strftime(issue.date, "%d %B") %></p>
+	<p><%= Russian::strftime(issue.date, "%B %Y") %></p>
 	<h1 style="color: #4c4c4c;"><%= issue.title %></h1>
 	<ul>
 	<% issue.olds.each do |old| %>
