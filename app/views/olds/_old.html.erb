@@ -1,5 +1,4 @@
 <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
-	<p><%= Russian::strftime(old.date, "%d %B") %></p>
 	<%= link_to old.title, old, :class=> 'hroniki_title_link' %><br>
 	<div class="hroniki_tags">
 	<% old.tags.limit(3).each do |tag| %>
