@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
 	$("#suggest_hronik").on('click', function () {
-		$(".page_content").addClass("blur");
+		$(".wrapper, .footer").addClass("blur");
 		$("#modal").show();
 	});
 	
@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 $(document).keyup(function(e) {
   if (e.keyCode == 27) { 
-	$(".page_content").removeClass("blur");
+	$(".wrapper, .footer").removeClass("blur");
 	$("#modal").hide();
 	 }   // esc
 });
