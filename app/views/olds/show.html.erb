@@ -32,7 +32,7 @@
 
 <div class="container" style="margin-top: 200px; margin-bottom: 100px;">
 <div class="row">
-  <div class="span12">
+  <div class="span6">
     <%= link_to issue_path(:issue_id => @old.issue_id), :class => 'link_to_back' do %>&larr; Назад, к статьям выпуска<% end %>
 	<div style="margin-top: 20px; margin-bottom: 20px;">
 	<h1 style="color: #4c4c4c;"><%= @old.title %></h1>
@@ -43,6 +43,14 @@
 	</div>
 	</div>
   </div>
+  <div class="span3">
+	<%= link_to issue_path(:issue_id => @old.issue_id) do %>
+	<div class="issue_title"><%= issue_title(@old.issue_id) %></div>
+	<% end%>
+  </div>
+	
+
+
 
   <div class="span9">
 	<div class="hronik_cover"><%= image_tag(@old.image.url(:show)) %></div>
