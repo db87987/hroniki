@@ -1,6 +1,11 @@
 class OldsController < ApplicationController
   def index
-    @olds = params[:issue_id] ? Old.where(:issue_id => params[:issue_id]) : Old.all
+    if params[:issue_id]
+      @olds = Old.where(:issue_id => params[:issue_id])
+      @issue = Issue.find(params[:issue_id])
+    else
+      @olds = Old.all
+    end
   end
   
   def issues
