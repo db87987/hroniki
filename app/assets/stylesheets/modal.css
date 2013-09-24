@@ -73,12 +73,13 @@
 	cursor: pointer;
 }
 
-#modal .modal-content .date span#number {
+#modal .modal-content .date #number {
 	font-size: 60px;
 }
 
-#modal .modal-content .date span#month {
+#modal .modal-content .date #month {
 	text-align: center;
+	text-transform: capitalize
 }
 
 

@@ -10,8 +10,8 @@
 	<div class="modal-content">
 		
 		<div class="date" id="date">
-		  <span id="number"><%= Russian::strftime(Time.now, "%d") %></span>
-		  <span id="month"><%= Russian::strftime(Time.now, "%d %B")[3..-1] %></span>
+		  <div id="number"><%= Russian::strftime(Time.now, "%d") %></div>
+		  <div id="month"><%= Russian::strftime(Time.now, "%d %B")[3..-1] %></div>
 		</div>
 		<div class="suggest-body">
 			<%= hidden_field_tag :alt_date %>
