@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	
+	
+	
 	$("#suggest_hronik").on('click', function () {
 		$(".wrapper, .footer").addClass("blur");
 		$("#modal").show();
@@ -37,10 +39,10 @@ $(document).ready(function() {
     }
     });
 
-/*
+
 	$(".wrapper, .footer").addClass("blur");
 	$("#modal").show();
-*/
+
 
 	
 	
