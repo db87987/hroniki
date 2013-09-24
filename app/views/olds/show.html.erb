@@ -38,7 +38,7 @@
 	<h1 style="color: #4c4c4c;"><%= @old.title %></h1>
 	<div style="margin-top: 10px;">
 	<% @old.tags.each do |tag| %>
-	  <%= link_to tag.title, "#", :class=> 'tag_link' %>
+	  <%= link_to tag.title, tags_path(:tag_ids => tag.id), :class=> 'tag_link' %>
 	<% end %>
 	</div>
 	</div>

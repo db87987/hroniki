@@ -1,5 +1,5 @@
 <div class="span12" style="margin-top: 20px; margin-bottom: 40px;">
-  <div class="article_image">
+  <div class="article_image" onclick="location.href='/articles/<%= article.id %>'">
 	<%= image_tag(article.image.url(:side)) %>
   </div>
   <div class="article_content">
