@@ -101,7 +101,7 @@
 	height: 30px;
 	margin-bottom: 15px;
 	font-family: 'PT Serif';
-	color: #7f7f7f;
+	color: black;
 	font-size: 12px;
 	resize: none; 
 	border: none;
@@ -114,7 +114,7 @@
 
 #new_suggest input[type="text"].suggest_title {
 	font-family: 'PT Serif';
-	color: #7f7f7f;
+	color: black;
 	border: none;
 	font-size: 24px;
 	width: 306px;
@@ -128,7 +128,7 @@
 	height: 260px;
 	margin-top: 30px;
 	font-family: 'PT Serif';
-	color: #7f7f7f;
+	color: black;
 	font-size: 12px;
 	resize: none; 
 	border: none;
@@ -141,7 +141,7 @@
 
 #new_suggest input[type="text"].suggest_author {
 	font-family: 'PT Sans';
-	color: #7f7f7f;
+	color: black;
 	border: none;
 	font-size: 16px;
 	width: 150px;
@@ -168,8 +168,7 @@
 
 #new_suggest .suggest_file #file  {
 	font-family: 'PT Sans Caption';
-	color: #8c8c8c;
-	font-weight: bold;
+	color: black;
 }
 
 
