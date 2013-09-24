@@ -13,4 +13,10 @@ class StaticPagesController < ApplicationController
     @hroniks = Hronik.where(:date => params[:date])
     @articles = Article.where(:date => params[:date])
   end
+  
+  def tags
+    @hroniks = Hronik.includes(:tags).where("tags.id" => params[:tag_ids]) 
+    @articles = Article.includes(:tags).where("tags.id" => params[:tag_ids]) 
+    @olds = Old.includes(:tags).where("tags.id" => params[:tag_ids]) 
+  end
 end

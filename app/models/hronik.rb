@@ -9,7 +9,7 @@ class Hronik < ActiveRecord::Base
   
   has_many :session_hroniks
   
-  validates :cover, :date, :text, :title, presence: true
+  validates :date, :text, :title, presence: true
     
   has_attached_file :cover, :styles => { 
     :ico => {:geometry => "100x100#"}, 

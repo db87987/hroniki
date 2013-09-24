@@ -12,7 +12,7 @@
   <%= image_tag @hronik.cover.url(:original), :id => "main" %>
 </div>
 
-<%= form_for @hronik do |f| %>
+<%= form_for @product_image do |f| %>
 <% %w[x y w h].each do |attribute| %>
 <%= f.hidden_field "crop_#{attribute}" %>
 <% end %>
