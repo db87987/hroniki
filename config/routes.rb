@@ -1,5 +1,5 @@
 Hroniki::Application.routes.draw do
-  
+  resources :suggests
   resources :hroniks
   match '/hroniks/comment' => 'hroniks#comment', :via => :post
 

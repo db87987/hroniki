@@ -8,7 +8,7 @@
   <%= yield :head %>
 </head>
 <body>	
-		<%= render :partial => 'shared/hronik_suggest' %>
+		<%= render :partial => 'shared/hronik_suggest', :locals => { :@suggest => Suggest.new } %>
         <div class="wrapper">
             <%= render 'layouts/header' %>
 		    <%= yield %>

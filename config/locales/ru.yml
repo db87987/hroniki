@@ -18,6 +18,9 @@ ru:
       hronik:
         one: "Хроника"
         other: "Хроники"
+      suggest:
+        one: "Предложение"
+        other: "Предложения"
       tag:
         one: "Тэг"
         other: "Тэги"
@@ -53,3 +56,11 @@ ru:
         date: "Дата"
         image: "Изображение"
         text: "Текст"
+      suggest:
+        date: "Дата"
+        title: "Заголовок"
+        comment: "Комментарий"
+        text: "Текст"
+        author: "Автор"
+        approved: "Проверено"
+        image: "Изображение"

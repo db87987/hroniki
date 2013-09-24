@@ -10,13 +10,12 @@
     position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
     left: 25%; /* positions the div half way horizontally */
     top: 25%; /* positions the div half way vertically */
-    background-color: #ffffff;
-    width: 50%;
+    width: 690px;
     height: 50%;
     z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
 }
 
-#feedback_sent {
+#feedback_sent, #suggest_sent {
 	display: none;
 	font-family: 'PT Serif Caption';
 	font-size: 30px;
@@ -57,7 +56,10 @@
 }
 
 #modal .modal-content {
-	padding: 20px 30px 20px 30px
+	padding: 20px 30px 20px 30px;
+	background-color: #ffffff;
+	float: left;
+	width: 630px;
 }
 
 #modal .modal-content .date {
@@ -74,10 +76,105 @@
 	font-size: 60px;
 }
 
-#modal .modal-content .date-text {
+#modal .modal-content .suggest-body {
 	font-family: 'PT Serif';
 	font-size: 12px;
-	width: 250px;
+	width: 310px;
 	float: left;
-	margin-left: 30px;
+	margin-left: 10px;
 }
+
+#modal .modal-content .suggest-body img {
+	display: block;
+	margin-top: 25px;
+	float: left;
+}
+
+
+#modal .modal-content .suggest-side {
+	width: 220px;
+	float: left;
+	margin-left: 20px;
+}
+
+#new_suggest textarea.comment {
+	height: 30px;
+	margin-bottom: 15px;
+	font-family: 'PT Serif';
+	color: #7f7f7f;
+	font-size: 12px;
+	resize: none; 
+	border: none;
+	width: 304px;
+}
+
+#new_suggest textarea.comment:focus {
+	border: none;
+}
+
+#new_suggest input[type="text"].suggest_title {
+	font-family: 'PT Serif';
+	color: #7f7f7f;
+	border: none;
+	font-size: 24px;
+	width: 306px;
+}
+
+#new_suggest input[type="text"].suggest_title:focus  {
+	border: none;
+}
+
+#new_suggest textarea.suggest_text {
+	height: 260px;
+	margin-top: 30px;
+	font-family: 'PT Serif';
+	color: #7f7f7f;
+	font-size: 12px;
+	resize: none; 
+	border: none;
+	width: 304px;
+}
+
+#new_suggest textarea.suggest_text:focus {
+	border: none;
+}
+
+#new_suggest input[type="text"].suggest_author {
+	font-family: 'PT Sans';
+	color: #7f7f7f;
+	border: none;
+	font-size: 16px;
+	width: 150px;
+	height: 30px;
+	display: block;
+	float: right;
+	margin-top: 12px;
+}
+
+#new_suggest input[type="text"].suggest_author:focus  {
+	border: none;
+}
+
+#suggest_image {
+	display: none;
+}
+
+#new_suggest .suggest_file  {
+	margin-top: 200px;
+	font-family: 'PT Sans';
+	color: #8c8c8c;
+}
+
+#new_suggest .suggest_file #file  {
+	font-family: 'PT Sans Caption';
+	color: #8c8c8c;
+	font-weight: bold;
+}
+
+
+#new_suggest .suggest_file a  {
+	font-family: 'PT Sans Caption';
+	color: #8c8c8c;
+	font-weight: normal;
+}
+

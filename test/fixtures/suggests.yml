@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2013-09-24
+  comment: MyText
+  title: MyString
+  text: MyText
+  author: MyString
+  image: 
+  approved: false
+
+two:
+  date: 2013-09-24
+  comment: MyText
+  title: MyString
+  text: MyText
+  author: MyString
+  image: 
+  approved: false

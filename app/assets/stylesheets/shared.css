@@ -79,6 +79,15 @@ a:hover {
 	font-size: 14px;
 }
 
+.red_button.suggest {
+	width: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	float: right;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
 .red_button:hover {
 	color: #ffffff;
 	background-color: #ff634d;
@@ -135,7 +144,7 @@ textarea:focus, input:focus, select:focus {
 	font-family: 'PT Serif Caption';
 	color: #bfbfbf;
 	font-size: 16px;
-	border: 1px inset
+	border: 1px inset;
 }
 
 #feedback_page input[type="text"]:focus  {

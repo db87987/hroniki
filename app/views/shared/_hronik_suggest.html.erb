@@ -6,17 +6,44 @@
 		<%= link_to "Закрыть", "#", :class => 'close_modal' %>
 	</div>
 	
+	<%= form_for @suggest, remote: true do |f| %>
 	<div class="modal-content">
+		
 		<div class="date">
 		  <span><%= Russian::strftime(Time.now, "%d") %></span>
 		  <%= Russian::strftime(Time.now, "%d %B")[3..-1] %>
 		</div>
-		<div class="date-text">
-			В этот день в 1929 году датируется первая публикация сказки Чуковского «Айболит» датируется 1929 года
+		<div class="suggest-body">
+			<%= f.text_area :comment, :placeholder => "Краткое описание, максимум 120 символов", :class => 'comment' %>
+			<%= f.text_field :title, :placeholder => "Заголовок", :class => 'suggest_title' %>
+			<%= f.text_area :text, :placeholder => "Добавьте описание", :class => 'suggest_text' %>
+			<%= image_tag('suggest-logo-down.png') %>
+			<%= f.text_field :author, :placeholder => "и Ваше имя", :class => 'suggest_author' %>
 		</div>
+		
+		<div class="suggest-side">
+			<%= image_tag('suggest-logo-top.png') %>
+			
+			<div class="suggest_file">
+			  Прикрепите изображение<br> (jpg, gif, png, не более 3 Мб)
+			  <%= f.file_field :image %>
+			  <div id="file"><%= link_to "Выбрать файл", "#" %></div>
+			</div>
+		</div>
+		
+		
 	</div>
+	
+
+	
+	<% end %>
+	
+	<%= link_to "Поделиться открыткой с друзьями", "#", :class => 'red_button suggest', :id => 'suggest_share' %>
+	<%= link_to "Отправить сюжет в редакцию", "#", :class => 'red_button suggest', :id => 'suggest_submit' %>
 	
 	
 
 
 </div>
+
+<div id="suggest_sent">Спасибо за ваш сюжет!</div>
