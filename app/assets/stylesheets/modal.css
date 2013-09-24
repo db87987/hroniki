@@ -113,6 +113,7 @@
 	resize: none; 
 	border: none;
 	width: 304px;
+	text-overflow:ellipsis
 }
 
 #new_suggest textarea.comment:focus {
