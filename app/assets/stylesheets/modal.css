@@ -34,7 +34,7 @@
 	font-family: 'PT Sans Caption';
 	color: #e9f0f4;
 	font-size: 16px;
-	height: 34px;
+	height: 39px;
 	padding-top: 16px;
 	padding-left: 20px;
 	background-color: #7f7f7f;
@@ -66,20 +66,25 @@
 	font-family: 'PT Serif';
 	color: #7f7f7f;
 	line-height: 0.9;
-	width: 70px;
+	width: 60px;
+	height: 60px;
 	margin: 0px;
 	padding: 0px;
 	float: left;
 	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: -1px;
 }
 
 #modal .modal-content .date #number {
-	font-size: 60px;
+	font-size: 50px;
+	
 }
 
 #modal .modal-content .date #month {
 	text-align: center;
-	text-transform: capitalize
+	text-transform: capitalize;
+	font-size: 14px;
 }
 
 
@@ -88,7 +93,7 @@
 	font-size: 12px;
 	width: 310px;
 	float: left;
-	margin-left: 10px;
+	margin-left: 24px;
 }
 
 #modal .modal-content .suggest-body img {
@@ -100,19 +105,21 @@
 
 #modal .modal-content .suggest-side {
 	width: 220px;
-	float: left;
-	margin-left: 20px;
+	float: right;
+	margin-left: 16px;
+	margin-top: 24px;
+	
 }
 
 #new_suggest textarea.comment {
 	height: 30px;
-	margin-bottom: 15px;
+	margin-top: 27px;
 	font-family: 'PT Serif';
 	color: black;
 	font-size: 12px;
 	resize: none; 
 	border: none;
-	width: 304px;
+	width: 276px;
 	text-overflow:ellipsis
 }
 
@@ -121,6 +128,7 @@
 }
 
 #new_suggest input[type="text"].suggest_title {
+	margin-top: 24px;
 	font-family: 'PT Serif';
 	color: black;
 	border: none;
@@ -135,9 +143,9 @@
 #new_suggest textarea.suggest_text {
 	height: 260px;
 	margin-top: 30px;
-	font-family: 'PT Serif';
+	font-family: 'PT Sans Narrow';
 	color: black;
-	font-size: 12px;
+	font-size: 16px;
 	resize: none; 
 	border: none;
 	width: 304px;
@@ -172,17 +180,21 @@
 	margin-top: 200px;
 	font-family: 'PT Sans';
 	color: #8c8c8c;
+	font-size: 14px;
+	letter-spacing: -1px;
 }
 
 #new_suggest .suggest_file #file  {
-	font-family: 'PT Sans Caption';
 	color: black;
 }
 
 
 #new_suggest .suggest_file a  {
-	font-family: 'PT Sans Caption';
-	color: #8c8c8c;
+	color: #bfbfbf;
 	font-weight: normal;
+}
+
+#new_suggest .suggest_file a:hover  {
+	color: black;
 }
 
