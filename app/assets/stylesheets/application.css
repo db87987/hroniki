@@ -21,4 +21,5 @@
  *= require sticky_footer
  *= require modal
  *= require calendar
+ *= require jquery.ui.datepicker
  */

@@ -70,11 +70,17 @@
 	margin: 0px;
 	padding: 0px;
 	float: left;
+	cursor: pointer;
 }
 
-#modal .modal-content span {
+#modal .modal-content .date span#number {
 	font-size: 60px;
 }
+
+#modal .modal-content .date span#month {
+	text-align: center;
+}
+
 
 #modal .modal-content .suggest-body {
 	font-family: 'PT Serif';
