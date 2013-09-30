@@ -1,0 +1,6 @@
+$('#hroniks').append('<%= j render(@hroniks) %>');
+<% if @hroniks.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@hroniks) %>');
+<% else %>
+  $('.pagination').remove();
+<% end %>
