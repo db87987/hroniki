@@ -1,7 +1,12 @@
+# coding: utf-8
+
 class HroniksController < InheritedResources::Base
   
   def create
     @hronik = Hronik.new(params[:hronik])
+    @hronik.from_visitor = true
+    @hronik.published = true
+    @hronik.tags << Tag.find_by_title('Читательские хроники')
     if @hronik.save
       result = {status: 'ok'}
     else
