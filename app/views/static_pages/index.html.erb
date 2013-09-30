@@ -12,7 +12,7 @@
 	
 	  <div class="span8" style="margin-top: 20px;">
 		<%= link_to (Russian::strftime(@hronik.date, "%d %B") + " " + @hronik.title), hronik_path(@hronik), :class=> 'title_link' %>
-		<p>В 1959 году родился Хью Лори, актёр, писатель и музыкант</p>
+		<p><%= @hronik.short %></p>
 		<%= link_to "Смотреть", hronik_path(@hronik), :class=> 'small_link' %>
 	  </div>
 	

@@ -39,6 +39,7 @@ ru:
         date: "Дата"
         cover: "Изображение"
         text: "Текст"
+        short: "Краткий текст"
       article:
         title: "Название"
         date: "Дата"

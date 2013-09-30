@@ -48,7 +48,10 @@
 
   <div class="span9">
 	<div class="hronik_cover"><%= image_tag(@hronik.cover.url(:show)) %></div>
-    <div class="hronik_text"><%= @hronik.text.html_safe %></div>
+    <div class="hronik_text">
+	  <p><b><%= @hronik.short %></b></p>
+	  <%= @hronik.text.html_safe %>
+	</div>
 
 	<div class="hronik_social">
 		<p>Понравился сюжет? Расскажи друзьям!</p>

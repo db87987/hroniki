@@ -1,7 +1,7 @@
 # coding: utf-8
 
 class Hronik < ActiveRecord::Base
-  attr_accessible :cover, :date, :text, :title, :tag_ids, :crop_x, :crop_y, :crop_w, :crop_h
+  attr_accessible :cover, :date, :text, :title, :tag_ids, :crop_x, :crop_y, :crop_w, :crop_h, :short
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
   default_scope order('date DESC')
   
