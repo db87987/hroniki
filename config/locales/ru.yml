@@ -33,6 +33,9 @@ ru:
       issue:
         one: "Выпуск"
         other: "Выпуски"
+      feedback:
+        one: "Отзыв"
+        other: "Отзывы"
     attributes:
       hronik:
         title: "Название"

@@ -243,6 +243,11 @@ textarea:focus, input:focus, select:focus {
 	color: #ff634d;
 }
 
+.feedback_answer {
+	opacity: 0.6;
+	margin-top: 20px;
+}
+
 .yellow_cation {
 	background-color: #fff0aa;
 	text-align: center;

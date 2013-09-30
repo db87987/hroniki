@@ -43,6 +43,13 @@
 	  <div class="feedback_text">
 		<p><%= feedback.feedback %></p>
 	  </div>
+	  
+	  <% if feedback.comment? %>
+	  <div class="feedback_answer">
+		<p style="color: #ff634d;">Наш ответ</p>
+		<p><%= feedback.comment %></p>
+	  </div>
+	  <% end %>
     </div>
 	</div>
 	
