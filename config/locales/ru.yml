@@ -44,6 +44,8 @@ ru:
         text: "Текст"
         short: "Краткий текст"
         published: "Опубликована"
+        from_visitor: "От посетителя"
+        moderated: "Проверена"
       article:
         title: "Название"
         date: "Дата"

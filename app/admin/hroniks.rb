@@ -1,6 +1,6 @@
 ActiveAdmin.register Hronik do
   config.batch_actions = false
-  config.clear_sidebar_sections!
+  filter :from_visitor, :as => :select
   config.sort_order = "created_at_desc"
   
    index do
