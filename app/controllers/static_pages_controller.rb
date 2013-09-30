@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def index
-    @hroniks = Hronik.limit(9)
-    @hronik = Hronik.all.sample
+    @slider_hroniks = Hronik.published.limit(3)
+    @hroniks = Hronik.published.limit(9)
   end
   
   def feedback
@@ -10,12 +10,12 @@ class StaticPagesController < ApplicationController
   end
   
   def calendar
-    @hroniks = Hronik.where(:date => params[:date])
+    @hroniks = Hronik.published.where(:date => params[:date])
     @articles = Article.where(:date => params[:date])
   end
   
   def tags
-    @hroniks = Hronik.includes(:tags).where("tags.id" => params[:tag_ids]) 
+    @hroniks = Hronik.published.includes(:tags).where("tags.id" => params[:tag_ids]) 
     @articles = Article.includes(:tags).where("tags.id" => params[:tag_ids]) 
     @olds = Old.includes(:tags).where("tags.id" => params[:tag_ids]) 
   end

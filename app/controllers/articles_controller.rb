@@ -4,9 +4,9 @@ class ArticlesController < ApplicationController
   end
 
   def show 
-    @hroniks = Hronik.limit(3)
+    @hroniks = Hronik.published.limit(3)
     
-    @events_by_date = (Article.all + Hronik.all).group_by(&:date)
+    @events_by_date = (Article.all + Hronik.published.all).group_by(&:date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     
     @article = Article.find(params[:id])

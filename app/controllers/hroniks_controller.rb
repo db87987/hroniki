@@ -1,9 +1,9 @@
 class HroniksController < InheritedResources::Base
   
   def show 
-    @hroniks = Hronik.limit(3)
+    @hroniks = Hronik.published.limit(3)
     
-    @events_by_date = (Article.all + Hronik.all).group_by(&:date)
+    @events_by_date = (Article.all + Hronik.published.all).group_by(&:date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     
     @hronik = Hronik.find(params[:id])
@@ -37,7 +37,7 @@ class HroniksController < InheritedResources::Base
   end
   
   def index
-    @hroniks = Hronik.order("date DESC").page(params[:page]).per_page(3)
+    @hroniks = Hronik.published.order("date DESC").page(params[:page]).per_page(3)
   end
   
 end

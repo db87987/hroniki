@@ -75,9 +75,7 @@ $(document).ready(function() {
 	  $(this).removeClass('input_error');	
     }
   });
-	
-	
-	
+ 	
 	
 	
 	

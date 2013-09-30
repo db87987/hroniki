@@ -2,18 +2,24 @@
 	
 	<div class="row header-image">
     
-	<div class="span12">
-	    <%= image_tag @hronik.cover.url(:main) %>
-	 </div>
+	 <div id="slider">
+     <% @slider_hroniks.each do |hronik| %>
+     <div class="slide">
+	 	 <div class="span12">
+		    <%= image_tag hronik.cover.url(:main) %>
+		 </div>
 
-      <div class="span4">
-	    <%= link_to "Смотреть все хроники", hroniks_path, :class=> 'yellow_link' %>
-	  </div>
+	     <div class="span4">
+		    <%= link_to "Смотреть все хроники", hroniks_path, :class=> 'yellow_link' %>
+		 </div>
 	
-	  <div class="span8" style="margin-top: 20px;">
-		<%= link_to (Russian::strftime(@hronik.date, "%d %B") + " " + @hronik.title), hronik_path(@hronik), :class=> 'title_link' %>
-		<p><%= @hronik.short %></p>
-		<%= link_to "Смотреть", hronik_path(@hronik), :class=> 'small_link' %>
+		 <div class="span8" style="margin-top: 20px;">
+			<%= link_to (Russian::strftime(hronik.date, "%d %B") + " " + hronik.title), hronik_path(hronik), :class=> 'title_link' %>
+			<p><%= hronik.short %></p>
+			<%= link_to "Смотреть", hronik_path(hronik), :class=> 'small_link' %>
+		 </div>
+	  </div>
+	  <% end %>
 	  </div>
 	
 	  <div class="span12" style="margin-top: 20px;">
