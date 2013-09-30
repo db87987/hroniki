@@ -6,7 +6,7 @@
 	<p><%= Russian::strftime(article.date, "%d %B") %></p>
 	<h1 style="color: #4c4c4c;"><%= article.title %></h1>
 	<div class="hroniki_tags">
-	<% article.tags.limit(3).each do |tag| %>
+	<% article.tags.all.each do |tag| %>
 	   <%= link_to tag.title, tags_path(:tag_ids => tag.id), :class=> 'tag_link' %>
 	<% end %>
 	</div>

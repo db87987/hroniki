@@ -1,7 +1,7 @@
 <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
 	<%= link_to old.title, old, :class=> 'hroniki_title_link' %><br>
 	<div class="hroniki_tags">
-	<% old.tags.limit(3).each do |tag| %>
+	<% old.tags.all.each do |tag| %>
 	   <%= link_to tag.title, tags_path(:tag_ids => tag.id), :class=> 'tag_link' %>
 	<% end %>
 	</div>
