@@ -35,9 +35,9 @@ $(document).ready(function() {
 	$('#new_hronik').on('ajax:success', function(data, response, xhr) {
     if (response.status == 'ok') {
       scroll(0,0)
-	  $(".wrapper, .footer").removeClass("blur");
+	  $(".wrapper, .footer").removeClass("blur").delay(1000);
 	  $("#modal").hide();
-      $('#suggest_sent').show().fadeOut(4000);
+      $('#hronik_sent').show().fadeOut(4000);
     }
     else{
       $('#suggest_errors').html(response.errors.join('<br>'));
