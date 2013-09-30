@@ -1,6 +1,6 @@
 class Old < ActiveRecord::Base
   attr_accessible :date, :issue_id, :sn, :text, :title, :image, :tag_ids
-  default_scope order('created_at DESC')
+  default_scope order('date DESC')
   
   has_many :old_tags
   has_many :tags, through: :old_tags
