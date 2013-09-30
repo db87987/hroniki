@@ -15,11 +15,11 @@
 	<%= f.text_field :name %>
 	<%= f.label :feedback, "Добавьте отзыв или предложение" %>
 	<%= f.text_area :feedback %>
-	<%= f.hidden_field :feedback_type %>
+	<%= f.hidden_field :feedback_type, :value => 'like' %>
 	<%= link_to "Можно отправлять", "#", :class => 'red_button', :id => 'feedback_submit' %>
 	</div>
 	<div style="float: left; margin-left: 150px; width: 220px;">
-	<%= link_to "Мне нравится!", "#", :class => 'like_link like', :id => 'like' %>
+	<%= link_to "Мне нравится!", "#", :class => 'like_link like active', :id => 'like' %>
 	<%= link_to "Не понравилось", "#", :class => 'like_link un_like', :id => 'unlike' %>
 	</div>
 	<% end %>

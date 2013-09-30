@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
   attr_accessible :date, :image, :text, :title, :tag_ids
+  default_scope order('created_at DESC')
   
   has_many :article_tags
   has_many :tags, through: :article_tags
