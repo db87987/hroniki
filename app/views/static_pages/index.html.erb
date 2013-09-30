@@ -5,8 +5,10 @@
 	 <div id="slider">
      <% @slider_hroniks.each do |hronik| %>
      <div class="slide">
-	 	 <div class="span12">
+	 	 <div class="span12 slide_image">
 		    <%= image_tag hronik.cover.url(:main) %>
+			<%= image_tag('left_arrow.png', :id => 'left_arrow') %>
+			<%= image_tag('left_arrow.png', :id => 'right_arrow') %>
 		 </div>
 
 	     <div class="span4">

@@ -5,3 +5,15 @@
 .slide:first-child {
 	display: block;
 }
+
+#left_arrow {
+	position: absolute;
+	top: 200px;
+	right: 260px;
+}
+
+#right_arrow {
+	position: absolute;
+	top: 200px;
+	right: 200px;
+}
