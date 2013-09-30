@@ -1,5 +1,15 @@
 class HroniksController < InheritedResources::Base
   
+  def create
+    @hronik = Hronik.new(params[:hronik])
+    if @hronik.save
+      result = {status: 'ok'}
+    else
+      result = {errors: @suggest.errors.full_messages}
+    end
+    render json: result
+  end
+  
   def show 
     @hroniks = Hronik.published.limit(3)
     

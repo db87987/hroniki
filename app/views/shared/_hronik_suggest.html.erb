@@ -6,7 +6,7 @@
 		<%= link_to "Закрыть", "#", :class => 'close_modal' %>
 	</div>
 	
-	<%= form_for @suggest, remote: true do |f| %>
+	<%= form_for @hronik, remote: true do |f| %>
 	<div class="modal-content">
 		
 		<div class="date" id="date">
@@ -16,7 +16,7 @@
 		<div class="suggest-body">
 			<%= hidden_field_tag :alt_date %>
 			<%= f.hidden_field :date %>
-			<%= f.text_area :comment, :placeholder => "Краткое описание, максимум 70 символов", :class => 'comment' %>
+			<%= f.text_area :short, :placeholder => "Краткое описание, максимум 70 символов", :class => 'comment' %>
 			<%= f.text_field :title, :placeholder => "Заголовок", :class => 'suggest_title' %>
 			<%= f.text_area :text, :placeholder => "Добавьте описание", :class => 'suggest_text' %>
 			<%= image_tag('suggest-logo-down.png') %>

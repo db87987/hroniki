@@ -14,11 +14,6 @@ $(document).ready(function() {
 		$('.hroniki_hover_small_container').hide();
 	});
 	
-	$(".hroniki_image_container").mouseleave(function () {
-		$('.hroniki_hover_container').hide();
-		$('.hroniki_hover_small_container').hide();
-	});
-	
 	
 	$("#like").on('click', function () {
 		$(this).addClass('active');
