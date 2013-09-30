@@ -1,6 +1,6 @@
 require 'rvm/capistrano'
 require 'bundler/capistrano'
-
+require "delayed/recipes"  
 load 'deploy/assets'
 
 server "5.178.80.26", :web, :app, :db, primary: true
@@ -51,6 +51,8 @@ namespace(:thin) do
   end
 end
 
-
+after "deploy:stop",    "delayed_job:stop"
+after "deploy:start",   "delayed_job:start"
+after "deploy:restart", "delayed_job:restart"
 before "deploy:assets:precompile", "copy_database_config"
 after "deploy", "deploy:cleanup"

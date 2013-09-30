@@ -22,6 +22,7 @@ class Hronik < ActiveRecord::Base
     :show => {:geometry => "640x460>"},
     :main => {:geometry => "940x510#", :processors => [:cropper]}
   }
+  process_in_background :cover
   
   after_update :reprocess_cover, :if => :cropping? 
   

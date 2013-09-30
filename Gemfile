@@ -9,6 +9,8 @@ gem 'execjs'
 gem 'therubyracer', '~> 0.10.2'
 
 gem "paperclip", "~> 3.0"
+gem 'delayed_paperclip'
+gem 'delayed_job_active_record'
 gem "russian", "~> 0.6.0"
 
 gem "ckeditor"
