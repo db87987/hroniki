@@ -111,7 +111,7 @@
 	
 }
 
-#new_suggest textarea.comment {
+#new_hronik textarea.comment {
 	height: 30px;
 	margin-top: 27px;
 	font-family: 'PT Serif';
@@ -123,11 +123,11 @@
 	text-overflow:ellipsis
 }
 
-#new_suggest textarea.comment:focus {
+#new_hronik textarea.comment:focus {
 	border: none;
 }
 
-#new_suggest input[type="text"].suggest_title {
+#new_hronik input[type="text"].suggest_title {
 	margin-top: 24px;
 	font-family: 'PT Serif';
 	color: black;
@@ -136,11 +136,11 @@
 	width: 306px;
 }
 
-#new_suggest input[type="text"].suggest_title:focus  {
+#new_hronik input[type="text"].suggest_title:focus  {
 	border: none;
 }
 
-#new_suggest textarea.suggest_text {
+#new_hronik textarea.suggest_text {
 	height: 260px;
 	margin-top: 30px;
 	font-family: 'PT Sans Narrow';
@@ -151,11 +151,11 @@
 	width: 304px;
 }
 
-#new_suggest textarea.suggest_text:focus {
+#new_hronik textarea.suggest_text:focus {
 	border: none;
 }
 
-#new_suggest input[type="text"].suggest_author {
+#new_hronik input[type="text"].suggest_author {
 	font-family: 'PT Sans';
 	color: black;
 	border: none;
@@ -168,7 +168,7 @@
 	line-height: 1;
 }
 
-#new_suggest input[type="text"].suggest_author:focus  {
+#new_hronik input[type="text"].suggest_author:focus  {
 	border: none;
 }
 
@@ -176,7 +176,7 @@
 	display: none;
 }
 
-#new_suggest .suggest_file  {
+#new_hronik .suggest_file  {
 	margin-top: 200px;
 	font-family: 'PT Sans';
 	color: #8c8c8c;
@@ -184,17 +184,17 @@
 	letter-spacing: -1px;
 }
 
-#new_suggest .suggest_file #file  {
+#new_hronik .suggest_file #file  {
 	color: black;
 }
 
 
-#new_suggest .suggest_file a  {
+#new_hronik .suggest_file a  {
 	color: #bfbfbf;
 	font-weight: normal;
 }
 
-#new_suggest .suggest_file a:hover  {
+#new_hronik .suggest_file a:hover  {
 	color: black;
 }
 

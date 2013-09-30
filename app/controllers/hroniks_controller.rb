@@ -5,7 +5,7 @@ class HroniksController < InheritedResources::Base
     if @hronik.save
       result = {status: 'ok'}
     else
-      result = {errors: @suggest.errors.full_messages}
+      result = {errors: @hronik.errors.full_messages}
     end
     render json: result
   end

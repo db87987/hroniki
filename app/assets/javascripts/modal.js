@@ -29,15 +29,18 @@ $(document).ready(function() {
 	
 	
 	$("#suggest_submit").on('click', function () {
-		$("#new_suggest").submit();
+		$("#new_hronik").submit();
 	});
 	
-	$('#new_suggest').on('ajax:success', function(data, response, xhr) {
+	$('#new_hronik').on('ajax:success', function(data, response, xhr) {
     if (response.status == 'ok') {
       scroll(0,0)
 	  $(".wrapper, .footer").removeClass("blur");
 	  $("#modal").hide();
       $('#suggest_sent').show().fadeOut(4000);
+    }
+    else{
+      $('#suggest_errors').html(response.errors.join('<br>'));
     }
     });
 
@@ -46,7 +49,7 @@ $(document).ready(function() {
 	
 	$(function() {
 	    $('#alt_date').datepicker({
-		    altField: "#suggest_date",
+		    altField: "#hronik_date",
 			onSelect: function(dateText, inst) 
 			  {
 			  datePieces = dateText.split('.');
@@ -64,7 +67,7 @@ $(document).ready(function() {
 	
 	});
 	
-	$('#suggest_comment').maxlength({   
+	$('#hronik_short').maxlength({   
     events: [], // Array of events to be triggerd    
     maxCharacters: 73, // Characters limit   
     status: false, // True to show status indicator bewlow the element    
@@ -76,7 +79,7 @@ $(document).ready(function() {
     slider: false // True Use counter slider    
   });
 
-	$('#suggest_text').maxlength({   
+	$('#hronik_text').maxlength({   
     events: [], // Array of events to be triggerd    
     maxCharacters: 400, // Characters limit   
     status: false, // True to show status indicator bewlow the element    
