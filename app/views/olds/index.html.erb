@@ -5,7 +5,8 @@
     <h1 style="font-size: 44px"><%= @issue.title %></h1>
     </div>
  <% end %>
- <div class="row">
+ <div class="row" id="olds">
 	<%= render @olds %>
  </div>
+ <%= will_paginate @olds %>
 </div>

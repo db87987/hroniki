@@ -264,3 +264,7 @@ textarea:focus, input:focus, select:focus {
 	border-radius: 4px;
 	background: #ffa599 url('circle-shadow.png') no-repeat 15px 10px;
 }
+
+.pagination {
+	display: none;
+}

@@ -1,10 +1,11 @@
 class OldsController < ApplicationController
   def index
+      @olds = Old.order("date DESC").page(params[:page]).per_page(3)
     if params[:issue_id]
-      @olds = Old.where(:issue_id => params[:issue_id])
+      @olds = @olds.where(:issue_id => params[:issue_id])
       @issue = Issue.find(params[:issue_id])
     else
-      @olds = Old.all
+      @olds = @olds
     end
   end
   

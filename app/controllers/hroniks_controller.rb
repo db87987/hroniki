@@ -37,7 +37,7 @@ class HroniksController < InheritedResources::Base
   end
   
   def index
-    @hroniks = Hronik.all
+    @hroniks = Hronik.order("date DESC").page(params[:page]).per_page(3)
   end
   
 end
