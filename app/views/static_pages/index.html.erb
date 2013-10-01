@@ -1,17 +1,21 @@
 <div class="container">
 	
-	<div class="row header-image">
-    
-	 <div id="slider">
+	<div class="row">
+	<div class="header-image">
+	<div class="slider">
+		
+	
+   	<%= link_to image_tag('left_arrow.png'), "#", :class => 'fwd' %>
+		<%= link_to image_tag('left_arrow.png'), "#", :class => 'bck' %>
+	 <div class="slider2">
+
      <% @slider_hroniks.each do |hronik| %>
      <div class="slide">
-	 	 <div class="span12 slide_image">
+	 	 <div class="slide_img">
 		    <%= image_tag hronik.cover.url(:main) %>
-			<%= image_tag('left_arrow.png', :id => 'left_arrow') %>
-			<%= image_tag('left_arrow.png', :id => 'right_arrow') %>
 		 </div>
 
-	     <div class="span4">
+	     <div class="span3">
 		    <%= link_to "Смотреть все хроники", hroniks_path, :class=> 'yellow_link' %>
 		 </div>
 	
@@ -23,7 +27,8 @@
 	  </div>
 	  <% end %>
 	  </div>
-	
+	  </div>
+	  </div>
 	  <div class="span12" style="margin-top: 20px;">
 		<h3>Что у нас есть нового?</h3>
 	  </div>
@@ -31,7 +36,7 @@
 		<%= render @hroniks %>
 	
 	 	
-	</div>
 	
+	</div>
 		
 </div>

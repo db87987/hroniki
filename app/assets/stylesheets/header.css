@@ -1,5 +1,6 @@
 .header {
 	position: absolute;
+	z-index: 999;
 }
 
 .header_top_menu {
