@@ -121,8 +121,9 @@ a:hover {
 	padding: 20px;
 	width: 900px;
 	margin-top: 20px;
-	margin-bottom: 60px;
 	float: left;
+	display: none;
+	margin-bottom: 60px;
 }
 
 #feedback_page label {

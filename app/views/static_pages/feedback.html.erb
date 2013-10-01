@@ -7,7 +7,7 @@
   </div>
 
   <div id="new_feedback_area">
-  <h1 style="color: #4c4c4c;">Оставьте свой отзыв!</h1>
+  <%= link_to "Оставьте свой отзыв!", "#", :class=> 'hroniki_title_link show_feedback_form' %>
   <div class="wrap">
 	<%= form_for @feedback, remote: true do |f| %>
 	<div style="float: left; width: 530px;">
@@ -26,7 +26,7 @@
   </div>
   </div>
 
-  <h1 style="color: #4c4c4c;">Что о нас думают люди (<%= @feedbacks.count %> <%= Russian.p(@feedbacks.count, "отзыв", "отзыва", "отзывов") %>)</h1>
+  <h1 style="color: #4c4c4c; margin-top: 60px;">Что о нас думают люди (<%= @feedbacks.count %> <%= Russian.p(@feedbacks.count, "отзыв", "отзыва", "отзывов") %>)</h1>
 
    <% @feedbacks.each do |feedback| %>
 	<div class="feedback">

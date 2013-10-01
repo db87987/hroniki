@@ -70,6 +70,10 @@ $(document).ready(function() {
 	  $(this).removeClass('input_error');	
     }
   });
+
+  $(".show_feedback_form").on('click', function () {
+    $(".wrap").show();
+  });
  	
 	
 	
