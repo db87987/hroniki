@@ -11,7 +11,7 @@
 			<p><%= Russian::strftime(hronik.date, "%d %B") %></p>
 			<%= link_to hronik.title, hronik, :class=> 'hroniki_title_link' %><br>
 			<% hronik.tags.each do |tag| %>
-			  <%= link_to tag.title, "#", :class=> 'tag_link' %>
+			  <%= link_to tag.title, tags_path(:tag_ids => tag.id), :class=> 'tag_link' %>
 			<% end %>
 			<div class="hroniki_image_container">
 			<div class="hroniki_hover_small_container" onclick="location.href='/hroniks/<%= hronik.id %>'">
