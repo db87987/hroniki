@@ -28,6 +28,14 @@
 	position: absolute;
 	top: 200px;
 	right: 100px;
+	height: 38px;
+	width: 38px;
+	background: url('button-left.png');
+	text-indent: -9999px;
+}
+
+.fwd:hover, .bck:hover {
+	background-position: bottom;
 }
 
 .bck {
@@ -35,4 +43,8 @@
 	position: absolute;
 	top: 200px;
 	right: 50px;
+	height: 38px;
+	width: 38px;
+	background: url('button-right.png');
+	text-indent: -9999px;
 }
