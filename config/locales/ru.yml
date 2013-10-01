@@ -71,3 +71,10 @@ ru:
         author: "Автор"
         approved: "Проверено"
         image: "Изображение"
+      feedback:
+        name: "Имя"
+        feedback: "Отзыв"
+        comment: "Ответ"
+        feedback_type: "Тип"
+        published: "Опубликован"
+        sn: "Порядковый номер"

@@ -1,8 +1,11 @@
 ActiveAdmin.register Feedback do
   config.batch_actions = false
   config.clear_sidebar_sections!
+  config.sort_order = "sn_asc"
+  
   
    index do 
+     column :sn
      column :name
      column :feedback_type
      column :feedback
@@ -13,8 +16,9 @@ ActiveAdmin.register Feedback do
 
    form do |f|  
      f.inputs t('properties') do
-       f.input :feedback
+       f.input :sn
        f.input :published
+       f.input :feedback
        f.input :comment
      end
      f.actions
@@ -22,10 +26,12 @@ ActiveAdmin.register Feedback do
 
   show do
     attributes_table do
+      row :sn
       row :name
+      row :published
       row :feedback_type
       row :feedback
-      row :published
+      
       row :comment
     end  
    end  
