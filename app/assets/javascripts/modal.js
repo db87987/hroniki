@@ -2,13 +2,16 @@ $(document).ready(function() {
 	
 	$("#suggest_hronik").on('click', function () {
 		$(".wrapper, .footer").addClass("blur");
+		$(".overlay").show();
 		$("#modal").show();
 	});
 	
-	$(".close_modal").on('click', function () {
+	$(".close_modal, .overlay").on('click', function () {
 		$(".wrapper, .footer").removeClass("blur");
+		$(".overlay").hide();
 		$("#modal").hide();
 	});
+
 
 /*file_input*/	
 
