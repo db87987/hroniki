@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def index
-    @slider_hroniks = Hronik.published.limit(1)
-    @hroniks = Hronik.published.order("date DESC").page(params[:page]).per_page(3)
+    @slider_hroniks = Hronik.published.limit(5)
+    @hroniks = Hronik.published.limit(9)
   end
   
   def feedback

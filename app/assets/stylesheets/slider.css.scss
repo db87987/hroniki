@@ -1,0 +1,38 @@
+.slider{
+  width:  940px;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+.header-image{
+	margin-left: 20px;
+	width: 940px;
+	position: relative;
+	height: 700px;
+}
+.slider2{
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 700px;
+}
+.slide{
+  display: inline-block;
+  width:  940px;
+  height: 700px;
+}
+.fwd {
+	z-index: 100;
+	position: absolute;
+	top: 200px;
+	right: 260px;
+}
+
+.bck {
+	z-index: 100;
+	position: absolute;
+	top: 200px;
+	right: 200px;
+}

@@ -30,7 +30,7 @@ end
 gem 'jquery-rails', '~> 2.3.0'
 gem 'jquery-ui-rails'
 
-group :production do
-  gem 'thin'
-  gem 'mysql2'
-end
+# group :production do
+#   gem 'thin'
+#   gem 'mysql2'
+# end
