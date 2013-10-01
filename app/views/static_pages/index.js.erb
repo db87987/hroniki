@@ -1,10 +1,10 @@
-$('#hroniks').append('<%= j render(@hroniks) %>');
-<% if @hroniks.next_page %>
-  $('.pagination').replaceWith('<%= j will_paginate(@hroniks) %>');
+
+$('#elements').append('<%= j render partial: "element", collection: @elements %>');
+<% if @elements.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate @elements %>');
 <% else %>
   $('.pagination').remove();
 <% end %>
-
 $(".hroniki_image_container").on("mouseover",function () {
 	$(this).find('.hroniki_hover_container').show();
 	$(this).find('.hroniki_hover_small_container').show();

@@ -30,8 +30,11 @@
 	  <div class="span12" style="margin-top: 20px;">
 		<h3>Что у нас есть нового?</h3>
 	  </div>
-	
-		<%= render @hroniks %>
+		
+		<div id="elements">
+			<%= render partial: "element", collection: @elements %>
+		</div>
+		<%= will_paginate @elements %>
 	
 	 	
 	

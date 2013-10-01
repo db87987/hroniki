@@ -1,0 +1,29 @@
+<div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
+	<p><%= Russian::strftime(element.date, "%d %B") %></p>
+	<%= link_to element.title, element, :class=> 'hroniki_title_link' %><br>
+	<div class="hroniki_tags">
+	<% element.tags.all.each do |tag| %>
+	  <%= link_to tag.title, tags_path(:tag_ids => tag.id), :class=> 'tag_link' %>
+	<% end %>
+	</div>
+	<div class="hroniki_image_container">
+	<div class="hroniki_hover_container" onclick="location.href='/hroniks/<%= element.id %>'">
+		<h4 class="title"><%= element.title %></h4>
+		<p style="height: 180px; overflow: hidden;">
+		<% text = strip_tags(element.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>
+		<%= truncate(text, length: 260, omission: '...').html_safe %></p>
+		<div class="panel">
+			<%= image_tag "hroniki_comment.png" %>
+			<span style="margin-right: 10px;"><%= element.comments_qty %></span>
+			<%= image_tag "hroniki_watch.png" %>
+			
+			<%= link_to "читать далее", element %>
+		</div>
+	</div>
+	<% if element.respond_to?(:cover) %>
+	<%= image_tag(element.cover.url(:gallery), :class => "hroniki_image") %>
+	<% else %>
+	<%= image_tag(element.image.url(:gallery), :class => "hroniki_image") %>
+	<% end %>
+	</div>
+</div>

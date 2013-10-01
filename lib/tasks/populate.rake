@@ -16,6 +16,7 @@ namespace :db do
       hronik.watched = 0
       hronik.comments_qty = 0
       hronik.short = Populator.sentences(2)
+      hronik.published = true
     end
     Hronik.all.each { |hronik| hronik.tags << Tag.all.sample; hronik.save! }
     Hronik.all.each { |hronik| hronik.cover = File.open(Dir.glob(File.join(Rails.root, 'covers', '*')).sample); hronik.save! }
