@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def index
     @slider_hroniks = Hronik.published.limit(5)
-    @elements = (Article.all + Hronik.published.all + Old.all).sort_by{|e| e[:date]}.paginate(:page => params[:page], :per_page => 3)
+    @elements = (Article.all + Hronik.published.all).sort_by{|e| e[:date]}.paginate(:page => params[:page], :per_page => 3)
   end
   
   def feedback
