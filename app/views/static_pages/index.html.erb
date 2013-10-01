@@ -15,11 +15,11 @@
 		    <%= image_tag hronik.cover.url(:main) %>
 		 </div>
 
-	     <div class="span3">
+	     <div class="span3" style="margin-left: 0px;">
 		    <%= link_to "Смотреть все хроники", hroniks_path, :class=> 'yellow_link' %>
 		 </div>
 	
-		 <div class="span8" style="margin-top: 20px;">
+		 <div class="span8" style="margin-top: 20px; margin-left: 100px;">
 			<%= link_to (Russian::strftime(hronik.date, "%d %B") + " " + hronik.title), hronik_path(hronik), :class=> 'title_link' %>
 			<p><%= hronik.short %></p>
 			<%= link_to "Смотреть", hronik_path(hronik), :class=> 'small_link' %>

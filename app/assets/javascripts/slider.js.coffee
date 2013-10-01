@@ -16,7 +16,7 @@ $ ->
       container.css {"left": -1*slide_width+'px'}
   setInterval ->
     next_slide()
-  , 1000
+  , 6000
 
   $(".bck").click (e) ->
     e.preventDefault()

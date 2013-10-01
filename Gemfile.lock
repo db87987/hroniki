@@ -68,7 +68,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-<<<<<<< HEAD
     daemons (1.1.9)
     delayed_job (3.0.5)
       activesupport (~> 3.0)
@@ -77,8 +76,6 @@ GEM
       delayed_job (~> 3.0)
     delayed_paperclip (2.6.1)
       paperclip (>= 3.3.0)
-=======
->>>>>>> 2ed9bda116c4387864e63fae7b13e0600b611961
     devise (3.0.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
