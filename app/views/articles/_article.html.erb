@@ -4,7 +4,7 @@
   </div>
   <div class="article_content">
 	<p><%= Russian::strftime(article.date, "%d %B") %></p>
-	<h1 style="color: #4c4c4c;"><%= article.title %></h1>
+	<%= link_to article.title, article, :class=> 'hroniki_title_link' %>
 	<div class="hroniki_tags">
 	<% article.tags.all.each do |tag| %>
 	   <%= link_to tag.title, tags_path(:tag_ids => tag.id), :class=> 'tag_link' %>
