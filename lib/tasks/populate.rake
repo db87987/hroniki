@@ -57,7 +57,7 @@ namespace :db do
     Article.destroy_all
     
     Article.populate 30 do |article|
-      article.title = Faker::Lorem.words(1)[0].capitalize
+      article.title = 'Blog ' + Faker::Lorem.words(1)[0].capitalize
       article.date = Date.today + rand(200)
       article.text = Populator.sentences(30..50)
       article.comments_qty = 0

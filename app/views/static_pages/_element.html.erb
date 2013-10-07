@@ -16,7 +16,13 @@
 			<%= image_tag "hroniki_comment.png" %>
 			<span style="margin-right: 10px;"><%= element.comments_qty %></span>
 			<%= image_tag "hroniki_watch.png" %>
-			
+			<% if element.respond_to?(:session_hroniks) %>
+			<%= element.session_hroniks.count %>
+			<% elsif element.respond_to?(:article_views) %>
+			<%= element.article_views.count %>
+			<% elsif element.respond_to?(:old_views) %>
+			<%= element.old_views.count %>
+			<% end %>
 			<%= link_to "читать далее", element %>
 		</div>
 	</div>
