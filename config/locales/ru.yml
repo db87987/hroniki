@@ -51,6 +51,7 @@ ru:
         date: "Дата"
         image: "Изображение"
         text: "Текст"
+        published: "Опубликована"
       tag:
         title: "Название"
       issue:
@@ -63,6 +64,7 @@ ru:
         date: "Дата"
         image: "Изображение"
         text: "Текст"
+        published: "Опубликована"
       suggest:
         date: "Дата"
         title: "Заголовок"

@@ -1,10 +1,12 @@
 class Article < ActiveRecord::Base
-  attr_accessible :date, :image, :text, :title, :tag_ids
+  attr_accessible :date, :image, :text, :title, :tag_ids, :published
   default_scope order('date DESC')
   
   has_many :article_tags
   has_many :tags, through: :article_tags
   has_many :article_views
+  
+  scope :published, -> { where(published: true) }  
   
   validates :date, :text, :title, presence: true
   

@@ -1,6 +1,6 @@
 class OldsController < ApplicationController
   def index
-      @olds = Old.order("date DESC").page(params[:page]).per_page(3)
+      @olds = Old.published.order("date DESC").page(params[:page]).per_page(3)
     if params[:issue_id]
       @olds = @olds.where(:issue_id => params[:issue_id])
       @issue = Issue.find(params[:issue_id])
@@ -10,13 +10,13 @@ class OldsController < ApplicationController
   end
   
   def issues
-    @issues = Issue.all
+    @issues = Issue.with_olds
   end
 
   def show
     @hroniks = Hronik.published.limit(3)
     
-    @events_by_date = (Article.all + Hronik.published.all).group_by(&:date)
+    @events_by_date = (Article.published.all + Hronik.published.all).group_by(&:date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     
     @old = Old.find(params[:id])

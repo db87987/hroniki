@@ -21,6 +21,7 @@ ActiveAdmin.register Article do
      f.inputs t('properties') do
        f.input :title
        f.input :date
+       f.input :published
        f.input :image, :as => :file, :hint => ( f.object.new_record? || !f.object.image ) ? nil : image_tag(f.object.image.url(:ico))
        f.input :text, :as => :ckeditor, :label => false
      end
@@ -34,6 +35,7 @@ ActiveAdmin.register Article do
   show do |article|
     attributes_table do
       row :title
+      row :published
       row :date
       row :cover do |cover|
         image_tag article.image.url(:side)

@@ -35,6 +35,7 @@ ActiveAdmin.register Hronik do
   show do |hronik|
     attributes_table do
       row :title
+      row :published
       row :date
       row :cover do |cover|
         image_tag hronik.cover.url(:main)

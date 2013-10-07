@@ -1,5 +1,5 @@
 class Old < ActiveRecord::Base
-  attr_accessible :date, :issue_id, :sn, :text, :title, :image, :tag_ids
+  attr_accessible :date, :issue_id, :sn, :text, :title, :image, :tag_ids, :published
   default_scope order('date DESC')
   
   has_many :old_tags
@@ -7,6 +7,8 @@ class Old < ActiveRecord::Base
   has_many :old_views
   
   belongs_to :issue
+  
+  scope :published, -> { where(published: true) }  
   
   validates :text, :title, :issue_id, presence: true
   

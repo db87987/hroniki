@@ -1,12 +1,12 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.order("date DESC").page(params[:page]).per_page(3)
+    @articles = Article.published.order("date DESC").page(params[:page]).per_page(3)
   end
 
   def show 
     @hroniks = Hronik.published.limit(3)
     
-    @events_by_date = (Article.all + Hronik.published.all).group_by(&:date)
+    @events_by_date = (Article.published.all + Hronik.published.all).group_by(&:date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     
     @article = Article.find(params[:id])

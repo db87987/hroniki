@@ -19,6 +19,7 @@ ActiveAdmin.register Old do
    form do |f|  
      f.inputs t('properties') do
        f.input :title
+       f.input :published
        f.input :issue_id, :as => :select, :collection => Issue.all, :prompt => :false
        f.input :image, :as => :file, :hint => ( f.object.new_record? || !f.object.image ) ? nil : image_tag(f.object.image.url(:ico))
        f.input :text, :as => :ckeditor, :label => false
@@ -33,6 +34,7 @@ ActiveAdmin.register Old do
   show do |article|
     attributes_table do
       row :title
+      row :published
       row :issue_id do
         issue = Issue.find(article.issue_id)
         link_to issue.title, admin_issue_path(issue)
