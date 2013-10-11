@@ -120,9 +120,10 @@ a:hover {
 	background-color: white;
 	padding: 20px;
 	width: 900px;
-	margin-top: 20px;
+	margin-top: 0px;
 	float: left;
 	display: none;
+	margin-top: 8px;
 	margin-bottom: 60px;
 }
 
@@ -273,4 +274,16 @@ textarea:focus, input:focus, select:focus {
 
 .pagination {
 	display: none;
+}
+
+.show_feedback_form {
+	background: #ffffff url('feedback.png') no-repeat 15px 11px;
+	font-family: 'PT Sans Caption';
+	font-size: 16px;
+	color: #bfbfbf;
+	padding: 10px 20px 10px 40px;
+}
+.show_feedback_form:hover {
+	background-position: 15px -34px;
+	color: #ff634d;
 }
