@@ -10,7 +10,7 @@
 	<div class="hroniki_hover_container" onclick="location.href='<%= url_for(element) %>'">
 		<h4 class="title"><%= element.title %></h4>
 		<p style="height: 180px; overflow: hidden;">
-		<% text = strip_tags(element.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>
+		<% text = strip_tags(element.text) %>
 		<%= truncate(text, length: 260, omission: '...').html_safe %></p>
 		<div class="panel">
 			<%= image_tag "hroniki_comment.png" %>
