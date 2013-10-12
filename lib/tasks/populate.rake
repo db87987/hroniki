@@ -75,7 +75,6 @@ namespace :db do
     
     Old.populate 30 do |old|
       old.title = Faker::Lorem.words(1)[0].capitalize
-      old.date = Date.today + rand(200)
       old.text = Populator.sentences(30..50)
       old.issue_id = Issue.all.sample.id
       old.comments_qty = 0
