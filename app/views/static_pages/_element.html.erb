@@ -1,6 +1,6 @@
 <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
 	<p>
-	  <% if element.respond_to?(:date) %>
+	  <% if element.date? %>
 	    <%= Russian::strftime(element.date, "%d %B") %>
 	  <% else %>
 	    <%= Russian::strftime(element.created_at, "%d %B") %>
