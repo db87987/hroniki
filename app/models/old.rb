@@ -1,7 +1,7 @@
 class Old < ActiveRecord::Base
   attr_accessible :date, :issue_id, :sn, :text, :title, :image, :tag_ids, :published
   default_scope order('date DESC')
-  before_save :dublicate_date
+  before_create :dublicate_date
   
   has_many :old_tags
   has_many :tags, through: :old_tags
@@ -17,7 +17,7 @@ class Old < ActiveRecord::Base
   
   private
     def dublicate_date
-      self.date = self.created_at
+      self.date = Time.now
     end
   
 end
