@@ -18,7 +18,7 @@ class HroniksController < InheritedResources::Base
   def show 
     @hroniks = Hronik.published.limit(3)
     
-    @events_by_date = (Article.all + Hronik.published.all).group_by(&:date)
+    @events_by_date = (Article.published.all + Hronik.published.all).group_by(&:date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     
     @hronik = Hronik.find(params[:id])

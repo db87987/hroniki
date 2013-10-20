@@ -20,4 +20,10 @@ class StaticPagesController < ApplicationController
     @articles = Article.includes(:tags).where("tags.id" => params[:tag_ids]) 
     @olds = Old.includes(:tags).where("tags.id" => params[:tag_ids]) 
   end
+  
+  def calendar
+    @events_by_date = (Article.published.all + Hronik.published.all).group_by(&:date)
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
+    @hroniks = Hronik.published.limit(3)
+  end
 end
