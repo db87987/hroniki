@@ -7,6 +7,14 @@
 
 }
 
+.side .hroniki_title_link {
+	font-size: 16px;
+}
+
+.side .tag_link {
+	font-size: 12px;
+}
+
 .tag_link {
 	font-family: 'PT Sans Caption';
 	color: #777777;
@@ -164,8 +172,8 @@
 .hroniki_hover_small_container p {
 	color: white;
 	padding-top: 35px;
-	font-size: 14px;
-	line-height: 1;
+	font-size: 13px;
+	line-height: 1,2;
 	width: 180px;
 	height: 120px; 
 	overflow: hidden;

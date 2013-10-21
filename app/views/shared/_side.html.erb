@@ -1,4 +1,4 @@
-<div class="span3">
+<div class="span3 side">
 	<div class="yellow_cation" style="margin-bottom: 20px;">Календарь записей</div>
 	<div id="calendar_wrap">
 	<%= render 'shared/calendar' %>
@@ -8,7 +8,6 @@
 		
      <% @hroniks.each do |hronik| %>
        <div class="span3" style="margin-top: 20px; margin-bottom: 40px;">
-			<p><%= Russian::strftime(hronik.date, "%d %B") %></p>
 			<%= link_to hronik.title, hronik, :class=> 'hroniki_title_link' %><br>
 			<% hronik.tags.each do |tag| %>
 			  <%= link_to tag.title, tags_path(:tag_ids => tag.id), :class=> 'tag_link' %>

@@ -304,10 +304,6 @@ textarea:focus, input:focus, select:focus {
 	width: 440px;
 }
 
-.calendar_page .hroniki_title_link {
-	font-size: 16px;
-}
-
 .calendar_page .article_content a {
 	float: none;
 }
