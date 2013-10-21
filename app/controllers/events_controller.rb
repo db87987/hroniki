@@ -24,4 +24,19 @@ class EventsController < ApplicationController
       nil
     end
   end
+  
+  def comment
+    api_secret = "GfqyAEOfSrOYwssRtbOk"
+    last_comment = params[:last_comment].encode Encoding::WINDOWS_1251
+    hash = Digest::MD5.hexdigest(api_secret+params[:date]+params[:num]+last_comment)
+    sign = params[:sign]
+    if hash == sign
+      @event = Event.find(params[:id])
+      @event.comments_qty = params[:num]
+      @event.save
+    else
+      nil
+    end
+    render nothing: true
+  end
 end
