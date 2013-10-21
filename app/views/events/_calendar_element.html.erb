@@ -8,7 +8,6 @@
   </div>
   <div class="article_content">
   <%= link_to calendar_element.title, calendar_element, :class=> 'hroniki_title_link' %>
-	<p><%= Russian::strftime(calendar_element.date, "%d %B") %></p>
 	<p>
   	<% text = strip_tags(calendar_element.text) %>
   	<%= truncate(text, length: 300, omission: '...').html_safe %>
