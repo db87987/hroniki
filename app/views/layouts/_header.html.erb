@@ -9,7 +9,7 @@
 	  <li><%= link_to "Хроники", hroniks_path, :class => ('active' if controller_name == "hroniks")  %></li>
 	  <li><%= link_to "Блог", articles_path, :class => ('active' if controller_name == "articles")  %></li>
 	  <li><%= link_to "Медицинские старости", issues_path, :class => ('active' if controller_name == "olds")  %></li>
-	  <li><%= link_to "Медицинский календарь", calendar_path, :class => ('active' if controller_name == "static_pages" && action?('calendar'))  %></li>
+	  <li><%= link_to "Медицинский календарь", calendar_path, :class => ('active' if controller_name == "events" && action?('index'))  %></li>
 	  <li><%= link_to "Обратная связь", feedback_path, :class => ('active' if controller_name == "static_pages" && action?('feedback')) %></li>
   </div>
 </div>

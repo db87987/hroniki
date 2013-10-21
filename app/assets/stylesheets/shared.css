@@ -304,6 +304,10 @@ textarea:focus, input:focus, select:focus {
 	width: 440px;
 }
 
+.calendar_page .article_content_wide {
+	width: 680px;
+}
+
 .calendar_page .article_content a {
 	float: none;
 }
