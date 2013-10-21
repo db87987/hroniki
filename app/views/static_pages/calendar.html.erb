@@ -1,10 +1,22 @@
-<div class="container" style="margin-top: 200px; margin-bottom: 100px;">
+<div class="container calendar_page" style="margin-top: 200px; margin-bottom: 100px;">
+ <div class="row">
+   <div class="span9 date_row">
+	    <div class="prev_day"><%= link_to "&larr; ".html_safe + Russian::strftime(@date.prev_day, "%d %B"), {date: @date.prev_day}, :class => '' %></div>
+	    <span class="current_date"><%= Russian::strftime(@date, "%d %B") %></span>
+	    <div class="next_day"><%= link_to date: @date.next_day do %>
+	        <%= Russian::strftime(@date.next_day, "%d %B") %> &rarr;
+	        <% end %>
+	    </div>
+	 </div>
+	 <div class="span3">
+	 </div>
+ </div>
  <div class="row">
    <div class="span9">
-	  <div id="calendar_wrap">
-   	  <%= render 'shared/calendar' %>
-   	</div>
-	 </div>
+     <div class="row">
+       <%= render partial: "calendar_element", collection: @calendar_elements %>
+     </div>
+   </div>
 	 <%= render 'shared/side' %>
  </div>
 </div>

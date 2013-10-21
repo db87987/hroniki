@@ -287,3 +287,62 @@ textarea:focus, input:focus, select:focus {
 	background-position: 15px -34px;
 	color: #ff634d;
 }
+
+/*calendar*/
+
+.date_row {
+	margin-top: -20px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.calendar_element {
+	margin-bottom: 60px;
+}
+
+.calendar_page .article_content {
+	width: 440px;
+}
+
+.calendar_page .article_content a {
+	float: none;
+}
+
+.status_panel {
+	margin-top: 15px;
+	font-family: 'PT Sans Caption';
+	color: #ff634d;
+	font-size: 14px;
+}
+
+.status_panel .comments_qty {
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+.status_panel .watched_qty {
+	margin-right: 10px;
+}
+
+.date_row .current_date {
+	font-family: 'PT Serif';
+	font-size: 38px;
+	color: #4c4c4c;
+}
+
+.date_row .prev_day, .date_row .next_day {
+	margin-top: 20px;
+}
+
+.date_row .prev_day a, .date_row .next_day a {
+	font-family: 'PT Sans Caption';
+	color: #999999;
+}
+
+.date_row .prev_day {
+	float: left;
+}
+
+.date_row .next_day {
+	float: right;
+}

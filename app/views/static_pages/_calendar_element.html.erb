@@ -1,0 +1,33 @@
+<div class="span9 calendar_element">
+  <div class="article_image" onclick="location.href='<%= url_for(calendar_element) %>'">
+  	<% if calendar_element.respond_to?(:cover) %>
+  	<%= image_tag(calendar_element.cover.url(:side)) %>
+  	<% else %>
+  	<%= image_tag(calendar_element.image.url(:side)) %>
+  	<% end %>
+  </div>
+  <div class="article_content">
+  <%= link_to calendar_element.title, calendar_element, :class=> 'hroniki_title_link' %>
+	<p><%= Russian::strftime(calendar_element.date, "%d %B") %></p>
+	<p>
+  	<% text = strip_tags(calendar_element.text) %>
+  	<%= truncate(text, length: 300, omission: '...').html_safe %>
+	</p>
+	<div class="article_panel">
+	  <%= link_to calendar_element do %>читать далее &rarr; <% end %>
+	</div>
+  </div>
+  <div class="buf"></div>
+  <div class="status_panel">
+    <%= image_tag "hroniki_comment_red.png" %>
+    <span class="comments_qty"><%= calendar_element.comments_qty %></span>
+    <%= image_tag "hroniki_watch_red.png", :class => 'watched_qty' %>
+    <% if calendar_element.respond_to?(:session_hroniks) %>
+    <%= calendar_element.session_hroniks.count %>
+    <% elsif calendar_element.respond_to?(:article_views) %>
+    <%= calendar_element.article_views.count %>
+    <% elsif calendar_element.respond_to?(:old_views) %>
+    <%= calendar_element.old_views.count %>
+    <% end %>
+  </div>
+</div>

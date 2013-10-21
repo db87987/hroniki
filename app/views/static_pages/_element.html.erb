@@ -1,11 +1,5 @@
 <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
-	<p>
-	  <% if element.date? %>
-	    <%= Russian::strftime(element.date, "%d %B") %>
-	  <% else %>
-	    <%= Russian::strftime(element.created_at, "%d %B") %>
-	  <% end %>
-	</p>
+	<p><%= Russian::strftime(element.date, "%d %B") %></p>
 	<%= link_to element.title, element, :class=> 'hroniki_title_link' %><br>
 	<div class="hroniki_tags">
 	<% element.tags.all.each do |tag| %>
