@@ -22,12 +22,6 @@
     <%= image_tag "hroniki_comment_red.png" %>
     <span class="comments_qty"><%= calendar_element.comments_qty %></span>
     <%= image_tag "hroniki_watch_red.png", :class => 'watched_qty' %>
-    <% if calendar_element.respond_to?(:session_hroniks) %>
-    <%= calendar_element.session_hroniks.count %>
-    <% elsif calendar_element.respond_to?(:article_views) %>
-    <%= calendar_element.article_views.count %>
-    <% elsif calendar_element.respond_to?(:old_views) %>
-    <%= calendar_element.old_views.count %>
-    <% end %>
+    <%= calendar_element.event_views.count %>
   </div>
 </div>
