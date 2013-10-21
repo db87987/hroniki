@@ -18,6 +18,9 @@ ru:
       hronik:
         one: "Хроника"
         other: "Хроники"
+      event:
+        one: "Событие"
+        other: "События"
       suggest:
         one: "Предложение"
         other: "Предложения"
@@ -80,3 +83,9 @@ ru:
         feedback_type: "Тип"
         published: "Опубликован"
         sn: "Порядковый номер"
+      event:
+        title: "Название"
+        date: "Дата"
+        image: "Изображение"
+        text: "Текст"
+        published: "Опубликована"

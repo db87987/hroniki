@@ -85,6 +85,25 @@ namespace :db do
     puts "Olds created!"
     
   end
+  
+  task :import_events => :environment do
+    
+    Event.destroy_all
+    
+    Event.populate 30 do |event|
+      event.title = Faker::Lorem.words(1)[0].capitalize
+      event.date = Date.today + rand(200)
+      event.text = Populator.sentences(30..50)
+      event.published = true
+      event.comments_qty = 0
+      
+    end
+    Event.all.each { |event| event.tags << Tag.all.sample; event.save! }
+    Event.all.each { |event| event.image = File.open(Dir.glob(File.join(Rails.root, 'covers', '*')).sample); event.save! }
+    
+    puts "Olds created!"
+    
+  end
 end
 
 
