@@ -6,7 +6,7 @@ class EventsController < ApplicationController
     if params[:date] 
       @calendar_elements = Event.published.where(:date => params[:date]).sort_by{|e| e[:date]}.reverse 
     else
-      @calendar_elements = Event.published.where(:date => Time.now).sort_by{|e| e[:date]}.reverse 
+      @calendar_elements = Event.published.where(:date => Date.today).sort_by{|e| e[:date]}.reverse 
     end
   end
 
