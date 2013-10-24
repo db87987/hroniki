@@ -51,6 +51,39 @@ ActiveAdmin.register Event do
          end
        end
      end
-    
+   end
+   
+   member_action :crop do
+     @event = Event.find(params[:id])
+   end
+   
+   controller do
+
+     def create
+       @event = Event.new(params[:event])
+       if @event.save
+         if params[:event][:image].blank?
+           redirect_to admin_event_path(@event)
+         else
+           render :action => "crop", :layout => 'active_admin' 
+         end
+       else
+         render :action => 'new'
+       end
+     end
+
+     def update
+       @event = Event.find(params[:id])
+       if @event.update_attributes(params[:event])
+         if params[:event][:image].blank?
+           redirect_to admin_event_path(@event)
+         else
+           render :action => "crop", :layout => 'active_admin' 
+         end
+       else
+         render :action => 'edit'
+       end
+     end
+
    end
 end

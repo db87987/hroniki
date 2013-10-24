@@ -1,18 +1,17 @@
-<%= semantic_form_for [:admin, @hronik], :html => {:multipart => true}	 do |f| %>
+<%= semantic_form_for [:admin, @event], :html => {:multipart => true}	 do |f| %>
 
 <div style="float: left; width: 600px;">
 <h4>Оригинал:</h4>
-<%= image_tag @hronik.cover.url(:original), :id => "cropbox" %>
+<%= image_tag @event.image.url(:original), :id => "cropbox_event" %>
 </div>
 
 <div style="float: left; width: 600px; margin-left: 20px;">	
 <h4>Обработанный вариант:</h4>
-<div style="width:600px; height:326px; overflow:hidden;">
-  <%= image_tag("head.png", :class => "head") %>
-  <%= image_tag @hronik.cover.url(:original), :id => "main" %>
+<div style="width:220px; height:220px; overflow:hidden;">
+  <%= image_tag @event.image.url(:original), :id => "event_main" %>
 </div>
 
-<%= form_for @hronik do |f| %>
+<%= form_for @event do |f| %>
 <% %w[x y w h].each do |attribute| %>
 <%= f.hidden_field "crop_#{attribute}" %>
 <% end %>

@@ -61,8 +61,7 @@ ActiveAdmin.register Hronik do
   end
   
   controller do
-    
-    
+        
     def create
       @hronik = Hronik.new(params[:hronik])
       if @hronik.save
