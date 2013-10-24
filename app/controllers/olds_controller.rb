@@ -29,17 +29,17 @@ class OldsController < ApplicationController
   end
 
   def comment
-    api_secret = "GfqyAEOfSrOYwssRtbOk"
-    last_comment = params[:last_comment].encode Encoding::WINDOWS_1251
-    hash = Digest::MD5.hexdigest(api_secret+params[:date]+params[:num]+last_comment)
-    sign = params[:sign]
-    if hash == sign
+    # api_secret = "GfqyAEOfSrOYwssRtbOk"
+    # last_comment = params[:last_comment].encode Encoding::WINDOWS_1251
+    # hash = Digest::MD5.hexdigest(api_secret+params[:date]+params[:num]+last_comment)
+    # sign = params[:sign]
+    # if hash == sign
       @old = Old.find(params[:id])
       @old.comments_qty = params[:num]
       @old.save
-    else
-      nil
-    end
+    # else
+    #   nil
+    # end
     render nothing: true
   end
 end

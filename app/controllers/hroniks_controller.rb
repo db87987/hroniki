@@ -36,18 +36,18 @@ class HroniksController < InheritedResources::Base
   end
   
   def comment
-        
-    api_secret = "GfqyAEOfSrOYwssRtbOk"
-    last_comment = params[:last_comment].encode Encoding::WINDOWS_1251
-    hash = Digest::MD5.hexdigest(api_secret+params[:date]+params[:num]+last_comment)
-    sign = params[:sign]
-    if hash == sign
+    #     
+    # api_secret = "GfqyAEOfSrOYwssRtbOk"
+    # last_comment = params[:last_comment].encode Encoding::WINDOWS_1251
+    # hash = Digest::MD5.hexdigest(api_secret+params[:date]+params[:num]+last_comment)
+    # sign = params[:sign]
+    # if hash == sign
       @hronik = Hronik.find(params[:id])
       @hronik.comments_qty = params[:num]
       @hronik.save
-    else
-      nil
-    end
+    # else
+    #   nil
+    # end
     render nothing: true
   end
   
