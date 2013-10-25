@@ -12,7 +12,8 @@
   <%= calendar @date do |date| %>
    
     <% if @events_by_date[date] %>
-       <%= link_to date.day, calendar_path(:date => date) %>
+       <% event = @events_by_date[date].first %>
+       <%= link_to date.day, event %>
 	<% else %>
 	   <%= date.day %>
     <% end %>

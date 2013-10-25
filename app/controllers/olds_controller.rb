@@ -14,10 +14,8 @@ class OldsController < ApplicationController
   end
 
   def show
+    calendar
     @hroniks = Hronik.published.limit(3)
-    
-    @events_by_date = (Article.published.all + Hronik.published.all).group_by(&:date)
-    @date = params[:date] ? Date.parse(params[:date]) : Date.today
     
     @old = Old.find(params[:id])
     session_id = request.session_options[:id]
