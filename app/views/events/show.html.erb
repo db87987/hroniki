@@ -36,7 +36,7 @@
 <div class="container" style="margin-top: 200px; margin-bottom: 100px;">
 <div class="row">
   <div class="span12">
-    <%= link_to "/calendar", :class => 'link_to_back' do %>&larr; Назад, к каледарю<% end %>
+    <%= link_to "/calendar", :class => 'link_to_back' do %>&larr; Назад, к календарю<% end %>
 	<div style="margin-top: 20px; margin-bottom: 20px;">
 	<h1 style="color: #4c4c4c;"><%= @event.title %></h1>
 	<div style="margin-top: 10px;">
@@ -55,7 +55,7 @@
 	  <%= @event.text.html_safe %>
 	</div>
 
-	<div class="hronik_social">
+	<div class="hronik_social" style="height: 100px;">
 		<p>Понравился сюжет? Расскажи друзьям!</p>
 		<div class="like_panel">
 			
