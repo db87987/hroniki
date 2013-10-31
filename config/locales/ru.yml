@@ -10,6 +10,7 @@ ru:
   Saturday: "СБ"
   Sunday: "ВС"
   olds: "Медицинские Старости"
+  please_enter_correct_data: "Слова не совпадают, попробуйте еще раз"
   activerecord:
     models: 
       admin_user:

@@ -1,6 +1,7 @@
 <% @title = @event.title %>
 <% content_for :head do %>
 <script src="http://vk.com/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
+
 <% end %>
 
 
@@ -45,6 +46,8 @@
 	</div>
 	</div>
   </div>
+  
+  
 
   <div class="span9">
 	<div class="hronik_cover"><%= image_tag(@event.image.url(:show)) %></div>

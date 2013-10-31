@@ -206,3 +206,12 @@
 	color: black;
 }
 
+#captcha {
+}
+
+#suggest_errors {
+	padding-left: 80;
+	color: #ffa599;
+	font-family: 'PT Sans';
+	font-size: 14px;
+}

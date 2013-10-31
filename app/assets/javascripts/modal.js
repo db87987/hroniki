@@ -1,9 +1,19 @@
+function showRecaptcha(element) {
+           Recaptcha.create("6Ldb2-QSAAAAAHX6CKLAtkjVA2ubl7X5fA4z1RjX", element, {
+             theme: "white",
+             callback: Recaptcha.focus_response_field});
+         }
+
 $(document).ready(function() {
+	
+	
 	
 	$("#suggest_hronik").on('click', function () {
 		$(".wrapper, .footer").addClass("blur");
 		$(".overlay").show();
 		$("#modal").show();
+		showRecaptcha('captcha');
+		
 	});
 	
 	$(".close_modal, .overlay").on('click', function () {

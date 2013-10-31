@@ -7,7 +7,7 @@ class HroniksController < InheritedResources::Base
     @hronik.from_visitor = true
     @hronik.published = true
     @hronik.tags << Tag.find_by_title('Читательские хроники')
-    if @hronik.save
+    if verify_recaptcha(:model => @hronik, :message => t('please_enter_correct_data')) && @hronik.save
       result = {status: 'ok'}
     else
       result = {errors: @hronik.errors.full_messages}
