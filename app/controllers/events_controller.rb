@@ -9,6 +9,7 @@ class EventsController < ApplicationController
     else
       @calendar_elements = (Article.published.where(:date => Date.today) +
                    Hronik.published.where(:date => Date.today) +
+                   Event.published.where(:date => Date.today) +
                    Old.published.where(:date => Date.today)).sort_by{|e| e[:date]}.reverse
     end
   end
