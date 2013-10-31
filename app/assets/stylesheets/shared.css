@@ -127,7 +127,19 @@ a:hover {
 	margin-bottom: 60px;
 }
 
-#feedback_page label {
+#new_event_partial .wrap {
+	background-color: white;
+	padding: 20px;
+	width: 660px;
+	margin-top: 0px;
+	float: left;
+	display: none;
+	margin-top: 8px;
+	margin-bottom: 60px;
+}
+
+
+#feedback_page label, #new_event_partial label {
 	display: block;
 	font-family: 'PT Sans';
 	color: #8c8c8c;
@@ -138,7 +150,7 @@ textarea:focus, input:focus, select:focus {
     outline: 0;
 }
 
-#feedback_page input[type="text"]  {
+#feedback_page input[type="text"], , #new_event_partial input[type="text"] {
 	width: 530px;
 	height: 35px;
 	margin-top: 10px;
@@ -149,11 +161,11 @@ textarea:focus, input:focus, select:focus {
 	border: 1px inset;
 }
 
-#feedback_page input[type="text"]:focus  {
+#feedback_page input[type="text"]:focus, #new_event_partial input[type="text"]:focus {
 	border: 1px solid #29B0D9;
 }
 
-#feedback_page textarea  {
+#feedback_page textarea, #new_event_partial textarea {
 	width: 530px;
 	height: 230px;
 	margin-top: 10px;
@@ -164,7 +176,7 @@ textarea:focus, input:focus, select:focus {
 	border: 1px inset
 }
 
-#feedback_page input[type="text"].input_error, #feedback_page textarea.input_error {
+#feedback_page input[type="text"].input_error, #feedback_page textarea.input_error, #new_event_partial input[type="text"].input_error, #new_event_partial textarea.input_error  {
 	border: 1px solid #ff634d;
 	color: #ff634d;
 }
@@ -330,7 +342,7 @@ textarea:focus, input:focus, select:focus {
 
 .date_row .current_date {
 	font-family: 'PT Serif';
-	font-size: 38px;
+	font-size: 32px;
 	color: #4c4c4c;
 }
 

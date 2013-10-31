@@ -4,7 +4,9 @@
 	    <div class="prev_day">
 	      <%= link_to "&larr; ".html_safe + Russian::strftime(@date.prev_day, "%d %B"), {date: @date.prev_day}, :class => '' %>
 	    </div>
-	    <span class="current_date"><%= Russian::strftime(@date, "%d %B") %></span>
+	    <span class="current_date">
+	      <%= Russian::strftime(@date, "%d %B %Y") %>
+	    </span>
 	    <div class="next_day">
 	        <%= link_to date: @date.next_day do %>
 	        <%= Russian::strftime(@date.next_day, "%d %B") %> &rarr;
@@ -17,6 +19,9 @@
  <div class="row">
    <div class="span9">
      <div class="row">
+       <%= render "form", :event => Event.new %>
+     </div>
+     <div class="row" style="margin-top: 30px;">
        <%= render partial: "calendar_element", collection: @calendar_elements %>
      </div>
    </div>

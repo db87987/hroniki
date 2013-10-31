@@ -53,6 +53,8 @@ $(document).ready(function() {
 	$(function() {
 	    $('#alt_date').datepicker({
 		    altField: "#hronik_date",
+			dateFormat: 'dd.M.yy',
+			altFormat: "dd.mm.yy",
 			onSelect: function(dateText, inst) 
 			  {
 			  datePieces = dateText.split('.');
@@ -111,8 +113,6 @@ jQuery(function($){
                 dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
                 dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
                 weekHeader: 'Не',
-                dateFormat: 'dd.M.yy',
-				altFormat: "dd.mm.yy",
                 firstDay: 1,
                 isRTL: false,
                 showMonthAfterYear: false,

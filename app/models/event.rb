@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :date, :text, :title, :image, :tag_ids, :published,
+  attr_accessible :date, :text, :title, :image, :tag_ids, :published, :author,
                   :crop_x, :crop_y, :crop_w, :crop_h
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
   scope :published, -> { where(published: true) }  

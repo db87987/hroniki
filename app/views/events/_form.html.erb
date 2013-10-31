@@ -1,0 +1,20 @@
+<div class="span9">
+  <div id="new_event_partial">
+  <%= link_to "Отправить свой сюжет", "#", :class=> 'show_feedback_form' %>
+  <div class="wrap">
+  <%= form_for event, remote: true do |f| %>
+  <div style="float: left; width: 530px;">
+  <%= f.label :author, "Представьтесь, пожалуйста" %>
+  <%= f.text_field :author %>
+  <%= f.label :title, "Заголовок события" %>
+  <%= f.text_field :title %>
+  <%= f.label :date, "Дата события" %>
+  <%= f.text_field :date %>
+  <%= f.label :text, "Текст события" %>
+	<%= f.text_area :text %>
+  <%= link_to "Можно отправлять", "#", :class => 'red_button', :id => 'feedback_submit' %>
+  </div>
+  <% end %>
+  </div>
+  </div>
+</div>

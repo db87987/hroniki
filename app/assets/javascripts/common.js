@@ -75,6 +75,10 @@ $(document).ready(function() {
     $(".wrap").slideToggle();
 	return false
   });
+
+  $("#event_date").datepicker();
+
+  
  	
 	
 	

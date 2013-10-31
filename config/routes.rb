@@ -16,6 +16,7 @@ Hroniki::Application.routes.draw do
   match '/feedback' => 'static_pages#feedback'
   match '/calendar' => 'events#index'
   match '/events/comment' => 'events#comment', :via => :post
+  match '/events' => 'events#create', :via => :post, :as => :events
   match '/events/:id' => 'events#show', :as => :event
   match '/tags' => 'static_pages#tags'
   
