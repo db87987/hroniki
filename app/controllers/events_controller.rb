@@ -3,7 +3,7 @@ class EventsController < ApplicationController
     calendar
     @hroniks = Hronik.published.limit(3)
     if params[:date] 
-      @elements = (Article.published.where(:date => Date.parse(params[:date])) +
+      @calendar_elements = (Article.published.where(:date => Date.parse(params[:date])) +
                    Hronik.published.where(:date => Date.parse(params[:date])) +
                    Event.published.where(:date => Date.parse(params[:date])) +
                    Old.published.where(:date => params[:date])).sort_by{|e| e[:date]}.reverse
