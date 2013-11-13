@@ -16,6 +16,8 @@ gem "russian", "~> 0.6.0"
 gem "ckeditor"
 gem 'activeadmin'
 
+gem 'remotipart', '~> 1.2'
+
 gem 'populator'
 gem 'faker'
 

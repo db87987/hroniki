@@ -2,7 +2,7 @@
   <div id="new_event_partial">
   <%= link_to "Отправить свой сюжет", "#", :class=> 'show_feedback_form', :id => 'show_new_event_form' %>
   <div class="wrap">
-  <%= form_for event, remote: true do |f| %>
+  <%= form_for event, remote: true, :html => {:multipart => true} do |f| %>
   <div style="float: left; width: 530px;">
   <%= f.label :author, "Представьтесь, пожалуйста" %>
   <%= f.text_field :author %>
@@ -12,6 +12,8 @@
   <%= f.text_field :date %>
   <%= f.label :text, "Текст события" %>
 	<%= f.text_area :text %>
+	<%= f.label :image, "Изображение" %>
+  <%= f.file_field :image %>
 	<%= recaptcha_tags %>
 	<div id="event_errors"></div>
   <%= link_to "Можно отправлять", "#", :class => 'red_button', :id => 'feedback_submit' %>

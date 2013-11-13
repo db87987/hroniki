@@ -176,6 +176,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     recaptcha (0.3.5)
+    remotipart (1.2.1)
     responders (0.9.3)
       railties (~> 3.1)
     russian (0.6.0)
@@ -233,6 +234,7 @@ DEPENDENCIES
   populator
   rails (= 3.2.13)
   recaptcha
+  remotipart (~> 1.2)
   russian (~> 0.6.0)
   rvm-capistrano
   sass-rails (~> 3.2.3)

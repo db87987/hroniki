@@ -9,6 +9,8 @@ class Event < ActiveRecord::Base
   
   validates :author, :title, :date, :text, presence: true
   
+    
+  
   has_attached_file :image, :styles => { 
     :ico => {:geometry => "100x100#"}, 
     :side => {:geometry => "220x220#", :processors => [:cropper]},
@@ -26,6 +28,7 @@ class Event < ActiveRecord::Base
     @geometry ||= {}
     @geometry[style] ||= Paperclip::Geometry.from_file(image.path(style))
   end
+  
   
   private
   

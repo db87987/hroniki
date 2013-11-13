@@ -396,3 +396,7 @@ textarea:focus, input:focus, select:focus {
 	display: block;
 	float: left;
 }
+
+#new_event input[type="file"] {
+	margin-bottom: 20px;
+}

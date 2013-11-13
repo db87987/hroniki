@@ -100,16 +100,16 @@ $(document).ready(function() {
 	    });
 	});
 	
-	$('#new_event').on('ajax:success', function(data, response, xhr) {
-    if (response.status == 'ok') {
-	  $(".wrap").hide();
-      $('#event_sent').show().fadeOut(4000);
-    }
-    else{
-	  Recaptcha.reload();
-      $('#event_errors').html(response.errors.join('<br>'));
-    }
-    });
+	// $('#new_event').on('ajax:success', function(data, response, xhr) {
+	//     if (response.status == 'ok') {
+	//   $(".wrap").hide();
+	//       $('#event_sent').show().fadeOut(4000);
+	//     }
+	//     else{
+	//   Recaptcha.reload();
+	//       $('#event_errors').html(response.errors.join('<br>'));
+	//     }
+	//     });
 	
 
 	

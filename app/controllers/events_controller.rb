@@ -29,13 +29,19 @@ class EventsController < ApplicationController
   end
   
   def create
-    @event = Event.new(params[:event])
-    if verify_recaptcha(:model => @event, :message => t('please_enter_correct_data')) && @event.save
-      result = {status: 'ok'}
-    else
-      result = {errors: @event.errors.full_messages}
-    end
-    render json: result
+    # if verify_recaptcha(:model => @event, :message => t('please_enter_correct_data')) && @event.save
+    #   result = {status: 'ok'}
+    # else
+    #   result = {errors: @event.errors.full_messages}
+    # end
+    # render json: result
+    
+    respond_to do |format|
+      @event = Event.new(params[:event])
+        if verify_recaptcha(:model => @event, :message => t('please_enter_correct_data')) && @event.save
+          format.js
+        end
+      end
   end
   
   def comment
