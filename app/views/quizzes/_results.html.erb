@@ -1,6 +1,6 @@
 <ul>
 <% @quiz.answers.each do |a| %>
-<li><%= a.text %> <%= a.rate %></li>
+<li><%= a.text %> (<%= a.rate %>)</li>
 <% end %>
 </ul>
 
