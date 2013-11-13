@@ -1,4 +1,7 @@
 class Tag < ActiveRecord::Base
+  
+  default_scope order('title ASC')
+  
   attr_accessible :title
   
   has_many :hronik_tags
