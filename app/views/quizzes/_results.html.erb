@@ -1,0 +1,7 @@
+<ul>
+<% @quiz.answers.each do |a| %>
+<li><%= a.text %> <%= a.rate %></li>
+<% end %>
+</ul>
+
+<%= image_tag(@line_chart) %>

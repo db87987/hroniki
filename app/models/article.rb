@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  attr_accessible :date, :image, :text, :title, :tag_ids, :published
+  attr_accessible :date, :image, :text, :title, :tag_ids, :published, :quiz_id
   default_scope order('date DESC')
   
   has_many :article_tags

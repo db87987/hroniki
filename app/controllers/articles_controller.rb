@@ -6,8 +6,11 @@ class ArticlesController < ApplicationController
   def show 
     calendar
     @hroniks = Hronik.published.limit(3)
-
+    
     @article = Article.find(params[:id])
+    if @article.quiz_id
+      @quiz = Quiz.find(@article.quiz_id)
+    end
     session_id = request.session_options[:id]
     begin
       ArticleView.create(:article_id => @article.id, :session_id => session_id)

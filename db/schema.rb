@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131025130444) do
+ActiveRecord::Schema.define(:version => 20131113143333) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,6 +46,14 @@ ActiveRecord::Schema.define(:version => 20131025130444) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "answers", :force => true do |t|
+    t.string   "text"
+    t.integer  "quiz_id"
+    t.integer  "rate",       :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
   create_table "article_tags", :force => true do |t|
     t.integer  "article_id"
     t.integer  "tag_id"
@@ -76,6 +84,7 @@ ActiveRecord::Schema.define(:version => 20131025130444) do
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
     t.boolean  "published",          :default => false
+    t.integer  "quiz_id"
   end
 
   create_table "ckeditor_assets", :force => true do |t|
@@ -220,6 +229,15 @@ ActiveRecord::Schema.define(:version => 20131025130444) do
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
     t.boolean  "published",          :default => false
+  end
+
+  create_table "quizzes", :force => true do |t|
+    t.string   "title"
+    t.boolean  "hroniks"
+    t.boolean  "articles"
+    t.boolean  "olds"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "session_hroniks", :force => true do |t|

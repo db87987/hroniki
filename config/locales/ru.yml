@@ -11,6 +11,10 @@ ru:
   Sunday: "ВС"
   olds: "Медицинские Старости"
   please_enter_correct_data: "Слова не совпадают, попробуйте еще раз"
+  position: "Расположение"
+  answers: "Ответы"
+  destroy: "Удалить"
+  answers: "Ответы"
   activerecord:
     models: 
       admin_user:
@@ -28,6 +32,12 @@ ru:
       tag:
         one: "Тэг"
         other: "Тэги"
+      quiz:
+        one: "Опрос"
+        other: "Опросы"
+      answer:
+        one: "Ответ"
+        other: "Ответы"
       article:
         one: "Статья"
         other: "Статьи"
@@ -56,6 +66,7 @@ ru:
         image: "Изображение"
         text: "Текст"
         published: "Опубликована"
+        quiz_id: "Голосование"
       tag:
         title: "Название"
       issue:
@@ -91,3 +102,12 @@ ru:
         text: "Текст"
         published: "Опубликована"
         author: "Автор"
+      quiz:
+        title: "Название"
+        hroniks: "Хроники"
+        articles: "Блог"
+        olds: "Медицинские старости"
+      answer:
+        text: "Ответ"
+        rate: "Количество голосов"
+        

@@ -24,6 +24,7 @@ ActiveAdmin.register Article do
        f.input :published
        f.input :image, :as => :file, :hint => ( f.object.new_record? || !f.object.image ) ? nil : image_tag(f.object.image.url(:ico))
        f.input :text, :as => :ckeditor, :label => false
+       f.input :quiz_id, :as => :select, :collection => Quiz.all
      end
      
      f.inputs t('tags') do
@@ -42,6 +43,11 @@ ActiveAdmin.register Article do
       end
       row :text do |text|
         article.text.html_safe
+      end
+      row :quiz_id do |quiz_id|
+        if article.quiz_id
+          Quiz.find(article.quiz_id).title
+        end
       end
     end  
     

@@ -362,3 +362,36 @@ textarea:focus, input:focus, select:focus {
 .date_row .next_day {
 	float: right;
 }
+
+.quiz_results, .quiz_area {
+	font-family: 'PT Sans';
+	font-size: 15px;
+	color: black;
+}
+
+.quiz_area ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.quiz_area input[type="submit"] {
+	margin-top: 10px;
+}
+
+.quiz_results ul {
+	display: block;
+	float: left;
+	list-style-type: none;
+	padding: 0;
+	margin-top: 20px;
+	text-align: right;
+}
+
+.quiz_results ul li {
+	margin-bottom: 8px;
+}
+
+.quiz_results img {
+	display: block;
+	float: left;
+}

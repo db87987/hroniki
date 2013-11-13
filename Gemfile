@@ -19,6 +19,8 @@ gem 'activeadmin'
 gem 'populator'
 gem 'faker'
 
+gem 'googlecharts'
+
 gem 'will_paginate'
 gem "recaptcha", :require => "recaptcha/rails"
 group :assets do

@@ -20,6 +20,8 @@ Hroniki::Application.routes.draw do
   match '/events/:id' => 'events#show', :as => :event
   match '/tags' => 'static_pages#tags'
   
+  match '/quiz/:id' => 'quizzes#quiz', :as => :quiz
+  
   root :to => 'static_pages#index'
   
   devise_for :admin_users, ActiveAdmin::Devise.config
