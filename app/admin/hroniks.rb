@@ -27,7 +27,7 @@ ActiveAdmin.register Hronik do
      end
      
      f.inputs t('tags') do
-       f.input :tags, :as => :check_boxes
+       f.input :tags
      end
      f.actions
    end

@@ -54,6 +54,12 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    chosen-rails (1.0.0)
+      coffee-rails (>= 3.2)
+      compass-rails (>= 1.0)
+      railties (>= 3.0)
+      sass-rails (>= 3.2)
+    chunky_png (1.2.8)
     ckeditor (4.0.4)
       mime-types
       orm_adapter
@@ -68,6 +74,12 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     daemons (1.1.9)
     delayed_job (3.0.5)
       activesupport (~> 3.0)
@@ -89,6 +101,7 @@ GEM
     fastercsv (1.5.5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
+    fssm (0.2.10)
     has_scope (0.5.1)
     highline (1.6.19)
     hike (1.2.3)
@@ -204,6 +217,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   capistrano
+  chosen-rails
   ckeditor
   coffee-rails (~> 3.2.1)
   delayed_job_active_record
