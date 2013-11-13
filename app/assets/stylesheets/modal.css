@@ -23,7 +23,7 @@
     z-index: 9999; /* makes the div the top layer, so it’ll lay on top of the other content */
 }
 
-#feedback_sent, #hronik_sent {
+#feedback_sent, #hronik_sent, #event_sent {
 	display: none;
 	font-family: 'PT Serif Caption';
 	font-size: 30px;
@@ -209,9 +209,13 @@
 #captcha {
 }
 
-#suggest_errors {
+#suggest_errors, #event_errors {
 	padding-left: 80;
 	color: #ffa599;
 	font-family: 'PT Sans';
 	font-size: 14px;
+}
+
+#event_errors {
+	margin-bottom: 30px;
 }

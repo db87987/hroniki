@@ -7,6 +7,8 @@ class Event < ActiveRecord::Base
   has_many :tags, through: :event_tags
   has_many :event_views
   
+  validates :author, :title, :date, :text, presence: true
+  
   has_attached_file :image, :styles => { 
     :ico => {:geometry => "100x100#"}, 
     :side => {:geometry => "220x220#", :processors => [:cropper]},

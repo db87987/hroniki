@@ -150,7 +150,7 @@ textarea:focus, input:focus, select:focus {
     outline: 0;
 }
 
-#feedback_page input[type="text"], , #new_event_partial input[type="text"] {
+#feedback_page input[type="text"], #new_event_partial input[type="text"] {
 	width: 530px;
 	height: 35px;
 	margin-top: 10px;

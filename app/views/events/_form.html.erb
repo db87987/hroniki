@@ -1,6 +1,6 @@
 <div class="span9">
   <div id="new_event_partial">
-  <%= link_to "Отправить свой сюжет", "#", :class=> 'show_feedback_form' %>
+  <%= link_to "Отправить свой сюжет", "#", :class=> 'show_feedback_form', :id => 'show_new_event_form' %>
   <div class="wrap">
   <%= form_for event, remote: true do |f| %>
   <div style="float: left; width: 530px;">
@@ -12,6 +12,8 @@
   <%= f.text_field :date %>
   <%= f.label :text, "Текст события" %>
 	<%= f.text_area :text %>
+	<%= recaptcha_tags %>
+	<div id="event_errors"></div>
   <%= link_to "Можно отправлять", "#", :class => 'red_button', :id => 'feedback_submit' %>
   
   </div>
@@ -19,3 +21,5 @@
   </div>
   </div>
 </div>
+
+<div id="event_sent">Спасибо за ваш сюжет!</div>

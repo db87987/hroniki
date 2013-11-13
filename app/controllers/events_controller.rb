@@ -28,6 +28,16 @@ class EventsController < ApplicationController
     end
   end
   
+  def create
+    @event = Event.new(params[:event])
+    if verify_recaptcha(:model => @event, :message => t('please_enter_correct_data')) && @event.save
+      result = {status: 'ok'}
+    else
+      result = {errors: @event.errors.full_messages}
+    end
+    render json: result
+  end
+  
   def comment
     # api_secret = "GfqyAEOfSrOYwssRtbOk"
     # last_comment = params[:last_comment].encode Encoding::WINDOWS_1251

@@ -1,12 +1,16 @@
 <div class="span9 calendar_element">
-  <div class="article_image" onclick="location.href='<%= url_for(calendar_element) %>'">
-    <% if calendar_element.respond_to?(:cover) %>
+  <div class="article_image" onclick="location.href='<%= url_for(calendar_element) %>'"> 
+    <% if calendar_element.respond_to?(:cover) && calendar_element.cover? %>
   	<%= image_tag(calendar_element.cover.url(:side)) %>
-  	<% else %>
+  	<% elsif calendar_element.respond_to?(:image) && calendar_element.image? %>
   	<%= image_tag(calendar_element.image.url(:side)) %>
   	<% end %>
   </div>
-  <div class="article_content"> 
+  <% if calendar_element.respond_to?(:cover) && calendar_element.cover? || calendar_element.respond_to?(:image) && calendar_element.image? %>
+    <div class="article_content"> 
+  <% else %>
+    <div class="article_content_wide"> 
+  <% end %>
   <%= link_to calendar_element.title, calendar_element, :class=> 'hroniki_title_link' %>
   <p><%= Russian::strftime(calendar_element.date, "%d %B") %></p>
 	<p>

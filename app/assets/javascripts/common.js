@@ -76,7 +76,43 @@ $(document).ready(function() {
 	return false
   });
 
-  $("#event_date").datepicker();
+	$("#event_date").datepicker({
+		dateFormat: 'dd.mm.yy'
+	});
+
+
+   // event by user
+  
+	$("#feedback_submit").on('click', function () {
+		$("#new_event").submit();
+	});
+	
+	$('#new_event :input').focus(function() {
+	  $(this).removeClass('input_error');	
+    });
+ 
+	$('#new_event').submit(function() {
+		inputs = $('#new_event :input')	
+		inputs.each(function() {
+			if ($(this).val() == '') {
+		      $(this).addClass('input_error');	
+		    }   
+	    });
+	});
+	
+	$('#new_event').on('ajax:success', function(data, response, xhr) {
+    if (response.status == 'ok') {
+	  $(".wrap").hide();
+      $('#event_sent').show().fadeOut(4000);
+    }
+    else{
+	  Recaptcha.reload();
+      $('#event_errors').html(response.errors.join('<br>'));
+    }
+    });
+	
+
+	
 
   
  	

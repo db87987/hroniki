@@ -1,5 +1,5 @@
 function showRecaptcha(element) {
-           Recaptcha.create("6Ldb2-QSAAAAAHX6CKLAtkjVA2ubl7X5fA4z1RjX", element, {
+           Recaptcha.create("6LfNk-kSAAAAALyQVEAULRhUF7A6TEXq7TqMSljl", element, {
              theme: "white",
              callback: Recaptcha.focus_response_field});
          }
@@ -12,7 +12,7 @@ $(document).ready(function() {
 		$(".wrapper, .footer").addClass("blur");
 		$(".overlay").show();
 		$("#modal").show();
-		showRecaptcha('captcha');
+		// showRecaptcha('captcha');
 		
 	});
 	
@@ -53,6 +53,7 @@ $(document).ready(function() {
       $('#hronik_sent').show().fadeOut(4000);
     }
     else{
+	  Recaptcha.reload();
       $('#suggest_errors').html(response.errors.join('<br>'));
     }
     });
