@@ -1,19 +1,18 @@
 # coding: utf-8
 
 class HroniksController < InheritedResources::Base
-  
-  def create
+    
+  def create    
     @hronik = Hronik.new(params[:hronik])
     @hronik.from_visitor = true
     @hronik.published = true
     @hronik.tags << Tag.find_by_title('Читательские хроники')
-    if verify_recaptcha(:model => @hronik, :message => t('please_enter_correct_data')) && @hronik.save
-    # if @hronik.save
-      result = {status: 'ok'}
-    else
-      result = {errors: @hronik.errors.full_messages}
+    
+    respond_to do |format|  
+      if verify_recaptcha(:model => @hronik, :message => t('please_enter_correct_data')) && @hronik.save
+        format.js
+      end
     end
-    render json: result
   end
   
   def show 

@@ -26,6 +26,21 @@
 			<%= link_to "читать далее", element %>
 		</div>
 	</div>
+	
+	<% if element.class.name == "Hronik" %>
+	
+	<% if element.from_visitor %>
+	<div class="guest_pattern">
+	  <% if element.moderated == false %>
+	    В процессе модерации
+	  <% elsif element.moderated == true %>
+	    Читательские хроники
+	  <% end %>
+	</div>
+	<% end %>
+	
+	<% end %>
+	
 	<% if element.respond_to?(:cover) %>
 	<%= image_tag(element.cover.url(:gallery), :class => "hroniki_image") %>
 	<% else %>

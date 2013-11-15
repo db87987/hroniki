@@ -44,19 +44,19 @@ $(document).ready(function() {
 	$("#suggest_submit").on('click', function () {
 		$("#new_hronik").submit();
 	});
-	
-	$('#new_hronik').on('ajax:success', function(data, response, xhr) {
-    if (response.status == 'ok') {
-      scroll(0,0)
-	  $(".wrapper, .footer").removeClass("blur").delay(1000);
-	  $("#modal").hide();
-      $('#hronik_sent').show().fadeOut(4000);
-    }
-    else{
-	  Recaptcha.reload();
-      $('#suggest_errors').html(response.errors.join('<br>'));
-    }
-    });
+	// 
+	// $('#new_hronik').on('ajax:success', function(data, response, xhr) {
+	//     if (response.status == 'ok') {
+	//       scroll(0,0)
+	//   $(".wrapper, .footer").removeClass("blur").delay(1000);
+	//   $("#modal").hide();
+	//       $('#hronik_sent').show().fadeOut(4000);
+	//     }
+	//     else{
+	//   Recaptcha.reload();
+	//       $('#suggest_errors').html(response.errors.join('<br>'));
+	//     }
+	//     });
 
 	
 /*date-picker*/

@@ -1,7 +1,7 @@
 ActiveAdmin.register Event do
   config.batch_actions = false
-  config.clear_sidebar_sections!
   config.sort_order = "created_at_desc"
+  filter :guest, :as => :select
   
    index do
      column :id
@@ -34,7 +34,7 @@ ActiveAdmin.register Event do
   show do |article|
     attributes_table do
       row :title
-      row :published
+      bool_row :published
       row :date
       row :cover do |cover|
         image_tag article.image.url(:side)

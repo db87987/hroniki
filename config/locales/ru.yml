@@ -102,6 +102,7 @@ ru:
         text: "Текст"
         published: "Опубликована"
         author: "Автор"
+        guest: "Загружено пользователем"
       quiz:
         title: "Название"
         hroniks: "Хроники"

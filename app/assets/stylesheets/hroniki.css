@@ -52,6 +52,7 @@
 	top: 0px;
 	left: 0px;
 	display: none;
+	z-index: 1;
 }
 
 .hroniki_hover_container .title {
@@ -205,5 +206,17 @@
 	color: #666666;
 	font-size: 16px;
 	margin-bottom: 30px;
+}
+
+.guest_pattern {
+	position: absolute;
+	width: 286px;
+	height: 30px;
+	background-image: url('guest_pattern.png');
+	font-family: 'PT Sans Caption';
+	color: #ffffff;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-left: 14px;
 }
 
