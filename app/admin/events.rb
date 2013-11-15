@@ -34,7 +34,7 @@ ActiveAdmin.register Event do
   show do |article|
     attributes_table do
       row :title
-      bool_row :published
+      row :published
       row :date
       row :cover do |cover|
         image_tag article.image.url(:side)

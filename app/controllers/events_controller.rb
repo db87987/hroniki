@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class EventsController < ApplicationController
   def index
     calendar
@@ -35,13 +37,15 @@ class EventsController < ApplicationController
     #   result = {errors: @event.errors.full_messages}
     # end
     # render json: result
+    @event = Event.new(params[:event])
+    @event.guest = true
+    @event.tags << Tag.find_by_title('Читательские хроники')
     
     respond_to do |format|
-      @event = Event.new(params[:event])
-        if verify_recaptcha(:model => @event, :message => t('please_enter_correct_data')) && @event.save
-          format.js
-        end
+      if verify_recaptcha(:model => @event, :message => t('please_enter_correct_data')) && @event.save
+        format.js
       end
+    end
   end
   
   def comment
