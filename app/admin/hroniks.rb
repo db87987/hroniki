@@ -1,5 +1,5 @@
 ActiveAdmin.register Hronik do
-  filter :from_visitor
+  filter :from_visitor, as: :select, collection: [[I18n.t('from_guest'), 'true'], [I18n.t('from_moderator'), 'false']]
   config.batch_actions = false
   config.sort_order = "created_at_desc"
 
@@ -9,6 +9,7 @@ ActiveAdmin.register Hronik do
   # scope :from_moderator, :twers => '213213'
   
    index do
+     column :author
      column :id
      column :title
      column :date
@@ -52,6 +53,7 @@ ActiveAdmin.register Hronik do
       row :text do |text|
         hronik.text.html_safe
       end
+      row :author
     end  
     panel t('tags') do 
        table_for hronik.tags do 

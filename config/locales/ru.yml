@@ -17,6 +17,8 @@ ru:
   answers: "Ответы"
   guest_hroniks: "Читательские хроники"
   hroniks: "Хроники"
+  from_guest: "От посетителя"
+  from_moderator: "От редактора"
   activerecord:
     models: 
       admin_user:
@@ -62,6 +64,7 @@ ru:
         published: "Опубликована"
         from_visitor: "От посетителя"
         moderated: "Проверена"
+        author: "Автор"
       article:
         title: "Название"
         date: "Дата"

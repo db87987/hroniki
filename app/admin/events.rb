@@ -1,9 +1,10 @@
 ActiveAdmin.register Event do
   config.batch_actions = false
   config.sort_order = "created_at_desc"
-  filter :guest, :as => :select
+  filter :guest, as: :select, collection: [[I18n.t('from_guest'), 'true'], [I18n.t('from_moderator'), 'false']]
   
    index do
+     column :author
      column :id
      column :title
      column :date
@@ -42,6 +43,7 @@ ActiveAdmin.register Event do
       row :text do |text|
         article.text.html_safe
       end
+      row :author
     end  
     
     panel t('tags') do 

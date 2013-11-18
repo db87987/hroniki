@@ -41,7 +41,9 @@ ru:
       entry:
         one: "запись"
         other: "записей"
-    any: "Любой"
+    any: "Все"
+    true: "да"
+    false: "нет"
     blank_slate:
       content: "Пока нет %{resource_name}."
       link: "Создать"
