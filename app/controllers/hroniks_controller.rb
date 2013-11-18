@@ -10,7 +10,7 @@ class HroniksController < InheritedResources::Base
     
     respond_to do |format|  
       if verify_recaptcha(:model => @hronik, :message => t('please_enter_correct_data')) && @hronik.save
-        format.js
+        format.js { @hronik = @hronik }
       end
     end
   end

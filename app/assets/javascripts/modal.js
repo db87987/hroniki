@@ -44,6 +44,13 @@ $(document).ready(function() {
 	$("#suggest_submit").on('click', function () {
 		$("#new_hronik").submit();
 	});
+	
+	$(".ok_link").on('click', function () {
+		$(this).parent().hide();
+		return false
+	});
+	
+	
 	// 
 	// $('#new_hronik').on('ajax:success', function(data, response, xhr) {
 	//     if (response.status == 'ok') {

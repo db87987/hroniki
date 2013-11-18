@@ -25,18 +25,42 @@
 
 #feedback_sent, #hronik_sent, #event_sent {
 	display: none;
-	font-family: 'PT Serif Caption';
+	font-family: 'PT Sans';
 	font-size: 30px;
 	padding-top: 20px;
 	padding-bottom: 20px;
     position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
     left: 25%; /* positions the div half way horizontally */
     top: 25%; /* positions the div half way vertically */
-    background-color: #ff634d;
+    border: 5px solid #ff634d;
+		background-color: white;
     width: 50%;
 	text-align: center;
     z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
 }
+
+#hronik_sent {
+	padding: 20px;
+	font-size: 20px;
+	top: 36%;
+}
+
+#hronik_sent a {
+	font-size: 17px;
+}
+
+#hronik_sent a.ok_link {
+	color: black;
+	font-size: 20px;
+	background-color: #ff634d;
+	padding: 5px 20px 5px 20px;
+	text-decoration: none;
+}
+
+#hronik_sent a.ok_link:hover {
+	color: white;
+}
+
 
 #modal .modal-header {
 	font-family: 'PT Sans Caption';

@@ -1,3 +1,4 @@
 $(".wrapper, .footer").removeClass("blur").delay(1000);
 $("#modal").hide();
-$('#hronik_sent').show().fadeOut(4000);
+$('#hronik_sent').show();
+$("#new_hronik_link").attr("href", "/hroniks/" + <%= @hronik.id %>);
