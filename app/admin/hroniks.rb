@@ -1,7 +1,12 @@
 ActiveAdmin.register Hronik do
+  filter :from_visitor
   config.batch_actions = false
-  filter :from_visitor, :as => :select
   config.sort_order = "created_at_desc"
+
+  
+  # scope :all, :default => true
+  # scope :from_visitor
+  # scope :from_moderator, :twers => '213213'
   
    index do
      column :id

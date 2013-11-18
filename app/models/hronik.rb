@@ -12,6 +12,8 @@ class Hronik < ActiveRecord::Base
   has_many :session_hroniks
   
   scope :published, -> { where(published: true) }  
+  scope :from_visitor, -> { where(from_visitor: true)}
+  scope :from_moderator, -> { where(from_visitor: false)}
   
   validates :date, :text, :title, presence: true
     
