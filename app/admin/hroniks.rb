@@ -1,4 +1,7 @@
 ActiveAdmin.register Hronik do
+  
+  
+  
   filter :from_visitor, as: :select, collection: [[I18n.t('from_guest'), 'true'], [I18n.t('from_moderator'), 'false']]
   config.batch_actions = false
   config.sort_order = "created_at_desc"
@@ -66,6 +69,18 @@ ActiveAdmin.register Hronik do
   
   member_action :crop do
     @hronik = Hronik.find(params[:id])
+  end
+  
+  member_action :repost do
+    @hronik = Hronik.find(params[:id])
+    text = strip_tags(@hronik.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"")
+		text = truncate(text, length: 260, omission: '...')
+    SocialPoster.write(:vk, text, nil, owner_id: '-57352679')
+    redirect_to :back, :notice => I18n.t('successfully_reposted')
+  end
+  
+  action_item :only => :show do
+     link_to(I18n.t('repost'), repost_admin_hronik_path(hronik))
   end
   
   controller do

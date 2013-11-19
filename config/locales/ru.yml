@@ -19,6 +19,8 @@ ru:
   hroniks: "Хроники"
   from_guest: "От посетителя"
   from_moderator: "От редактора"
+  repost: "Репост"
+  successfully_reposted: "Репост совершен"
   activerecord:
     models: 
       admin_user:
