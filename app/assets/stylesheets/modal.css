@@ -62,7 +62,7 @@
 }
 
 
-#modal .modal-header {
+.modal-header {
 	font-family: 'PT Sans Caption';
 	color: #e9f0f4;
 	font-size: 16px;
@@ -72,7 +72,7 @@
 	background-color: #7f7f7f;
 }
 
-#modal .modal-header a {
+.modal-header a {
 	display: block;
 	float: right;
 	width: 14px;
@@ -83,18 +83,18 @@
 	background: url('suggest-close-hover.png') top;
 }
 
-#modal .modal-header a:hover {
+.modal-header a:hover {
 	background: url('suggest-close-hover.png') bottom;
 }
 
-#modal .modal-content {
+.modal-content {
 	padding: 20px 30px 20px 30px;
 	background-color: #ffffff;
 	float: left;
 	width: 630px;
 }
 
-#modal .modal-content .date {
+.modal-content .date {
 	font-family: 'PT Serif';
 	color: #7f7f7f;
 	line-height: 0.9;
@@ -108,19 +108,19 @@
 	letter-spacing: -1px;
 }
 
-#modal .modal-content .date #number {
+.modal-content .date #number {
 	font-size: 50px;
 	
 }
 
-#modal .modal-content .date #month {
+.modal-content .date #month {
 	text-align: center;
 	text-transform: capitalize;
 	font-size: 14px;
 }
 
 
-#modal .modal-content .suggest-body {
+.modal-content .suggest-body {
 	font-family: 'PT Serif';
 	font-size: 12px;
 	width: 310px;
@@ -128,14 +128,14 @@
 	margin-left: 24px;
 }
 
-#modal .modal-content .suggest-body img {
+.modal-content .suggest-body img {
 	display: block;
 	margin-top: 25px;
 	float: left;
 }
 
 
-#modal .modal-content .suggest-side {
+.modal-content .suggest-side {
 	width: 220px;
 	float: right;
 	margin-left: 16px;

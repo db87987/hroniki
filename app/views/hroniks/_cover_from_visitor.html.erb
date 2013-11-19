@@ -1,0 +1,27 @@
+<div class="modal-content user_hronik_cover">
+  
+	<div class="date">
+	  <div id="number"><%= Russian::strftime(@hronik.date, "%d") %></div>
+	  <div id="month"><%= Russian::strftime(@hronik.date, "%d %B")[3..-1] %></div>
+	</div>
+	
+	<div class="suggest-body">
+	  
+	  <div class="comment"><%= truncate(@hronik.short, length: 73).html_safe %></div>
+	  <div class="suggest_title"><%= truncate(@hronik.title, length: 45).html_safe %></div>
+	  <div class="suggest_text"><%= truncate(@hronik.text, length: 400).html_safe %></div>
+		<%= image_tag('suggest-logo-down.png') %>
+		<div class="suggest_author"><%= @hronik.author %></div>
+		
+	</div>
+	
+	
+	<div class="suggest-side">
+		<%= image_tag('suggest-logo-top.png') %>
+	</div>
+
+</div>
+
+
+<%= image_tag(@hronik.cover.url(:user_cover)) %>
+

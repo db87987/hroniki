@@ -7,7 +7,7 @@ class Event < ActiveRecord::Base
   has_many :tags, through: :event_tags
   has_many :event_views
   
-  validates :author, :title, :date, :text, presence: true
+  # validates :author, :title, :date, :text, presence: true
   
     
   

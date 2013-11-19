@@ -19,6 +19,7 @@
  *= require modal
  *= require_self
  *= require sticky_footer
+ *= require user_hronik_cover
  *= require modal
  *= require calendar
  *= require jquery.ui.datepicker

@@ -38,6 +38,9 @@
     <%= link_to hroniks_path, :class => 'link_to_back' do %>&larr; Назад, к "хроникам"<% end %>
 	<div style="margin-top: 20px; margin-bottom: 20px;">
 	<h1 style="color: #4c4c4c;"><%= @hronik.title %></h1>
+	<% if @hronik.author %>
+	<h4 style="color: #4c4c4c;">Сюжет присланный пользователем: <%= @hronik.author %></h4>
+	<% end %>
 	<div style="margin-top: 10px;">
 	<% @hronik.tags.each do |tag| %>
 	  <%= link_to tag.title, tags_path(:tag_ids => tag.id), :class=> 'tag_link' %>
@@ -47,39 +50,47 @@
   </div>
 
   <div class="span9">
+  
 	<div class="hronik_cover"><%= image_tag(@hronik.cover.url(:show)) %></div>
     <div class="hronik_text">
 	  <p><b><%= @hronik.short %></b></p>
 	  <%= @hronik.text.html_safe %>
+	  
+    <% if @hronik.from_visitor %>
+    <%= render 'cover_from_visitor' %>
+  	<% end %>
+	  
 	</div>
+	
+	
 
-	<div class="hronik_social">
-		<p>Понравился сюжет? Расскажи друзьям!</p>
-		<div class="like_panel">
-			
-			<div id="vk_like"></div>
-			<script type="text/javascript">
-			 VK.Widgets.Like('vk_like', {type: "button"});
-			</script>
-			
-			<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ru">Твитнуть</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-			
-			<div class="fb-like" data-href="http://hroniki.org/<%= request.fullpath %>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
-			
-			 
-			
-			
-		</div>
-		<div class="buf" style="height: 20px;"></div>
-		<p style="margin-top: 10px">Нравятся «хроники»?</p>
-		<a href="#" class="red_button" id="suggest_hronik">Предложи свой сюжет</a>
-	</div>
+  <!-- <div class="hronik_social">
+    <p>Понравился сюжет? Расскажи друзьям!</p>
+    <div class="like_panel">
+      
+      <div id="vk_like"></div>
+      <script type="text/javascript">
+       VK.Widgets.Like('vk_like', {type: "button"});
+      </script>
+      
+      <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ru">Твитнуть</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      
+      <div class="fb-like" data-href="http://hroniki.org/<%= request.fullpath %>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+      
+       
+      
+      
+    </div>
+    <div class="buf" style="height: 20px;"></div>
+    <p style="margin-top: 10px">Нравятся «хроники»?</p>
+    <a href="#" class="red_button" id="suggest_hronik">Предложи свой сюжет</a>
+  </div>
 
-	<div id="vk_comments"></div>
-	<script type="text/javascript">
-	VK.Widgets.Comments("vk_comments", {limit: 10, width: "520", attach: "*", onChange: addCommentCallback});
-	</script>
+  <div id="vk_comments"></div>
+  <script type="text/javascript">
+  VK.Widgets.Comments("vk_comments", {limit: 10, width: "520", attach: "*", onChange: addCommentCallback});
+  </script> -->
   </div>
 
 

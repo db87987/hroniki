@@ -1,6 +1,6 @@
 <div class="span4" style="margin-top: 20px; margin-bottom: 40px;">
 	<p><%= Russian::strftime(hronik.date, "%d %B") %></p>
-	<%= link_to hronik.title, hronik, :class=> 'hroniki_title_link' %><br>
+	<%= link_to truncate(hronik.title, length: 48), hronik, :class=> 'hroniki_title_link' %><br>
 	<div class="hroniki_tags">
 	<% hronik.tags.all.each do |tag| %>
 	  <%= link_to tag.title, tags_path(:tag_ids => tag.id), :class=> 'tag_link' %>
@@ -8,7 +8,7 @@
 	</div>
 	<div class="hroniki_image_container">
 	<div class="hroniki_hover_container" onclick="location.href='/hroniks/<%= hronik.id %>'">
-		<h4 class="title"><%= hronik.title %></h4>
+		<h4 class="title"><%= truncate(hronik.title, length: 48) %></h4>
 		<p style="height: 180px; overflow: hidden;">
 		<% text = strip_tags(hronik.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>
 		<%= truncate(text, length: 260, omission: '...').html_safe %></p>

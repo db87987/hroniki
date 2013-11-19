@@ -15,13 +15,14 @@ class Hronik < ActiveRecord::Base
   scope :from_visitor, -> { where(from_visitor: true)}
   scope :from_moderator, -> { where(from_visitor: false)}
   
-  validates :date, :text, :title, presence: true
+  # validates :date, :text, :title, presence: true
     
   has_attached_file :cover, :styles => { 
     :ico => {:geometry => "100x100#"}, 
     :side => {:geometry => "220x220#"},
     :gallery => {:geometry => "300x300#"},
     :show => {:geometry => "640x460>"},
+    :user_cover => {:geometry => "690x484#"},
     :main => {:geometry => "940x510#", :processors => [:cropper]}
   }
   # process_in_background :cover
