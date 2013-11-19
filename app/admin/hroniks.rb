@@ -31,7 +31,6 @@ ActiveAdmin.register Hronik do
        f.input :cover, :as => :file, :hint => ( f.object.new_record? || !f.object.cover ) ? nil : image_tag(f.object.cover.url(:ico))
        f.input :short, :input_html => { :rows => 2  }
        f.input :text, :as => :ckeditor, :label => false
-       f.input :author, :placeholder => 'admin'
      end
      
      f.inputs t('tags') do
