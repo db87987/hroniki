@@ -50,20 +50,16 @@
   </div>
 
   <div class="span9">
-  
-	<div class="hronik_cover"><%= image_tag(@hronik.cover.url(:show)) %></div>
+    <% if @hronik.from_visitor %>
+      <%= render 'cover_from_visitor' %>
+    <% else%>
+      <div class="hronik_cover"><%= image_tag(@hronik.cover.url(:show)) %></div>
+  	<% end %>
     <div class="hronik_text">
 	  <p><b><%= @hronik.short %></b></p>
 	  <%= @hronik.text.html_safe %>
-	  
-    <% if @hronik.from_visitor %>
-    <%= render 'cover_from_visitor' %>
-  	<% end %>
-	  
 	</div>
 	
-	
-
   <div class="hronik_social">
     <p>Понравился сюжет? Расскажи друзьям!</p>
     <div class="like_panel">
