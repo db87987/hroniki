@@ -15,5 +15,7 @@
 /tmp
 
 /config/database.yml
+/config/social.yml
 
 .DS_Store
+

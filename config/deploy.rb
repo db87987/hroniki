@@ -24,6 +24,11 @@ task :copy_database_config do
    run "cp #{db_config} #{latest_release}/config/database.yml"
 end
 
+task :copy_social_config do
+   social_config = "#{shared_path}/social.yml"
+   run "cp #{social_config} #{latest_release}/config/social.yml"
+end
+
 namespace :deploy do
   namespace :assets do
     task :precompile, :roles => :web, :except => { :no_release => true } do
@@ -55,4 +60,5 @@ after "deploy:stop",    "delayed_job:stop"
 after "deploy:start",   "delayed_job:start"
 after "deploy:restart", "delayed_job:restart"
 before "deploy:assets:precompile", "copy_database_config"
+before "deploy:assets:precompile", "copy_social_config"
 after "deploy", "deploy:cleanup"
