@@ -25,6 +25,8 @@ gem 'googlecharts'
 
 gem 'social_poster'
 
+gem 'prawn'
+
 gem 'will_paginate'
 gem "recaptcha", :require => "recaptcha/rails"
 group :assets do

@@ -7,6 +7,7 @@ Hroniki::Application.routes.draw do
   match '/articles/comment' => 'articles#comment', :via => :post
   
   match '/olds/issues' => 'olds#issues', :via => :get, :as => :issues
+  match '/issues/:id' => 'olds#issue', :as => :issue
   resources :olds
   match '/olds/comment' => 'olds#comment', :via => :post
   
@@ -19,6 +20,8 @@ Hroniki::Application.routes.draw do
   match '/events' => 'events#create', :via => :post, :as => :events
   match '/events/:id' => 'events#show', :as => :event
   match '/tags' => 'static_pages#tags'
+  
+  
   
   match '/quiz/:id' => 'quizzes#quiz', :as => :quiz
   

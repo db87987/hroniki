@@ -12,6 +12,20 @@ class OldsController < ApplicationController
   def issues
     @issues = Issue.with_olds
   end
+  
+  def issue
+    
+    @issue = Issue.find(params[:id])
+    
+    respond_to do |format|
+      format.pdf do
+        pdf = IssuePdf.new(@issue, view_context)
+        send_data pdf.render, filename: "document_#{@issue.id}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
+    end
+  end
 
   def show
     calendar

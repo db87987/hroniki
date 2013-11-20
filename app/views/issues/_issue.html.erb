@@ -10,6 +10,7 @@
 	<li><%= link_to old.title, old_path(old) %></li>
 	<% end %>
 	</ul>
+	<%= link_to "Скачать весь выпуск (pdf)", issue_path(issue, format: "pdf"), :target => '_blank', :class => 'issue_pdf_link' %>
 	
   </div>
 </div>

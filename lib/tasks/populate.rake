@@ -78,6 +78,8 @@ namespace :db do
       old.text = Populator.sentences(30..50)
       old.issue_id = Issue.all.sample.id
       old.comments_qty = 0
+      old.date = Date.today + rand(200)
+      old.published = true
     end
     Old.all.each { |old| old.tags << Tag.all.sample; old.save! }
     Old.all.each { |old| old.image = File.open(Dir.glob(File.join(Rails.root, 'covers', '*')).sample); old.save! }

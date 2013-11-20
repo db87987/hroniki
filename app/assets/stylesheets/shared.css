@@ -7,7 +7,7 @@ h1 {
 	font-family: 'PT Serif';
 	color: #000000;
 	font-weight: normal;
-	font-size: 1.5em;
+	font-size: 38px;
 }
 
 h3 {
@@ -400,3 +400,20 @@ textarea:focus, input:focus, select:focus {
 #new_event input[type="file"] {
 	margin-bottom: 20px;
 }
+
+.issue_pdf_link {
+	background: url('pdf.png') no-repeat;
+	height: 17px;
+	display: block;
+	margin-top: 15px;
+	padding-top: 24px;
+	padding-left: 50px;
+	font-family: 'PT Sans Caption';
+	color: #4d4d4d;
+	font-size: 16px;
+}
+
+.issue_pdf_link:hover {
+	color: #ff634d;
+}
+

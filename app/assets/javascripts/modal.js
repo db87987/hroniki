@@ -6,8 +6,6 @@ function showRecaptcha(element) {
 
 $(document).ready(function() {
 	
-	
-	
 	$("#suggest_hronik").on('click', function () {
 		$(".wrapper, .footer").addClass("blur");
 		$(".overlay").show();
