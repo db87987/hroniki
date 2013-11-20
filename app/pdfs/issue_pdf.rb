@@ -23,17 +23,17 @@ class IssuePdf < Prawn::Document
     @olds = issue.olds
     
     
-    font "serif"
+    # font "serif"
     text "#{@issue.title}", :align => :center, :size => 38, :style => :bold, :inline_format => true
     text "#{Russian::strftime(@issue.date, "%B %Y")}", :align => :center, :size => 38, :style => :bold, :inline_format => true
     move_down 20
     
     @olds.each do |old|
-      font "serif"
+      # font "serif"
       text "#{old.title}", :align => :center, :size => 30, :inline_format => true
       move_down 10
       
-      font "sans"
+      # font "sans"
       text "#{old.text}", :align => :left, :size => 16, :inline_format => true
       move_down 30
     end

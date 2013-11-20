@@ -22,11 +22,11 @@ class OldPdf < Prawn::Document
     @old = old
     
     
-    font "serif"
+    # font "serif"
     text "#{@old.title}", :align => :center, :size => 38, :style => :bold, :inline_format => true
     text "#{Russian::strftime(@old.date, "%B %Y")}", :align => :center, :size => 38, :style => :bold, :inline_format => true
     move_down 20
-    font "sans"
+    # font "sans"
     text "#{@old.text}", :align => :left, :size => 16, :inline_format => true
   
     
