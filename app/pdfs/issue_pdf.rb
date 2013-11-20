@@ -34,7 +34,7 @@ class IssuePdf < Prawn::Document
       move_down 10
       
       # font "sans"
-      text "#{old.text}", :align => :left, :size => 16, :inline_format => true
+      text "#{remove_html(old.text)}", :align => :left, :size => 16, :inline_format => true
       move_down 30
     end
     
