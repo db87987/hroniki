@@ -13,7 +13,7 @@ class OldPdf < Prawn::Document
   end
 
   def remove_html(string)
-    sanitize(string, :tags => {}).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"").gsub(/&ndash;/i,"").gsub(/&laquo;/i,"") # empty tags hash tells it to allow no tags
+    sanitize(string, :tags => {}).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"").gsub(/&ndash;/i,"").gsub(/&laquo;/i,"").gsub(/&raquo;/i,"") # empty tags hash tells it to allow no tags
   end
   
   def initialize(old, view)
@@ -28,7 +28,6 @@ class OldPdf < Prawn::Document
     move_down 20
     font "sans"
     text "#{remove_html(@old.text)}", :align => :left, :size => 16, :inline_format => true
-  
     
     
   end
