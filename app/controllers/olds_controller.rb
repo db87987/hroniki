@@ -41,6 +41,7 @@ class OldsController < ApplicationController
     
     respond_to do |format|
       format.html
+      format.js
       format.pdf do
         pdf = OldPdf.new(@old, view_context)
         send_data pdf.render, filename: "document_#{@old.id}.pdf",

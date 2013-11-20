@@ -57,6 +57,9 @@
 
   <div class="span9">
 	<div class="hronik_cover"><%= image_tag(@old.image.url(:show)) %></div>
+	
+	<%= link_to "Скачать статью (pdf)", old_path(@old, format: "pdf"), :target => '_blank', :class => 'issue_pdf_link' %>
+	
     <div class="hronik_text"><%= @old.text.html_safe %></div>
 
 	<div class="hronik_social" style="height: 100px;">

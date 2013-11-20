@@ -406,6 +406,7 @@ textarea:focus, input:focus, select:focus {
 	height: 17px;
 	display: block;
 	margin-top: 15px;
+	margin-bottom: 15px;
 	padding-top: 24px;
 	padding-left: 50px;
 	font-family: 'PT Sans Caption';
