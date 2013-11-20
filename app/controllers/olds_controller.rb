@@ -38,6 +38,16 @@ class OldsController < ApplicationController
     rescue ActiveRecord::RecordNotUnique
       nil
     end
+    
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = OldPdf.new(@old, view_context)
+        send_data pdf.render, filename: "document_#{@old.id}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
+    end
   end
 
   def comment
