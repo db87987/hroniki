@@ -13,7 +13,7 @@ class IssuePdf < Prawn::Document
   end
 
   def remove_html(string)
-    sanitize(string, :tags => {}).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"").gsub(/&ndash;/i,"") # empty tags hash tells it to allow no tags
+    sanitize(string, :tags => {}).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"").gsub(/&ndash;/i,"").gsub(/&laquo;/i,"") # empty tags hash tells it to allow no tags
   end
   
   def initialize(issue, view)
