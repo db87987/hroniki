@@ -58,6 +58,39 @@ ActiveAdmin.register Article do
          end
        end
      end
-    
    end  
+   
+   member_action :crop do
+     @article = Article.find(params[:id])
+   end
+   
+   controller do
+
+     def create
+       @article = Article.new(params[:article])
+       if @article.save
+         if params[:article][:image].blank?
+           redirect_to admin_article_path(@article)
+         else
+           render :action => "crop", :layout => 'active_admin' 
+         end
+       else
+         render :action => 'new'
+       end
+     end
+
+     def update
+       @article = Article.find(params[:id])
+       if @article.update_attributes(params[:article])
+         if params[:article][:image].blank?
+           redirect_to admin_article_path(@article)
+         else
+           render :action => "crop", :layout => 'active_admin' 
+         end
+       else
+         render :action => 'edit'
+       end
+     end
+
+   end
 end

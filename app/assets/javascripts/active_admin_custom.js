@@ -51,3 +51,29 @@ function update_crop(coords) {
   $("#hronik_crop_h").val(Math.round(coords.h));
 };
 
+// articles
+
+$(function() {
+  $('#cropbox_article').Jcrop({
+    onChange: article_update_crop,
+    onSelect: article_update_crop,
+    setSelect: [0, 0, 220, 220],
+    aspectRatio: 220/220,
+	boxWidth: 600
+  });
+});
+
+function article_update_crop(coords) {
+	$('#article_main').css({
+		width: Math.round(220/coords.w * $('#cropbox_article').width()) + 'px',
+		height: Math.round(220/coords.h * $('#cropbox_article').height()) + 'px',
+		marginLeft: '-' + Math.round(220/coords.w * coords.x) + 'px',
+		marginTop: '-' + Math.round(220/coords.h * coords.y) + 'px'
+	});
+
+  $("#article_crop_x").val(Math.round(coords.x));
+  $("#article_crop_y").val(Math.round(coords.y));
+  $("#article_crop_w").val(Math.round(coords.w));
+  $("#article_crop_h").val(Math.round(coords.h));
+};
+

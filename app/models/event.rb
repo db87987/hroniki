@@ -12,9 +12,9 @@ class Event < ActiveRecord::Base
     
   
   has_attached_file :image, :styles => { 
-    :ico => {:geometry => "100x100#"}, 
+    :ico => {:geometry => "100x100#", :processors => [:cropper]}, 
     :side => {:geometry => "220x220#", :processors => [:cropper]},
-    :gallery => {:geometry => "300x300#"},
+    :gallery => {:geometry => "300x300#", :processors => [:cropper]},
     :show => {:geometry => "640x460>"}
   }
   
