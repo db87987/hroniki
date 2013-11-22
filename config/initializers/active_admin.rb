@@ -20,9 +20,6 @@ ActiveAdmin.setup do |config|
   #   end
   # end
   
-  include ActionView::Helpers::SanitizeHelper
-  include ActionView::Helpers::TextHelper
-  
   # == Site Title
   #
   # Set the title that is displayed on the main layout

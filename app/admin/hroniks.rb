@@ -75,10 +75,8 @@ ActiveAdmin.register Hronik do
   
   member_action :repost do
     @hronik = Hronik.find(params[:id])
-    text = strip_tags(@hronik.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"")
-		text = truncate(text, length: 260, omission: '...')
-    # link = '<a href="http://hroniki.org/hroniks/#{@hronik.id}">читать далее'.html_safe
-    # text = text + " " + link 
+    text = ActionController::Base.helpers.strip_tags(@hronik.text) 
+		text = ActionController::Base.helpers.truncate(text, length: 260, omission: '...')
     SocialPoster.write(:vk, text, nil, owner_id: '-57352679')
     redirect_to :back, :notice => I18n.t('successfully_reposted')
   end
