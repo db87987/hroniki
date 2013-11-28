@@ -66,6 +66,28 @@ a:hover {
 	font-size: 15px;
 }
 
+.ginger_link {
+	font-family: 'PT Sans Caption';
+	display: block;
+	width: 222px;
+	height: 38px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #ff634d;
+	padding-top: 18px;
+	margin-top: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: white;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.ginger_link:hover {
+	color: black;
+}
+
+
 .red_button {
 	display: block;
 	font-family: 'PT Sans Caption';
@@ -75,8 +97,15 @@ a:hover {
 	text-align: center;
 	text-decoration: none;
 	background-color: #ffa599;
-	color: #ffffff;
+	text-transform: uppercase;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: white;
 	font-size: 14px;
+}
+
+.red_button:hover {
+	color: black;
 }
 
 .red_button.suggest {
@@ -289,15 +318,15 @@ textarea:focus, input:focus, select:focus {
 }
 
 .show_feedback_form {
-	background: #ffffff url('feedback.png') no-repeat 15px 11px;
+	background: #ff634d url('feedback.png') no-repeat 15px 11px;
 	font-family: 'PT Sans Caption';
 	font-size: 16px;
-	color: #bfbfbf;
+	color: white;
 	padding: 10px 20px 10px 40px;
 }
 .show_feedback_form:hover {
-	background-position: 15px -34px;
-	color: #ff634d;
+	background-position: 15px -18px;
+	color: black;
 }
 
 /*calendar*/

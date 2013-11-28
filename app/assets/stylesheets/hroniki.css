@@ -99,7 +99,7 @@
 	font-size: 14px;	
 }
 
-.hronik_social {
+.hronik_tag {
 	width: 585px;
 	height: 146px;
 	padding-left: 35px;
@@ -145,13 +145,13 @@
 	padding-top: 8px;
 	text-align: center;
 	text-decoration: none;
-	background-color: #ffa599;
+	background-color: #ff634d;
 	color: #ffffff;
 	font-size: 14px;
 }
 
 .hronik_social .red_button:hover {
-	color: #ffffff;
+	color: black;
 }
 
 
