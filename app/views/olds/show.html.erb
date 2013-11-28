@@ -12,11 +12,11 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   VK.init({apiId: 3850211, onlyWidgets: true});
-</script>
+</script> -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   function addCommentCallback(num, last_comment, date, sign){
     $.post("/olds/comment",{
          type: 'vkontakte',
@@ -27,7 +27,7 @@
          id: "<%= @old.id %>"
     });
 }
-</script>
+</script> -->
 
 
 <div class="container" style="margin-top: 200px; margin-bottom: 100px;">
@@ -62,7 +62,7 @@
 	
     <div class="hronik_text"><%= @old.text.html_safe %></div>
 
-	<div class="hronik_social" style="height: 100px;">
+	<div class="hronik_social" style="height: 70px;">
 		<p>Понравилась статья? Расскажи друзьям!</p>
 		<div class="like_panel">
 			

@@ -108,11 +108,19 @@
 	margin-bottom: 50px;
 }
 
+.hronik_social {
+	height: 130px;
+	background-color: #e6e6e6;
+	width: 600px;
+	padding: 30px;
+}
+
 .hronik_social .like_panel {
 	margin-top: 37px;
 	margin-bottom: 30px;
 	clear: both;
 	width: 100%;
+
 }
 
 #vk_like {
