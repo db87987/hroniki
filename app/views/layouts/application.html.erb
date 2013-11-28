@@ -9,7 +9,9 @@
   <%= yield :head %>
 </head>
 <body>	
-
+    <% if controller?('hroniks') && action?('show') || controller?('static_pages') && action?('index')  %>
+		<%= render :partial => 'shared/hronik_suggest', :locals => { :@hronik => Hronik.new } %>
+		<% end %>
         <div class="wrapper">
             <%= render 'layouts/header' %>
 		    <%= yield %>
