@@ -10,7 +10,8 @@ $(document).ready(function() {
 		$(".wrapper, .footer").addClass("blur");
 		$(".overlay").show();
 		$("#modal").show();
-		// showRecaptcha('captcha');
+		
+
 		
 	});
 	
@@ -18,6 +19,8 @@ $(document).ready(function() {
 		$(".wrapper, .footer").removeClass("blur");
 		$(".overlay").hide();
 		$("#modal").hide();
+		
+
 	});
 
 
@@ -142,5 +145,6 @@ $(document).keyup(function(e) {
   if (e.keyCode == 27) { 
 	$(".wrapper, .footer").removeClass("blur");
 	$("#modal").hide();
+	$(".overlay").hide();
 	 }   // esc
 });

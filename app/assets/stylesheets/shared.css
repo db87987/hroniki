@@ -68,7 +68,7 @@ a:hover {
 
 .ginger_link {
 	font-family: 'PT Sans Caption';
-	display: block;
+	display: inline-block;
 	width: 222px;
 	height: 38px;
 	text-align: center;
@@ -81,6 +81,7 @@ a:hover {
 	color: white;
 	font-size: 13px;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 
 .ginger_link:hover {
