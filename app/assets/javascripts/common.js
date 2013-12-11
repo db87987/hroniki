@@ -71,9 +71,16 @@ $(document).ready(function() {
     }
   });
 
-  $(".show_feedback_form").on('click', function () {
-    $(".wrap").slideToggle();
-	return false
+  $("#subscribe_form").on('click', function () {
+    $("#subscribe_wrap").slideToggle();
+		$("#feedback_wrap").hide();
+		return false
+  });
+
+  $("#feedback_form").on('click', function () {
+    $("#feedback_wrap").slideToggle();
+		$("#subscribe_wrap").hide();
+		return false
   });
 
 	$("#event_date").datepicker({

@@ -7,8 +7,41 @@
   </div>
 
   <div id="new_feedback_area">
-  <%= link_to "Оставьте свой отзыв!", "#", :class=> 'show_feedback_form' %>
-  <div class="wrap">
+  <%= link_to "Подписка на открытки", "#", :class=> 'show_feedback_form', :id => 'subscribe_form' %>
+  <%= link_to "Оставьте свой отзыв!", "#", :class=> 'show_feedback_form', :id => 'feedback_form' %>
+  
+  <div class="wrap" id="subscribe_wrap" style="display: block">
+  	<%= form_for @subscription, remote: true do |f| %>
+  	<div style="float: left;">
+  	<%= f.label :name, "Представьтесь, пожалуйста" %>
+  	<%= f.text_field :name %>
+  	<br>
+  	Укажите год вашего рождения
+  	<%= f.select(:birth, Array(1900..Time.now.year).reverse) %>
+  	<br>
+  	<br>
+  	Ваш индекс
+  	<%= f.text_field :index %>
+  	<span>Вы можете узнать свой индекс на сайте <a href="http://indexp.ru" target="_blank">indexp.ru</a></span>
+  	
+  	<%= f.label :address, "Ваш адрес" %>
+  	<%= f.text_area :address %>
+  	<span>Ваши личные данные будут использованы <br>исключительно для рассылки открыток по почте</span>
+  	
+  	<%= f.label :email, "Ваша электронная почта" %>
+  	<%= f.text_area :email %>
+  	<span>Мы оповестим Вас по этому адресу о деталях</span>
+  	
+  	<label>Подтвердите, что Вы не робот</label>
+  	
+  	
+
+  	<%= link_to "Отправить", "#", :class => 'red_button', :id => 'subscription_submit' %>
+  	<% end %>
+    </div>
+  </div>
+  
+  <div class="wrap" id="feedback_wrap">
 	<%= form_for @feedback, remote: true do |f| %>
 	<div style="float: left; width: 530px;">
 	<%= f.label :name, "Представьтесь, пожалуйста" %>

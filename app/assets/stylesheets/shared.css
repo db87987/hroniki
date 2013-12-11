@@ -155,6 +155,9 @@ a:hover {
 	display: none;
 	margin-top: 8px;
 	margin-bottom: 60px;
+	font-family: 'PT Sans';
+	color: #8c8c8c;
+	font-size: 14px;
 }
 
 #new_event_partial .wrap {
@@ -166,6 +169,29 @@ a:hover {
 	display: none;
 	margin-top: 8px;
 	margin-bottom: 60px;
+}
+
+.wrap select {
+	margin-left: 20px;
+}
+
+.wrap .index_field {
+	width: 100px;
+}
+
+.wrap span {
+	font-family: 'PT Sans';
+	font-style: italic;
+	color: #bfbfbf;
+	font-size: 14px;
+}
+
+.wrap span a {
+	color: #ffa599;
+}
+
+.wrap span a:hover {
+	color: black;
 }
 
 
@@ -324,6 +350,7 @@ textarea:focus, input:focus, select:focus {
 	font-size: 16px;
 	color: white;
 	padding: 10px 20px 10px 40px;
+	margin: 0px;
 }
 .show_feedback_form:hover {
 	background-position: 15px -18px;

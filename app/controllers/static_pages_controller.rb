@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
   
   def feedback
+    @subscription = Subscription.new
     @feedback = Feedback.new
     @feedbacks = Feedback.published.order('created_at DESC')
   end

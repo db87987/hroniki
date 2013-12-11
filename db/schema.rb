@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131115142532) do
+ActiveRecord::Schema.define(:version => 20131211152523) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -250,6 +250,17 @@ ActiveRecord::Schema.define(:version => 20131115142532) do
 
   add_index "session_hroniks", ["hronik_id", "session_id"], :name => "index_session_hroniks_on_hronik_id_and_session_id", :unique => true
   add_index "session_hroniks", ["hronik_id"], :name => "index_session_hroniks_on_hronik_id"
+
+  create_table "subscriptions", :force => true do |t|
+    t.string   "name"
+    t.string   "birth"
+    t.string   "profession"
+    t.string   "index"
+    t.text     "address"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "suggests", :force => true do |t|
     t.date     "date"

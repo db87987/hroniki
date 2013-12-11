@@ -1,4 +1,6 @@
 Hroniki::Application.routes.draw do
+  get "subscriptions/create"
+
   resources :suggests
   resources :hroniks
   match '/hroniks/comment' => 'hroniks#comment', :via => :post
@@ -14,6 +16,7 @@ Hroniki::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   
   match '/feedbacks' => 'feedbacks#create', :via => :post, :as => :feedbacks
+  match '/subscriptions' => 'subscriptions#create', :via => :post, :as => :subscriptions
   match '/feedback' => 'static_pages#feedback'
   match '/calendar' => 'events#index'
   match '/events/comment' => 'events#comment', :via => :post
