@@ -10,34 +10,34 @@
   <%= link_to "Подписка на открытки", "#", :class=> 'show_feedback_form subscribe', :id => 'subscribe_form' %>
   <%= link_to "Оставьте свой отзыв!", "#", :class=> 'show_feedback_form not_active', :id => 'feedback_form' %>
   
-  <div class="wrap" id="subscribe_wrap">
+  <div class="wrap" id="subscribe_wrap" style="display: block">
   	<%= form_for @subscription, remote: true do |f| %>
   	<div style="float: left;">
-  	<%= f.label :name, "Представьтесь, пожалуйста" %>
+  	<label for="subscription_name">Представьтесь, пожалуйста<span class="star">*</span></label>
   	<%= f.text_field :name %>
-  	<br>
-  	<%= f.label :profession, "Ваша профессия или отрасль, в которой Вы работаете?" %>
-  	<%= f.text_field :profession %>
-  	<br>
+    <div class="buf" style="height:0px;"></div>
   	Укажите год вашего рождения
   	<%= f.select(:birth, Array(1900..Time.now.year).reverse) %>
-  	<br>
-  	Ваш индекс
+    <div class="buf" style="height:20px;"></div>
+  	<%= f.label :profession, "Ваша профессия или отрасль, в которой Вы работаете?" %>
+  	<%= f.text_field(:profession, :class => 'profession_field') %>
+    <div class="buf" style="height:0px;"></div>
+  	Ваш индекс<span class="star">*</span>
   	<%= f.text_field(:index, :class => "index_field") %>
   	<span>Вы можете узнать свой индекс на сайте <a href="http://indexp.ru" target="_blank">indexp.ru</a></span>
-  	
-  	<%= f.label :address, "Ваш адрес:" %>
+  	<div class="buf" style="height:0px;"></div>
+  	<label for="subscription_address">Представьтесь, пожалуйста<span class="star">*</span></label>
   	<%= f.text_area(:address, :class => "address_field") %>
   	<div class="address_comment">Ваши личные данные будут использованы исключительно для рассылки открыток по почте</div>
-  	
-  	Ваша электронная почта
+  	<div class="buf" style="height:0px;"></div>
+  	Ваша электронная почта<span class="star">*</span></label>
   	<%= f.text_field(:email, :class => "email_field") %>
   	<div class="index_comment">Мы оповестим Вас по этому адресу о деталях</div>
   	
-  	<label>Подтвердите, что Вы не робот</label>
+  	<label>Подтвердите, что Вы не робот<span class="star">*</span></label></label>
   	<%= recaptcha_tags %>
+  	<div class="buf" style="height:20px;"></div>
     <div id="subscribe_errors"></div>
-  	<br>
   	
 
   	<%= link_to "Отправить", "#", :class => 'red_button', :id => 'subscription_submit' %>

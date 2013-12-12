@@ -199,6 +199,10 @@ a:hover {
 	margin-left: 20px;
 }
 
+.profession_field {
+	margin-bottom: 0px !important;
+}
+
 .index_field {
 	width: 100px !important;
 	margin-left: 10px;
@@ -254,7 +258,7 @@ textarea:focus, input:focus, select:focus {
     outline: 0;
 }
 
-#feedback_page input[type="text"], #new_event_partial input[type="text"] {
+#feedback_wrap input[type="text"], #new_event_partial input[type="text"] {
 	width: 530px;
 	height: 35px;
 	margin-top: 10px;
@@ -265,11 +269,28 @@ textarea:focus, input:focus, select:focus {
 	border: 1px inset;
 }
 
-#feedback_page input[type="text"]:focus, #new_event_partial input[type="text"]:focus {
+#subscribe_wrap input[type="text"] {
+	width: 530px;
+	height: 35px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-family: 'PT Serif Caption';
+	color: #bfbfbf;
+	font-size: 16px;
+	border: 1px solid #bcf1ed;
+}
+
+
+
+#feedback_wrap input[type="text"]:focus, #new_event_partial input[type="text"]:focus {
 	border: 1px solid #29B0D9;
 }
 
-#feedback_page textarea, #new_event_partial textarea {
+#subscribe_wrap input[type="text"]:focus{
+	border: 1px solid #10dacb;
+}
+
+#feedback_wrap textarea, #new_event_partial textarea {
 	width: 530px;
 	height: 230px;
 	margin-top: 10px;
@@ -277,17 +298,39 @@ textarea:focus, input:focus, select:focus {
 	font-family: 'PT Serif Caption';
 	color: #bfbfbf;
 	font-size: 16px;
-	border: 1px inset
+	border: 1px inset;
 }
 
-#feedback_page input[type="text"].input_error, #feedback_page textarea.input_error, #new_event_partial input[type="text"].input_error, #new_event_partial textarea.input_error  {
+#subscribe_wrap textarea {
+	width: 530px;
+	height: 230px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-family: 'PT Serif Caption';
+	color: #bfbfbf;
+	font-size: 16px;
+	border: 1px solid #bcf1ed;
+}
+
+#feedback_wrap input[type="text"].input_error, #feedback_page textarea.input_error, #new_event_partial input[type="text"].input_error, #new_event_partial textarea.input_error  {
 	border: 1px solid #ff634d;
 	color: #ff634d;
 }
 
-#feedback_page textarea:focus  {
+#subscribe_wrap input[type="text"].input_error {
+	border: 1px solid #ff634d;
+	color: #ff634d;
+}
+
+#feedback_wrap textarea:focus  {
 	border: 1px solid #29B0D9;
 }
+
+#subscribe_wrap textarea:focus  {
+	border: 1px solid #10dacb;
+}
+
+
 
 .like_link {
 	display: block;
@@ -545,5 +588,9 @@ textarea:focus, input:focus, select:focus {
 
 .issue_pdf_link:hover {
 	color: #ff634d;
+}
+
+.star {
+	color: #ff634d !important;
 }
 
