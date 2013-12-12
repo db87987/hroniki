@@ -117,7 +117,8 @@ $(document).ready(function() {
 	});
 	
 	$('.new_subscription').submit(function() {
-		inputs = $('.new_subscription :input')	
+		profession_field = $('#subscription_profession')
+		inputs = $('.new_subscription :input').not(profession_field)	
 		inputs.each(function() {
 			if ($(this).val() == '') {
 		      $(this).addClass('input_error');	
