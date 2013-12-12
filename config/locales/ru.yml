@@ -29,6 +29,9 @@ ru:
       hronik:
         one: "Хроника"
         other: "Хроники"
+      subscription:
+        one: "Подписка"
+        other: "Подписки"
       event:
         one: "Событие"
         other: "События"
@@ -118,4 +121,9 @@ ru:
       answer:
         text: "Ответ"
         rate: "Количество голосов"
-        
+      subscription:
+        name: "Имя"
+        birth: "Дата рождения"
+        profession: "Профессия"
+        index: "Индекс"
+        address: "Адрес"

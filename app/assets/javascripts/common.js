@@ -41,6 +41,11 @@ $(document).ready(function() {
 		$("#new_feedback").submit();
 	});
 	
+	$("#subscription_submit").on('click', function () {
+		$(".new_subscription").submit();
+		Recaptcha.reload();
+	});
+	
 	
 	$('#new_feedback').on('ajax:success', function(data, response, xhr) {
     if (response.status == 'ok') {
@@ -98,7 +103,7 @@ $(document).ready(function() {
 		$("#new_event").submit();
 	});
 	
-	$('#new_event :input').focus(function() {
+	$('#new_event :input, .new_subscription :input').focus(function() {
 	  $(this).removeClass('input_error');	
     });
  
@@ -111,19 +116,27 @@ $(document).ready(function() {
 	    });
 	});
 	
-	// $('#new_event').on('ajax:success', function(data, response, xhr) {
+	$('.new_subscription').submit(function() {
+		inputs = $('.new_subscription :input')	
+		inputs.each(function() {
+			if ($(this).val() == '') {
+		      $(this).addClass('input_error');	
+		    }   
+	    });
+	});
+	
+	// $('.new_subscription').on('ajax:success', function(data, response, xhr) {
 	//     if (response.status == 'ok') {
-	//   $(".wrap").hide();
-	//       $('#event_sent').show().fadeOut(4000);
+	// 	scroll(0,0)
+	// 	$(".wrap").hide();
+	// 	$('#subscribtion_create').show().fadeOut(4000);
 	//     }
 	//     else{
 	//   Recaptcha.reload();
 	//       $('#event_errors').html(response.errors.join('<br>'));
 	//     }
 	//     });
-	
 
-	
 
   
  	

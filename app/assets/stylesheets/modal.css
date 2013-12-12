@@ -23,7 +23,7 @@
     z-index: 9999; /* makes the div the top layer, so it’ll lay on top of the other content */
 }
 
-#feedback_sent, #hronik_sent, #event_sent {
+#feedback_sent, #hronik_sent, #event_sent, #subscribtion_created {
 	display: none;
 	font-family: 'PT Sans';
 	font-size: 30px;
