@@ -14,8 +14,9 @@
 		 </div>
 
 	     <div class="span3" style="margin-left: 0px;">
-		    <%= link_to "Предложить свой сюжет", "#", :id => 'suggest_hronik', :class=> 'ginger_link' %>
-		 </div>
+	      <%= link_to "подписка на открытки", feedback_path, :class=> 'ginger_link subscribe' %>
+		    <%= link_to "Предложить свой сюжет", "#", :id => 'suggest_hronik', :class=> 'ginger_link feedback_main' %>
+		  </div>
 	
 		 <div class="span8" style="margin-top: 20px; margin-left: 100px;">
 			<%= link_to (Russian::strftime(hronik.date, "%d %B") + " " + hronik.title), hronik_path(hronik), :class=> 'title_link' %>

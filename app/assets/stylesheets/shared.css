@@ -66,23 +66,47 @@ a:hover {
 	font-size: 15px;
 }
 
+.ginger_link:first-child {
+	margin-top: 30px;
+}
+
 .ginger_link {
 	font-family: 'PT Sans Caption';
 	display: inline-block;
-	width: 222px;
-	height: 38px;
-	text-align: center;
-	text-decoration: none;
-	background-color: #ff634d;
-	padding-top: 18px;
-	margin-top: 30px;
+	width: 218px;
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-top: 9px;
+	height: 26px;
+	text-align: left;
+	text-decoration: none;
+	background-color: #ff634d;
+	margin-top: 10px;
 	color: white;
 	font-size: 13px;
 	text-transform: uppercase;
 	cursor: pointer;
+	text-indent: 33px;
 }
+
+.ginger_link.feedback_main {
+	background: #ff634d url('add.png') no-repeat 15px 10px;
+}
+
+.ginger_link.feedback_main:hover {
+	background-position: 15px -44px;
+}
+
+.ginger_link.subscribe {
+	background: #ff634d url('subscribe.png') no-repeat 15px 12px;
+}
+
+.ginger_link.subscribe:hover {
+	background-position: 15px -22px;
+}
+
+
+
 
 .ginger_link:hover {
 	color: black;
