@@ -7,7 +7,7 @@
   </div>
 
   <div id="new_feedback_area">
-  <%= link_to "Подписка на открытки", "#", :class=> 'show_feedback_form', :id => 'subscribe_form' %>
+  <%= link_to "Подписка на открытки", "#", :class=> 'show_feedback_form subscribe', :id => 'subscribe_form' %>
   <%= link_to "Оставьте свой отзыв!", "#", :class=> 'show_feedback_form', :id => 'feedback_form' %>
   
   <div class="wrap" id="subscribe_wrap" style="display: block">
@@ -19,21 +19,21 @@
   	Укажите год вашего рождения
   	<%= f.select(:birth, Array(1900..Time.now.year).reverse) %>
   	<br>
-  	<br>
   	Ваш индекс
-  	<%= f.text_field :index %>
+  	<%= f.text_field(:index, :class => "index_field") %>
   	<span>Вы можете узнать свой индекс на сайте <a href="http://indexp.ru" target="_blank">indexp.ru</a></span>
   	
-  	<%= f.label :address, "Ваш адрес" %>
-  	<%= f.text_area :address %>
-  	<span>Ваши личные данные будут использованы <br>исключительно для рассылки открыток по почте</span>
+  	<%= f.label :address, "Ваш адрес:" %>
+  	<%= f.text_area(:address, :class => "address_field") %>
+  	<div class="address_comment">Ваши личные данные будут использованы исключительно для рассылки открыток по почте</div>
   	
-  	<%= f.label :email, "Ваша электронная почта" %>
-  	<%= f.text_area :email %>
-  	<span>Мы оповестим Вас по этому адресу о деталях</span>
+  	Ваша электронная почта
+  	<%= f.text_field(:email, :class => "email_field") %>
+  	<div class="index_comment">Мы оповестим Вас по этому адресу о деталях</div>
   	
   	<label>Подтвердите, что Вы не робот</label>
-  	
+  	<%= recaptcha_tags %>
+  	<br>
   	
 
   	<%= link_to "Отправить", "#", :class => 'red_button', :id => 'subscription_submit' %>

@@ -72,14 +72,18 @@ $(document).ready(function() {
   });
 
   $("#subscribe_form").on('click', function () {
-    $("#subscribe_wrap").slideToggle();
+    $("#subscribe_wrap").toggle();
 		$("#feedback_wrap").hide();
+		$("#feedback_form").addClass('not_active');
+		$("#subscribe_form").removeClass('not_active');
 		return false
   });
 
   $("#feedback_form").on('click', function () {
-    $("#feedback_wrap").slideToggle();
+    $("#feedback_wrap").toggle();
 		$("#subscribe_wrap").hide();
+		$("#subscribe_form").addClass('not_active');
+		$("#feedback_form").removeClass('not_active');
 		return false
   });
 

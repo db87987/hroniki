@@ -175,10 +175,34 @@ a:hover {
 	margin-left: 20px;
 }
 
-.wrap .index_field {
-	width: 100px;
+.index_field {
+	width: 100px !important;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px !important;
 }
 
+.email_field {
+	width: 200px !important;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px !important;
+}
+
+.address_field {
+	height: 65px !important;
+}
+
+.address_comment, .index_comment {
+	display: inline-block;
+	width: 350px;
+	padding-top: 25px;
+	font-family: 'PT Sans';
+	font-style: italic;
+	color: #bfbfbf;
+	font-size: 14px;
+	padding-left: 10px;
+}
 .wrap span {
 	font-family: 'PT Sans';
 	font-style: italic;
@@ -344,14 +368,38 @@ textarea:focus, input:focus, select:focus {
 	display: none;
 }
 
+.show_feedback_form:first-child {
+	margin-left: 0px;
+}
+
 .show_feedback_form {
 	background: #ff634d url('feedback.png') no-repeat 15px 11px;
 	font-family: 'PT Sans Caption';
 	font-size: 16px;
 	color: white;
 	padding: 10px 20px 10px 40px;
-	margin: 0px;
+	display: inline-block;
+	margin: 0px 0px -7px -4px;
 }
+
+.show_feedback_form.subscribe {
+	background: #ff634d url('subscribe.png') no-repeat 15px 14px;
+}
+
+.show_feedback_form.subscribe:hover {
+	background-position: 15px 14px;
+	color: black;
+}
+
+.show_feedback_form.not_active {
+	background: #eeeeee url('feedback.png') no-repeat 15px 11px;
+}
+
+.show_feedback_form.subscribe.not_active {
+	background: #eeeeee url('subscribe.png') no-repeat 15px 14px;
+}
+
+
 .show_feedback_form:hover {
 	background-position: 15px -18px;
 	color: black;
