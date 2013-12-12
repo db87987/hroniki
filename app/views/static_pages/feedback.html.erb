@@ -10,11 +10,14 @@
   <%= link_to "Подписка на открытки", "#", :class=> 'show_feedback_form subscribe', :id => 'subscribe_form' %>
   <%= link_to "Оставьте свой отзыв!", "#", :class=> 'show_feedback_form', :id => 'feedback_form' %>
   
-  <div class="wrap" id="subscribe_wrap" style="display: block">
+  <div class="wrap" id="subscribe_wrap">
   	<%= form_for @subscription, remote: true do |f| %>
   	<div style="float: left;">
   	<%= f.label :name, "Представьтесь, пожалуйста" %>
   	<%= f.text_field :name %>
+  	<br>
+  	<%= f.label :profession, "Ваша профессия или отрасль, в которой Вы работаете?" %>
+  	<%= f.text_field :profession %>
   	<br>
   	Укажите год вашего рождения
   	<%= f.select(:birth, Array(1900..Time.now.year).reverse) %>
