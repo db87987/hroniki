@@ -10,7 +10,7 @@
   <%= link_to "Подписка на открытки", "#", :class=> 'show_feedback_form subscribe', :id => 'subscribe_form' %>
   <%= link_to "Оставьте свой отзыв!", "#", :class=> 'show_feedback_form not_active', :id => 'feedback_form' %>
   
-  <div class="wrap" id="subscribe_wrap">
+  <div class="wrap" id="subscribe_wrap" style="display: block;">
   	<%= form_for @subscription, remote: true do |f| %>
   	<div style="float: left;">
   	<label for="subscription_name">Представьтесь, пожалуйста<span class="star">*</span></label>
@@ -35,7 +35,13 @@
   	<div class="index_comment">Мы оповестим Вас по этому адресу о деталях</div>
   	
   	<label>Подтвердите, что Вы не робот<span class="star">*</span></label></label>
+  	
+  	<div style="display: inline-block">
   	<%= recaptcha_tags %>
+  	</div>
+  	
+  	<div class="fields_notice"><span class="star">*</span> — этим знаком отмечены поля, <br>обязательные для заполнения</div>
+  	
   	<div class="buf" style="height:20px;"></div>
     <div id="subscribe_errors"></div>
   	

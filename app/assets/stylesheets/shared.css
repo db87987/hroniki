@@ -221,6 +221,14 @@ a:hover {
 	height: 65px !important;
 }
 
+.fields_notice {
+	display: inline-block;
+	margin-left: 240px;
+	vertical-align:top;
+	padding-top: 30px;
+}
+
+
 .address_comment, .index_comment {
 	display: inline-block;
 	width: 350px;
@@ -442,11 +450,13 @@ textarea:focus, input:focus, select:focus {
 .show_feedback_form {
 	background: #ff634d url('feedback.png') no-repeat 15px 11px;
 	font-family: 'PT Sans Caption';
-	font-size: 16px;
+	font-size: 13px;
 	color: white;
 	padding: 10px 20px 10px 40px;
 	display: inline-block;
 	margin: 0px 0px -7px -4px;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .show_feedback_form.subscribe {
@@ -592,5 +602,6 @@ textarea:focus, input:focus, select:focus {
 
 .star {
 	color: #ff634d !important;
+	font-size: 20px !important;
 }
 
