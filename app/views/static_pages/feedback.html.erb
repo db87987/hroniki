@@ -8,7 +8,7 @@
 
   <div id="new_feedback_area">
   <%= link_to "Подписка на открытки", "#", :class=> 'show_feedback_form subscribe', :id => 'subscribe_form' %>
-  <%= link_to "Оставьте свой отзыв!", "#", :class=> 'show_feedback_form', :id => 'feedback_form' %>
+  <%= link_to "Оставьте свой отзыв!", "#", :class=> 'show_feedback_form not_active', :id => 'feedback_form' %>
   
   <div class="wrap" id="subscribe_wrap">
   	<%= form_for @subscription, remote: true do |f| %>
