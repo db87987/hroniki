@@ -578,7 +578,7 @@ textarea:focus, input:focus, select:focus {
 .quiz_results img {
 	display: block;
 	float: left;
-	margin-left: 60px;
+	margin-left: 90px;
 }
 
 #new_event input[type="file"] {
