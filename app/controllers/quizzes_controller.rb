@@ -8,7 +8,7 @@ class QuizzesController < ApplicationController
     @answer.save
     @line_chart = Gchart.bar(:data => @quiz.answers.pluck(:rate), 
                               :orientation => 'horizontal',
-                              :size => '200x100')
+                              :size => '200x150')
     respond_to do |format|
       format.js
     end
