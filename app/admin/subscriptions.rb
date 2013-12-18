@@ -10,7 +10,6 @@ ActiveAdmin.register Subscription do
      column :profession
      column :index
      column :address
-     column :created_at
 
      default_actions
    end
@@ -22,18 +21,20 @@ ActiveAdmin.register Subscription do
        f.input :profession
        f.input :index
        f.input :address
+       f.input :email
      end
      f.actions
    end
 
   show do
     attributes_table do
-      row :title
       row :name
       row :birth
+      row :profession
       row :index
-      row :title
       row :address
+      row :email
+      row :created_at
     end  
    end
 
