@@ -1,0 +1,29 @@
+<%= semantic_form_for [:admin, @old], :html => {:multipart => true}	 do |f| %>
+
+<div style="float: left; width: 600px;">
+<h4>Оригинал:</h4>
+<%= image_tag @old.image.url(:original), :id => "cropbox_old" %>
+</div>
+
+<div style="float: left; width: 600px; margin-left: 20px;">	
+<h4>Обработанный вариант:</h4>
+<div style="width:220px; height:220px; overflow:hidden;">
+  <%= image_tag @old.image.url(:original), :id => "old_main" %>
+</div>
+
+<%= form_for @old do |f| %>
+<% %w[x y w h].each do |attribute| %>
+<%= f.hidden_field "crop_#{attribute}" %>
+<% end %>
+<fieldset class="actions">
+<ol>
+<li><%= f.submit "Обрезать" %></li>
+</ol>
+</fieldset>
+<% end %>
+
+</div>
+
+
+
+<% end %>

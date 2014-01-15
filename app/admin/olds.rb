@@ -56,4 +56,43 @@ ActiveAdmin.register Old do
      end
     
    end  
+   
+   
+   member_action :crop do
+     @old = Old.find(params[:id])
+   end
+   
+   
+   
+   controller do
+
+     def create
+       @old = Old.new(params[:old])
+       if @old.save
+         if params[:old][:image].blank?
+           redirect_to admin_old_path(@old)
+         else
+           render :action => "crop", :layout => 'active_admin' 
+         end
+       else
+         render :action => 'new'
+       end
+     end
+
+     def update
+       @old = Old.find(params[:id])
+       if @old.update_attributes(params[:old])
+         if params[:old][:image].blank?
+           redirect_to admin_old_path(@old)
+         else
+           render :action => "crop", :layout => 'active_admin' 
+         end
+       else
+         render :action => 'edit'
+       end
+     end
+
+   end
+   
+   
 end

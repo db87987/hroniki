@@ -77,3 +77,29 @@ function article_update_crop(coords) {
   $("#article_crop_h").val(Math.round(coords.h));
 };
 
+// olds
+
+$(function() {
+  $('#cropbox_old').Jcrop({
+    onChange: article_update_crop,
+    onSelect: article_update_crop,
+    setSelect: [0, 0, 220, 220],
+    aspectRatio: 220/220,
+	boxWidth: 600
+  });
+});
+
+function article_update_crop(coords) {
+	$('#old_main').css({
+		width: Math.round(220/coords.w * $('#cropbox_old').width()) + 'px',
+		height: Math.round(220/coords.h * $('#cropbox_old').height()) + 'px',
+		marginLeft: '-' + Math.round(220/coords.w * coords.x) + 'px',
+		marginTop: '-' + Math.round(220/coords.h * coords.y) + 'px'
+	});
+
+  $("#old_crop_x").val(Math.round(coords.x));
+  $("#old_crop_y").val(Math.round(coords.y));
+  $("#old_crop_w").val(Math.round(coords.w));
+  $("#old_crop_h").val(Math.round(coords.h));
+};
+
