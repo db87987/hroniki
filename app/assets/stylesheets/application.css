@@ -23,5 +23,6 @@
  *= require modal
  *= require calendar
  *= require slider
+ *= require
  *= require jquery.ui.datepicker
  */
