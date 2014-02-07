@@ -1,0 +1,3 @@
+$('.result_count').html(<%= @results.count %>);
+$('#results_area').html('<%= j render 'search/results', :@results => @results %>');
+console.log(<%= @results.count %>);

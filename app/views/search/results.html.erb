@@ -2,67 +2,22 @@
 
   <div class="row">
     <div class="span6">
-
     <h1>Результаты поиска</h1>
-
-    <div class="s-total">Найдено результатов: 24</div>
+    <div class="s-total">Найдено результатов: <span class="result_count"><%= @results.count %></span></div>
     </div>
     <div class="span6 s-form">
-
-      <label for="">Не нашли то, что искали? Попробуйте ещё раз: </label>
-      <input size="70" type="text">
-      <a href="#" class="red_button">Искать</a>
-
-
-      <span class="label"></span>
-      <span class="button"></span>
-
+        <%= form_tag search_results_path, :id => 'bodysearch', remote: true do %>
+          <label for="">Не нашли то, что искали? Попробуйте ещё раз: </label>
+          <%= text_field_tag 'search', (params[:search  ]), size: 75 %>
+          <a href="#" class="red_button" >Искать</a>
+          <span class="label"></span>
+          <span class="button"></span>
+        <% end %>
     </div>
   </div>
 
-
-
-
-  <div class="row s-result">
-
-    <div class="article_content">
-      <n> 1 </n>
-      <a href="/olds/9" class="hroniki_title_link">Sequi</a>
-
-      <p>
-        Occaecati dolor libero illum fuga beatae qui quis culpa quia et sunt et nisi. Facere quasi voluptatem sapiente iure possimus tempora aut voluptatum id dolores. Minus corrupti et magnam culpa aut officiis et id quas consectetur suscipit voluptate et nihil ullam asperiores cum qui. A id et quaerat ...
-      </p>
-
-    </div>
-
-
-    <div class="article_content">
-      <n> 2 </n>
-      <a href="/olds/9" class="hroniki_title_link">Sequi</a>
-
-      <p>
-        Occaecati dolor libero illum fuga beatae qui quis culpa quia et sunt et nisi. Facere quasi voluptatem sapiente iure possimus tempora aut voluptatum id dolores. Minus corrupti et magnam culpa aut officiis et id quas consectetur suscipit voluptate et nihil ullam asperiores cum qui. A id et quaerat ...
-        Occaecati dolor libero illum fuga beatae qui quis culpa quia et sunt et nisi. Facere quasi voluptatem sapiente iure possimus tempora aut voluptatum id dolores. Minus corrupti et magnam culpa aut officiis et id quas consectetur suscipit voluptate et nihil ullam asperiores cum qui. A id et quaerat ...
-      </p>
-
-    </div>
-
-
-    <div class="article_content">
-      <n> 3 </n>
-      <a href="/olds/9" class="hroniki_title_link">Sequi</a>
-
-      <p>Occaecati dolor libero illum fuga beatae qui quis culpa quia et sunt et nisi. Facere quasi voluptatem sapiente iure possimus tempora aut voluptatum id dolores. Minus corrupti et magnam culpa aut officiis et id quas consectetur suscipit voluptate et nihil ullam asperiores cum qui. A id et quaerat ...
-        Occaecati dolor libero illum fuga beatae qui quis culpa quia et sunt et nisi. Facere quasi voluptatem sapiente iure possimus tempora aut voluptatum id dolores. Minus corrupti et magnam culpa aut officiis et id quas consectetur suscipit voluptate et nihil ullam asperiores cum qui. A id et quaerat ...
-        Occaecati dolor libero illum fuga beatae qui quis culpa quia et sunt et nisi. Facere quasi voluptatem sapiente iure possimus tempora aut voluptatum id dolores. Minus corrupti et magnam culpa aut officiis et id quas consectetur suscipit voluptate et nihil ullam asperiores cum qui. A id et quaerat ...
-
-        Occaecati dolor libero illum fuga beatae qui quis culpa quia et sunt et nisi. Facere quasi voluptatem sapiente iure possimus tempora aut voluptatum id dolores. Minus corrupti et magnam culpa aut officiis et id quas consectetur suscipit voluptate et nihil ullam asperiores cum qui. A id et quaerat ...
-      </p>
-
-    </div>
+  <div class="row s-result" id="results_area">
+    <%= render 'results' %>
   </div>
-
-
-
-
+  
 </div>

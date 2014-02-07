@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'sqlite3'
-
+gem 'thinking-sphinx', '~> 3.1.0'
 gem 'capistrano'
 gem 'rvm-capistrano'
 gem 'execjs'

@@ -1,6 +1,7 @@
 require 'rvm/capistrano'
 require 'bundler/capistrano'
 require "delayed/recipes"  
+require 'thinking_sphinx/deploy/capistrano'
 load 'deploy/assets'
 
 server "5.178.80.26", :web, :app, :db, primary: true

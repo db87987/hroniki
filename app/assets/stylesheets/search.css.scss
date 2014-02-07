@@ -35,21 +35,36 @@
   }
 }
 
-input.s-footer {
-  color: #8c8c8c;
-  font-family: "PT Sans";
-  font-size: 12px;
-  border: 1px solid #8c8c8c;
-  background: transparent;
+#footsearch {
+	position:relative;
+  margin-top: 17px;
   width: 196px;
   height: 30px;
-  padding-left: 12px;
-  padding-right: 12px;
-  margin-top: 17px;
-  font-weight: 700;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowNTkyRjJFNTg3OEExMUUzQUI4Qzk2NzFDNzFFMUJCRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowNTkyRjJFNjg3OEExMUUzQUI4Qzk2NzFDNzFFMUJCRCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA1OTJGMkUzODc4QTExRTNBQjhDOTY3MUM3MUUxQkJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA1OTJGMkU0ODc4QTExRTNBQjhDOTY3MUM3MUUxQkJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Anp/kQAAARFJREFUeNpi7O3tZcABeIA4D4j9gVgaiF8D8Q4g7gfiVyAFLDg0qgDxTiBWQhIDGWAAxClAHADER5mwaOQA4q1QjeeA2AOIZYDYFmqgCBCvB2IxbDbHAbEaEF+GavgGFX8KxN5AvA2I3YC4CJvNblC6F0kjDPwF4hYo2wObZnEo/RBHeNyD0mLYND+G0no4NOvC1GHTvAVKlwKxAJocF5KzN2LTvAaIX0JD+BIQ5wOxAzQgTwCxMRDfBeLJ6KHNDMQzof4GJQRZIJ6ApuYWEPsB8WcWNI1zgDgBiBcCcRoQh0AVSiGlMJDcL+QUhq4xGRoty6AYK2CC4tlYNBIEII3/oAG0gBSNyM6uRDKIaAAQYADqyTi97awHBwAAAABJRU5ErkJggg==');
-  background-position: 198px 10px;
+
+}
+
+input.s-footer {
+	color: #8c8c8c;
+	font-family: "PT Sans";
+	font-size: 12px;
+	border: 1px solid #8c8c8c;
+	background: transparent;
+	padding-left: 12px;
+	font-weight: 700;
+	width: 196px;
+	height: 30px;
+}
+
+.s-footer_search-submit {
+	position: absolute; 
+	width: 30px; height: 25px; 
+	display: block; 
+	right: -18px; 
+	top: 10px; 
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowNTkyRjJFNTg3OEExMUUzQUI4Qzk2NzFDNzFFMUJCRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowNTkyRjJFNjg3OEExMUUzQUI4Qzk2NzFDNzFFMUJCRCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA1OTJGMkUzODc4QTExRTNBQjhDOTY3MUM3MUUxQkJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA1OTJGMkU0ODc4QTExRTNBQjhDOTY3MUM3MUUxQkJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Anp/kQAAARFJREFUeNpi7O3tZcABeIA4D4j9gVgaiF8D8Q4g7gfiVyAFLDg0qgDxTiBWQhIDGWAAxClAHADER5mwaOQA4q1QjeeA2AOIZYDYFmqgCBCvB2IxbDbHAbEaEF+GavgGFX8KxN5AvA2I3YC4CJvNblC6F0kjDPwF4hYo2wObZnEo/RBHeNyD0mLYND+G0no4NOvC1GHTvAVKlwKxAJocF5KzN2LTvAaIX0JD+BIQ5wOxAzQgTwCxMRDfBeLJ6KHNDMQzof4GJQRZIJ6ApuYWEPsB8WcWNI1zgDgBiBcCcRoQh0AVSiGlMJDcL+QUhq4xGRoty6AYK2CC4tlYNBIEII3/oAG0gBSNyM6uRDKIaAAQYADqyTi97awHBwAAAABJRU5ErkJggg==');
+  background-position: 0px 0px;
   background-repeat: no-repeat;
+	cursor: pointer;
 }
 
 .s-page {
@@ -69,6 +84,7 @@ input.s-footer {
   .article_content{
     margin-top: 35px;
     position: relative;
+width: 874px;
     n{
       position: absolute;
       display: block;
@@ -86,6 +102,7 @@ input.s-footer {
     }
     p{
       margin-left: 75px;
+			font-weight: 100;
 
     }
   }

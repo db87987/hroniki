@@ -38,6 +38,10 @@ class Hronik < ActiveRecord::Base
     @geometry[style] ||= Paperclip::Geometry.from_file(cover.path(style))
   end
   
+  ThinkingSphinx::Index.define :hronik, :with => :active_record do
+    indexes title
+    indexes text
+  end
   
   
   private

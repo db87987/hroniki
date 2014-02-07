@@ -30,6 +30,11 @@ class Article < ActiveRecord::Base
     @geometry[style] ||= Paperclip::Geometry.from_file(image.path(style))
   end
   
+  ThinkingSphinx::Index.define :article, :with => :active_record do
+    indexes title
+    indexes text
+  end
+  
   
   private
   

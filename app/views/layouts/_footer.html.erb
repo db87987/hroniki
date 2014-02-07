@@ -1,11 +1,13 @@
-
 <div class="row">
   <div class="span6">
 	<div class="copyright">
 	<%= Time.now.year %> © Хроники, Euromed group
 	</div>
     <div>
-      <input type="text" class="s-footer" placeholder="Поиск по сайту">
+      <%= form_tag search_results_path, :id => 'footsearch' do %>
+          <%= text_field_tag 'search', '', size: 75, :class => 's-footer', :placeholder => 'Поиск по сайту' %>
+          <a class="s-footer_search-submit"></a>
+      <% end %>
     </div>
   </div>
   <div class="span4">

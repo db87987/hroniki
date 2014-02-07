@@ -21,6 +21,7 @@ ru:
   from_moderator: "От редактора"
   repost: "Репост"
   successfully_reposted: "Репост совершен"
+  article: "Блог"
   activerecord:
     models: 
       admin_user:

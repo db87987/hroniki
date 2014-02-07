@@ -24,8 +24,7 @@ Hroniki::Application.routes.draw do
   match '/events' => 'events#create', :via => :post, :as => :events
   match '/events/:id' => 'events#show', :as => :event
   match '/tags' => 'static_pages#tags'
-  match '/search_results' => 'search#results', :via => :get
-  match '/search' => 'search#search', :via => :post
+  match '/search_results' => 'search#results'
   
   
   match '/quiz/:id' => 'quizzes#quiz', :as => :quiz
