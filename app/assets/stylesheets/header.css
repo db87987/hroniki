@@ -1,6 +1,7 @@
 .header {
 	position: absolute;
 	z-index: 50;
+    min-width: 955px;
 }
 
 .header_top_menu {

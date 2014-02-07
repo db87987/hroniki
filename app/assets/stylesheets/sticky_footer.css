@@ -9,6 +9,7 @@ min-height: 100%;
 height: auto !important;
 height: 100%;
 margin: 0 auto -90px;
+    min-width: 955px;
 }
 .footer, .push {
 height: 90px;
