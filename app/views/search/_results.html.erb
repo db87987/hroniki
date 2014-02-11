@@ -6,22 +6,26 @@
           <%= link_to elem, :class => 'hroniki_title_link' do %>
               Блог / <%= highlight(elem.title, params[:search]) if params[:search] %>
           <% end %>
-          <p><%= highlight(truncate(elem.text, length: 450, omission: '...').html_safe, params[:search]) if params[:search] %></p>
+          <% text = strip_tags(elem.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>          
+          <p><%= highlight(truncate(text, length: 450, omission: '...').html_safe, params[:search]) if params[:search] %></p>
     <% when 'Event' %>
           <%= link_to elem, :class => 'hroniki_title_link' do %>
               Медицинский календарь / <%= Russian::strftime(elem.date, "%d %B") %>
           <% end %>
-          <p><%= highlight(truncate(elem.text, length: 450, omission: '...').html_safe, params[:search]) if params[:search] %></p>
+          <% text = strip_tags(elem.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>         
+          <p><%= highlight(truncate(text, length: 450, omission: '...').html_safe, params[:search]) if params[:search] %></p>
     <% when 'Hronik' %>
           <%= link_to elem, :class => 'hroniki_title_link' do %>
               Хроники / <%= highlight(elem.title, params[:search]) if params[:search] %>
           <% end %>
-          <p><%= highlight(truncate(elem.text, length: 450, omission: '...').html_safe, params[:search]) if params[:search] %></p>
+          <% text = strip_tags(elem.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>         
+          <p><%= highlight(truncate(text, length: 450, omission: '...').html_safe, params[:search]) if params[:search] %></p>
     <% when 'Old' %>
           <%= link_to elem, :class => 'hroniki_title_link' do %>
               Медицинские старости №<%= elem.issue.id %> / <%= highlight(elem.title, params[:search]) if params[:search] %>
           <% end %>
-          <p><%= highlight(truncate(elem.text, length: 450, omission: '...').html_safe, params[:search]) if params[:search] %></p>
+          <% text = strip_tags(elem.text).gsub(/&quot;/i,"").gsub(/&nbsp;/i,"") %>         
+          <p><%= highlight(truncate(text, length: 450, omission: '...').html_safe, params[:search]) if params[:search] %></p>
     <% else %>
     <% end %>
     </div>
