@@ -45,15 +45,15 @@ end
 
 namespace(:thin) do
   task :stop do
-    run "bundle thin stop -C /etc/thin/hroniki.yml"
+    run %Q{cd #{latest_release} && bundle exec thin stop -C /etc/thin/hroniki.yml}
    end
   
   task :start do
-    run "bundle thin start -C /etc/thin/hroniki.yml"
+    run %Q{cd #{latest_release} && bundle exec thin start -C /etc/thin/hroniki.yml}
   end
 
   task :restart do
-    run "bundle thin restart -C /etc/thin/hroniki.yml"
+    rrun %Q{cd #{latest_release} && bundle exec thin restart -C /etc/thin/hroniki.yml}
   end
 end
 

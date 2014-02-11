@@ -4,7 +4,7 @@ class SearchController < ApplicationController
 
   def results
     @search = params[:search]  
-    @results = ThinkingSphinx.search(params[:search], :limit => 1000)
+    params[:search] ? @results = ThinkingSphinx.search(params[:search], :limit => 1000) : @results = nil
   end
   
 end

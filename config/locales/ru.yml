@@ -27,39 +27,63 @@ ru:
       admin_user:
         one: "Администратор"
         other: "Администраторы"
+        many: "Администраторы"
+        few: "Администраторы"
       hronik:
         one: "Хроника"
         other: "Хроники"
+        many: "Хроники"
+        few: "Хроники"
       subscription:
         one: "Подписка"
         other: "Подписки"
+        many: "Подписки"
+        few: "Подписки"
       event:
         one: "Событие"
         other: "События"
+        many: "События"
+        few: "События"
       suggest:
         one: "Предложение"
         other: "Предложения"
+        many: "Предложения"
+        few: "Предложения"
       tag:
         one: "Тэг"
         other: "Тэги"
+        many: "Тэги"
+        few: "Тэги"
       quiz:
         one: "Опрос"
         other: "Опросы"
+        many: "Опросы"
+        few: "Опросы"
       answer:
         one: "Ответ"
         other: "Ответы"
+        many: "Ответы"
+        few: "Ответы"
       article:
         one: "Статья"
         other: "Статьи"
+        many: "Статьи"
+        few: "Статьи"
       old:
         one: "Медицинская старость"
         other: "Медицинские старости"
+        many: "Медицинские старости"
+        few: "Медицинские старости"
       issue:
         one: "Выпуск"
         other: "Выпуски"
+        many: "Выпуски"
+        few: "Выпуски"
       feedback:
         one: "Отзыв"
         other: "Отзывы"
+        many: "Отзывы"
+        few: "Отзывы"
     attributes:
       hronik:
         title: "Название"
