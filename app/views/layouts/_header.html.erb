@@ -11,6 +11,7 @@
 	  <li><%= link_to "Медицинские старости", issues_path, :class => ('active' if controller_name == "olds")  %></li>
 	  <li><%= link_to "Медицинский календарь", calendar_path, :class => ('active' if controller_name == "events" && action?('index'))  %></li>
 	  <li><%= link_to "Обратная связь", feedback_path, :class => ('active' if controller_name == "static_pages" && action?('feedback')) %></li>
+	  <li><%= link_to "Поиск по сайту", search_results_path, :class => ('active' if controller_name == "search") %></li>
   </div>
 </div>
 </div>

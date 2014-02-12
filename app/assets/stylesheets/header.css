@@ -12,7 +12,7 @@
 .header_title {
 	background: url('header-logo.png');
 	background-repeat:no-repeat;
-	height: 170px;
+	height: 190px;
 	width: 710px;
 	float: left;
 	cursor: pointer;
@@ -34,7 +34,7 @@
 	font-family: 'PT Sans Caption';
 	font-size: 14px;
 	background-color: black;
-	height: 170px;
+	height: 190px;
 	opacity: 0.8;
 	width: 230px;
 	float: left;

@@ -9,19 +9,18 @@
   <%= yield :head %>
 </head>
 <body>	
-    <% if controller?('hroniks') && action?('show') || controller?('static_pages') && action?('index')  %>
+    <div class="wrapper">
+        <%= render 'layouts/header' %>
+    <%= yield %>
+        <div class="push"></div>
+    </div>
+    <div class="container footer">
+        <%= render 'layouts/footer' %>
+    </div>
+		<%= render 'shared/metrika' %>
+		<% if controller?('hroniks') && action?('show') || controller?('static_pages') && action?('index')  %>
 		<%= render :partial => 'shared/hronik_suggest', :locals => { :@hronik => Hronik.new } %>
 		<% end %>
-        <div class="wrapper">
-            <%= render 'layouts/header' %>
-		    <%= yield %>
-            <div class="push"></div>
-        </div>
-        <div class="container footer">
-            <%= render 'layouts/footer' %>
-        </div>
-		<%= render 'shared/metrika' %>
-    </body>
+</body>
 </html>
-
 <body>
