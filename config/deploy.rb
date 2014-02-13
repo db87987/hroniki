@@ -53,7 +53,7 @@ namespace(:thin) do
   end
 
   task :restart do
-    rrun %Q{cd #{latest_release} && bundle exec thin restart -C /etc/thin/hroniki.yml}
+    run %Q{cd #{latest_release} && bundle exec thin restart -C /etc/thin/hroniki.yml}
   end
 end
 
